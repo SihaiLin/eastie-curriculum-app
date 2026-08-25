@@ -1,0 +1,301 @@
+import type { UnitLanguageClassificationMap } from "./types";
+
+// Auto-classified K language classifications for k3-language-unit-09.
+// Generated from the Language Classification Review tool using the default
+// auto-classifier + errorSuggestions.ts (no reviewer overrides).
+// 2 error items auto-resolved via errorSuggestions.ts → emitted as 3 target sentences + 2 keywords.
+
+export const k3LanguageUnit09Classifications: UnitLanguageClassificationMap = {
+  "pu-l1": {
+    newKeywords: [
+      { text: ". Learners share ideas with the class. Ask questions", source: "PU" },
+    ],
+    targetSentences: [
+      { text: "e.g. When did you move house? Where did you move from? How old were you? How did you feel?", source: "PU" },
+    ],
+  },
+  "pu-l2": {
+    newKeywords: [
+      { text: "afraid", source: "PU" },
+      { text: "boring", source: "PU" },
+      { text: "dangerous", source: "PU" },
+      { text: "difficult", source: "PU" },
+      { text: "easy", source: "PU" },
+      { text: "exciting", source: "PU" },
+      { text: "frightened", source: "PU" },
+      { text: "hungry", source: "PU" },
+      { text: "surprised", source: "PU" },
+      { text: "thirsty", source: "PU" },
+      { text: "tired", source: "PU" },
+      { text: "circus", source: "PU" },
+      { text: "net", source: "PU" },
+    ],
+    recycledKeywords: [
+      { text: "asleep", source: "PU" },
+      { text: "catch", source: "PU" },
+      { text: "enjoy", source: "PU" },
+      { text: "have a picnic", source: "PU" },
+      { text: "lemonade", source: "PU" },
+      { text: "lunch", source: "PU" },
+      { text: "sun", source: "PU" },
+      { text: "ticket", source: "PU" },
+      { text: "trip", source: "PU" },
+    ],
+    targetSentences: [
+      { text: "Would you like to go?", source: "PU" },
+    ],
+    reviewIssues: [
+      { text: "adjectives", originalSource: "recycled", issueType: "needs_extension", note: "", expansionHint: ["new","nice","big","small","long","short","beautiful","dirty","old","clean","hot","ugly","cold","pretty","fat","tall","thin"] },
+    ],
+  },
+  "pu-l3": {
+    newKeywords: [
+      { text: "brave", source: "PU" },
+      { text: "comparatives with long adjectives: more (surprised) than", source: "PU" },
+    ],
+    recycledKeywords: [
+      { text: "better", source: "PU" },
+      { text: "the best", source: "PU" },
+      { text: "catch", source: "PU" },
+      { text: "children", source: "PU" },
+      { text: "circus", source: "PU" },
+      { text: "clothes", source: "PU" },
+      { text: "cook (n)", source: "PU" },
+      { text: "costume", source: "PU" },
+      { text: "farm", source: "PU" },
+      { text: "jump", source: "PU" },
+      { text: "ride (v)", source: "PU" },
+      { text: "sing", source: "PU" },
+      { text: "want to", source: "PU" },
+      { text: "work (v)", source: "PU" },
+      { text: "write/play music", source: "PU" },
+    ],
+    targetSentences: [
+      { text: "ShallI... ?", source: "PU" },
+    ],
+    reviewIssues: [
+      { text: "adjectives", originalSource: "recycled", issueType: "needs_extension", note: "", expansionHint: ["new","nice","big","small","long","short","beautiful","dirty","old","clean","hot","ugly","cold","pretty","fat","tall","thin"] },
+      { text: "school", originalSource: "recycled", issueType: "needs_extension", note: "", expansionHint: ["book","crayon","teacher","bag","classroom","pencil","school","rubber"] },
+    ],
+  },
+  "pu-l4": {
+    newKeywords: [
+      { text: "dangerous", source: "PU" },
+      { text: "more dangerous than Diversicus ...", source: "PU" },
+    ],
+    recycledKeywords: [
+      { text: "holidays", source: "PU" },
+    ],
+    targetSentences: [
+      { text: "Circus clothes are more beautiful than these.", source: "PU" },
+      { text: "The circus is more exciting than the farm!", source: "PU" },
+    ],
+    reviewIssues: [
+      { text: "adjectives", originalSource: "recycled", issueType: "needs_extension", note: "", expansionHint: ["new","nice","big","small","long","short","beautiful","dirty","old","clean","hot","ugly","cold","pretty","fat","tall","thin"] },
+      { text: "days of the week", originalSource: "recycled", issueType: "needs_extension", note: "", expansionHint: ["evening","morning","afternoon","today","yesterday"] },
+      { text: "free time activities", originalSource: "recycled", issueType: "needs_extension", note: "", expansionHint: ["find","eat","jump","run","swim","walk","close","open","touch","draw","sing","help","look for","race","win","catch","clean","drink","sleep","stand","listen","share","rule","take","play","running","smile","dance","kick","wash","look","read","write","work","cry"] },
+    ],
+  },
+  "pu-l5": {
+    newKeywords: [
+      { text: "adventure", source: "PU" },
+      { text: "busy", source: "PU" },
+      { text: "email (n", source: "PU" },
+      { text: "v)", source: "PU" },
+      { text: "round (the world)", source: "PU" },
+      { text: "(send a) text", source: "PU" },
+      { text: "text (v)", source: "PU" },
+      { text: "travel (v)", source: "PU" },
+      { text: "world", source: "PU" },
+    ],
+    recycledKeywords: [
+      { text: "apartment", source: "PU" },
+      { text: "blanket", source: "PU" },
+      { text: "book", source: "PU" },
+      { text: "call", source: "PU" },
+      { text: "circus", source: "PU" },
+      { text: "DVD", source: "PU" },
+      { text: "friend", source: "PU" },
+      { text: "job", source: "PU" },
+      { text: "map", source: "PU" },
+      { text: "tour", source: "PU" },
+      { text: "trip", source: "PU" },
+      { text: "questions with who", source: "PU" },
+      { text: "what", source: "PU" },
+      { text: "where and why", source: "PU" },
+    ],
+    targetSentences: [
+      { text: "have got", source: "PU" },
+      { text: "Let's ...", source: "PU" },
+    ],
+    reviewIssues: [
+      { text: "adjectives", originalSource: "recycled", issueType: "needs_extension", note: "", expansionHint: ["new","nice","big","small","long","short","beautiful","dirty","old","clean","hot","ugly","cold","pretty","fat","tall","thin"] },
+      { text: "family", originalSource: "recycled", issueType: "needs_extension", note: "", expansionHint: ["Dad","Mum","man","woman","boy","girl","family","friend","twins","brother","sister","pet","grandma","grandpa","teddy","father","mother","baby"] },
+      { text: "school", originalSource: "recycled", issueType: "needs_extension", note: "", expansionHint: ["book","crayon","teacher","bag","classroom","pencil","school","rubber"] },
+    ],
+  },
+  "pu-l6": {
+    newKeywords: [
+      { text: "frightened", source: "PU" },
+      { text: "my brother is the most frightened of spiders.", source: "PU" },
+    ],
+    recycledKeywords: [
+      { text: "countryside", source: "PU" },
+      { text: "places", source: "PU" },
+      { text: "buy", source: "PU" },
+      { text: "CD", source: "PU" },
+      { text: "circus", source: "PU" },
+      { text: "funfair", source: "PU" },
+      { text: "ride (n)", source: "PU" },
+      { text: "ticket", source: "PU" },
+      { text: "in the morning/afternoon/ evening", source: "PU" },
+      { text: "comparatives", source: "PU" },
+      { text: "past simple", source: "PU" },
+    ],
+    targetSentences: [
+      { text: "This city is one of the most beautiful in the world.", source: "PU" },
+    ],
+    reviewIssues: [
+      { text: "animals", originalSource: "recycled", issueType: "needs_extension", note: "", expansionHint: ["bird","cat","animals","rabbit","animal","cow","sheep","monster","dog","elephant","flamingo","frog","toad","duck","horse","mouse","bear","crocodile","monkey","snake","tiger","lion"] },
+    ],
+  },
+  "pu-l7": {
+    newKeywords: [
+      { text: "Africa", source: "PU" },
+      { text: "Antarctica", source: "PU" },
+      { text: "Asia", source: "PU" },
+      { text: "Australia", source: "PU" },
+      { text: "Europe", source: "PU" },
+      { text: "North America", source: "PU" },
+      { text: "South America", source: "PU" },
+      { text: "bottom", source: "PU" },
+      { text: "build", source: "PU" },
+      { text: "canyon", source: "PU" },
+      { text: "continent", source: "PU" },
+      { text: "in order", source: "PU" },
+      { text: "wonder (n)", source: "PU" },
+      { text: "(four thousand) years old", source: "PU" },
+    ],
+    recycledKeywords: [
+      { text: "natural features", source: "PU" },
+      { text: "climb", source: "PU" },
+      { text: "different", source: "PU" },
+      { text: "Earth", source: "PU" },
+      { text: "famous", source: "PU" },
+      { text: "fish", source: "PU" },
+      { text: "huge", source: "PU" },
+      { text: "old", source: "PU" },
+      { text: "planet", source: "PU" },
+      { text: "river", source: "PU" },
+      { text: "rock", source: "PU" },
+      { text: "round the world", source: "PU" },
+      { text: "swimsuit", source: "PU" },
+      { text: "towel", source: "PU" },
+      { text: "water", source: "PU" },
+      { text: "have to", source: "PU" },
+    ],
+    reviewIssues: [
+      { text: "colours", originalSource: "recycled", issueType: "needs_extension", note: "", expansionHint: ["blue","green","orange","purple","red","yellow","black","brown"] },
+    ],
+  },
+  "pu-l8": {
+    newKeywords: [
+      { text: "coral", source: "PU" },
+      { text: "hard", source: "PU" },
+      { text: "living thing", source: "PU" },
+      { text: "manmade", source: "PU" },
+      { text: "natural", source: "PU" },
+      { text: "reef", source: "PU" },
+    ],
+    recycledKeywords: [
+      { text: "continents", source: "PU" },
+      { text: "countryside", source: "PU" },
+      { text: "around", source: "PU" },
+      { text: "fish", source: "PU" },
+      { text: "house", source: "PU" },
+      { text: "make", source: "PU" },
+      { text: "rock", source: "PU" },
+      { text: "small", source: "PU" },
+      { text: "station", source: "PU" },
+      { text: "whale", source: "PU" },
+      { text: "superlative adjectives", source: "PU" },
+    ],
+    reviewIssues: [
+      { text: "animal", originalSource: "recycled", issueType: "needs_extension", note: "", expansionHint: ["bird","cat","animals","rabbit","animal","cow","sheep","monster","dog","elephant","flamingo","frog","toad","duck","horse","mouse","bear","crocodile","monkey","snake","tiger","lion"] },
+      { text: "home", originalSource: "recycled", issueType: "needs_extension", note: "", expansionHint: ["café","home","school","house","shop","beach","town","park","zoo","world"] },
+    ],
+  },
+  "pu-l9": {
+    newKeywords: [
+      { text: "carefully", source: "PU" },
+      { text: "clue", source: "PU" },
+      { text: "good news", source: "PU" },
+      { text: "in the shape of last", source: "PU" },
+      { text: "mystery", source: "PU" },
+      { text: "quiz", source: "PU" },
+      { text: "past (prep)", source: "PU" },
+      { text: "reach", source: "PU" },
+      { text: "shiver", source: "PU" },
+      { text: "step (n)", source: "PU" },
+      { text: "treat (n)", source: "PU" },
+      { text: "wood", source: "PU" },
+    ],
+    recycledKeywords: [
+      { text: "countryside", source: "PU" },
+      { text: "numbers 1-100", source: "PU" },
+      { text: "children", source: "PU" },
+      { text: "cross (v)", source: "PU" },
+      { text: "find", source: "PU" },
+      { text: "first", source: "PU" },
+      { text: "giraffe", source: "PU" },
+      { text: "hide", source: "PU" },
+      { text: "laugh", source: "PU" },
+      { text: "picnic", source: "PU" },
+      { text: "plan (v)", source: "PU" },
+      { text: "second", source: "PU" },
+      { text: "shoe", source: "PU" },
+      { text: "sunny", source: "PU" },
+      { text: "take off imperatives", source: "PU" },
+      { text: "past simple", source: "PU" },
+    ],
+    reviewIssues: [
+      { text: "adjectives", originalSource: "recycled", issueType: "needs_extension", note: "", expansionHint: ["new","nice","big","small","long","short","beautiful","dirty","old","clean","hot","ugly","cold","pretty","fat","tall","thin"] },
+      { text: "food", originalSource: "recycled", issueType: "needs_extension", note: "", expansionHint: ["fish","banana","watermelon","fruit","burger","egg","rice","food","breakfast","chicken","milk","water","lunch","juice","ice cream","bread","cake","chocolate","apple","dinner"] },
+      { text: "prepositions of place", originalSource: "recycled", issueType: "needs_extension", note: "", expansionHint: ["under","in","next to","on","behind","between","in front of"] },
+    ],
+  },
+  "pu-l10": {
+    newKeywords: [
+      { text: "(be) proud (of)", source: "PU" },
+    ],
+    recycledKeywords: [
+      { text: "language from the poem", source: "PU" },
+    ],
+  },
+  "pu-l11": {
+    newKeywords: [
+      { text: "earache", source: "PU" },
+      { text: "in those days", source: "PU" },
+      { text: "one day", source: "PU" },
+    ],
+    recycledKeywords: [
+      { text: "circus(es)", source: "PU" },
+      { text: "clown", source: "PU" },
+      { text: "point", source: "PU" },
+      { text: "think", source: "PU" },
+    ],
+    targetSentences: [
+      { text: "I'd like to...", source: "PU" },
+    ],
+    reviewIssues: [
+      { text: "adjectives", originalSource: "recycled", issueType: "needs_extension", note: "", expansionHint: ["new","nice","big","small","long","short","beautiful","dirty","old","clean","hot","ugly","cold","pretty","fat","tall","thin"] },
+      { text: "animals", originalSource: "recycled", issueType: "needs_extension", note: "", expansionHint: ["bird","cat","animals","rabbit","animal","cow","sheep","monster","dog","elephant","flamingo","frog","toad","duck","horse","mouse","bear","crocodile","monkey","snake","tiger","lion"] },
+      { text: "free time activities", originalSource: "recycled", issueType: "needs_extension", note: "", expansionHint: ["find","eat","jump","run","swim","walk","close","open","touch","draw","sing","help","look for","race","win","catch","clean","drink","sleep","stand","listen","share","rule","take","play","running","smile","dance","kick","wash","look","read","write","work","cry"] },
+    ],
+  },
+  "pu-l12": {
+    recycledKeywords: [
+      { text: "unit language", source: "PU" },
+    ],
+  },
+};

@@ -1,0 +1,47 @@
+.DS_Store
+
+# Logs and temporary files
+*.log
+*.tmp
+tmp/
+temp/
+.tmp*/
+.tmp_generated_backup_*/
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Node dependencies
+node_modules/
+api/node_modules/
+web/node_modules/
+
+# Build outputs and caches
+dist/
+api/dist/
+web/dist/
+.vite/
+.cache/
+coverage/
+
+# Runtime databases and SQLite sidecars
+*.sqlite
+*.sqlite-*
+api/db/*.sqlite
+api/db/*.sqlite-*
+
+# Large external resource payloads
+web/public/curriculum-resources/
+curriculum-resources/
+
+# Local backups / one-off exports
+backups/
+web/backups/
+*.bak
+*.backup
+
+# Release extraction workspace is intentionally external for the initial clean repo.
+curriculum_release/

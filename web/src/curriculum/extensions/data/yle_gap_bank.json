@@ -1,0 +1,3463 @@
+{
+  "source_file": "/Users/Lucia/Desktop/Codex_workspace/Power Up/curriculum_design/v1/excel/outputs/powerup_level_1_curriculum_design_v0.1.xlsx",
+  "source_sheet": "YLE Gap Bank",
+  "record_count": 432,
+  "records": [
+    {
+      "yle_level": "S",
+      "display_item": "cool",
+      "primary_category": "Classroom phrases & social language",
+      "categories": "Classroom phrases & social language",
+      "item": "cool",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "fantastic",
+      "primary_category": "Classroom phrases & social language",
+      "categories": "Classroom phrases & social language",
+      "item": "fantastic",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "hooray",
+      "primary_category": "Classroom phrases & social language",
+      "categories": "Classroom phrases & social language",
+      "item": "hooray",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "pardon",
+      "primary_category": "Classroom phrases & social language",
+      "categories": "Classroom phrases & social language",
+      "item": "pardon",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "gray (grey)",
+      "primary_category": "Colours",
+      "categories": "Colours",
+      "item": "gray",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "pink",
+      "primary_category": "Colours",
+      "categories": "Colours",
+      "item": "pink",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "double",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "double",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "silly",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "silly",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "classmate",
+      "primary_category": "Family & friends",
+      "categories": "Family & friends",
+      "item": "classmate",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "kid",
+      "primary_category": "Family & friends",
+      "categories": "Family & friends",
+      "item": "kid",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "man/men",
+      "primary_category": "Family & friends",
+      "categories": "Family & friends",
+      "item": "man/men",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "chips",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "chips",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "fries",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "fries",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "lime",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "lime",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "pear",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "pear",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "potato",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "potato",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "lots of",
+      "primary_category": "Function words & grammar support",
+      "categories": "Function words & grammar support",
+      "item": "lots of",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "store",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions",
+      "item": "store",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "correct",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "correct",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "English",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "english",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "eraser",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "eraser",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "example",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "example",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "lesson",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "lesson",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "letter",
+      "primary_category": "School",
+      "categories": "School | The home",
+      "item": "letter",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "line",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "line",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "open",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "open",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "page",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "page",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "poster",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "poster",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "sentence",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "sentence",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "spell",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "spell",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "story",
+      "primary_category": "School",
+      "categories": "School | Sports & leisure",
+      "item": "story",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "tell",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "tell",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "word",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "word",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "kick",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "kick",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "soccer",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure | Toys",
+      "item": "soccer",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "song",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "song",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "TV (television)",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure | The home",
+      "item": "television/tv",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "night",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "night",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "truck",
+      "primary_category": "Toys",
+      "categories": "Toys | Transport",
+      "item": "truck",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "clap",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "clap",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "complete",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "complete",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "point",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "point",
+      "source_note": ""
+    },
+    {
+      "yle_level": "S",
+      "display_item": "talk",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "talk",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "little",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "little",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "loudly",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "loudly",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "quiet",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "quiet",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "quietly",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "quietly",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "weak",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "weak",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "well",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "well",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "wet",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "wet",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "worst",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "worst",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "noodles",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "noodles",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "sweet",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "sweet",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "cough",
+      "primary_category": "Health",
+      "categories": "Health",
+      "item": "cough",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "sick",
+      "primary_category": "Health",
+      "categories": "Health",
+      "item": "sick",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "stomach-ache",
+      "primary_category": "Health",
+      "categories": "Health",
+      "item": "stomach-ache",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "temperature",
+      "primary_category": "Health",
+      "categories": "Health",
+      "item": "temperature",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "toothache",
+      "primary_category": "Health",
+      "categories": "Health",
+      "item": "toothache",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "hundred",
+      "primary_category": "Numbers",
+      "categories": "Numbers",
+      "item": "hundred",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "pair",
+      "primary_category": "Numbers",
+      "categories": "Numbers",
+      "item": "pair",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "difference",
+      "primary_category": "Other topic nouns",
+      "categories": "Other topic nouns",
+      "item": "difference",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "jungle",
+      "primary_category": "Other topic nouns",
+      "categories": "Other topic nouns",
+      "item": "jungle",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "laptop",
+      "primary_category": "Other topic nouns",
+      "categories": "Other topic nouns",
+      "item": "laptop",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "place",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions",
+      "item": "place",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "dance",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "dance",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "ice skating",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "ice skating",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "movie",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "movie",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "practise (practice)",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "practise",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "sail",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "sail",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "score",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "score",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "skip",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "skip",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "neck",
+      "primary_category": "The body and the face",
+      "categories": "The body and the face",
+      "item": "neck",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "shoulder",
+      "primary_category": "The body and the face",
+      "categories": "The body and the face",
+      "item": "shoulder",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "stomach",
+      "primary_category": "The body and the face",
+      "categories": "The body and the face",
+      "item": "stomach",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "tooth/teeth",
+      "primary_category": "The body and the face",
+      "categories": "The body and the face",
+      "item": "tooth/teeth",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "elevator",
+      "primary_category": "The home",
+      "categories": "The home",
+      "item": "elevator",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "internet",
+      "primary_category": "The home",
+      "categories": "The home",
+      "item": "internet",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "message",
+      "primary_category": "The home",
+      "categories": "The home",
+      "item": "message",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "island",
+      "primary_category": "The world around us",
+      "categories": "The world around us",
+      "item": "island",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "moon",
+      "primary_category": "The world around us",
+      "categories": "The world around us",
+      "item": "moon",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "wave",
+      "primary_category": "The world around us",
+      "categories": "The world around us",
+      "item": "wave",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "monday",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "monday",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "sunday",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "sunday",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "thursday",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "thursday",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "change",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "change",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "fix",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "fix",
+      "source_note": ""
+    },
+    {
+      "yle_level": "M",
+      "display_item": "mean",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "mean",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "butterfly",
+      "primary_category": "Animals",
+      "categories": "Animals",
+      "item": "butterfly",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "camel",
+      "primary_category": "Animals",
+      "categories": "Animals",
+      "item": "camel",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "creature",
+      "primary_category": "Animals",
+      "categories": "Animals",
+      "item": "creature",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "dinosaur",
+      "primary_category": "Animals",
+      "categories": "Animals",
+      "item": "dinosaur",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "eagle",
+      "primary_category": "Animals",
+      "categories": "Animals",
+      "item": "eagle",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "extinct",
+      "primary_category": "Animals",
+      "categories": "Animals",
+      "item": "extinct",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "fur",
+      "primary_category": "Animals",
+      "categories": "Animals",
+      "item": "fur",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "insect",
+      "primary_category": "Animals",
+      "categories": "Animals",
+      "item": "insect",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "nest",
+      "primary_category": "Animals",
+      "categories": "Animals",
+      "item": "nest",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "octopus",
+      "primary_category": "Animals",
+      "categories": "Animals",
+      "item": "octopus",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "swan",
+      "primary_category": "Animals",
+      "categories": "Animals",
+      "item": "swan",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "tortoise",
+      "primary_category": "Animals",
+      "categories": "Animals",
+      "item": "tortoise",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "excellent",
+      "primary_category": "Classroom phrases & social language",
+      "categories": "Classroom phrases & social language",
+      "item": "excellent",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "pleased",
+      "primary_category": "Classroom phrases & social language",
+      "categories": "Classroom phrases & social language",
+      "item": "pleased",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "crown",
+      "primary_category": "Clothes",
+      "categories": "Clothes",
+      "item": "crown",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "necklace",
+      "primary_category": "Clothes",
+      "categories": "Clothes",
+      "item": "necklace",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "pocket",
+      "primary_category": "Clothes",
+      "categories": "Clothes",
+      "item": "pocket",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "spot",
+      "primary_category": "Clothes",
+      "categories": "Clothes | Colours",
+      "item": "spot",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "spotted",
+      "primary_category": "Clothes",
+      "categories": "Clothes | Colours",
+      "item": "spotted",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "striped",
+      "primary_category": "Clothes",
+      "categories": "Clothes | Colours",
+      "item": "striped",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "trainers",
+      "primary_category": "Clothes",
+      "categories": "Clothes",
+      "item": "trainers",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "umbrella",
+      "primary_category": "Clothes",
+      "categories": "Clothes | Sports & leisure",
+      "item": "umbrella",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "uniform",
+      "primary_category": "Clothes",
+      "categories": "Clothes",
+      "item": "uniform",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "gold",
+      "primary_category": "Colours",
+      "categories": "Colours | Materials",
+      "item": "gold",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "silver",
+      "primary_category": "Colours",
+      "categories": "Colours | Materials",
+      "item": "silver",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "cheap",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "cheap",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "dark",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "dark",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "deep",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "deep",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "else",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "else",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "empty",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "empty",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "enormous",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "enormous",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "ever",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "ever",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "everywhere",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "everywhere",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "expensive",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "expensive",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "far",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "far",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "frightening",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "frightening",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "full",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "full",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "furry",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "furry",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "half",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "half",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "heavy",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "heavy",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "high",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "high",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "horrible",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "horrible",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "instead",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "instead",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "interested",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "interested",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "interesting",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "interesting",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "just",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "just",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "large",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "large",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "lazy",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "lazy",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "low",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "low",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "lucky",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "lucky",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "missing",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "missing",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "next",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "next",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "noisy",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "noisy",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "nowhere",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "nowhere",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "perhaps",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "perhaps",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "poor",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "poor",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "popular",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "popular",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "quite",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "quite",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "ready",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "ready",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "rich",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "rich",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "soft",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "soft",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "somewhere",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "somewhere",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "soon",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "soon",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "sore",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "sore",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "special",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "special",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "still",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "still",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "strange",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "strange",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "sure",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "sure",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "tidy",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "tidy",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "together",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "together",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "twice",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "twice",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "unfriendly",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "unfriendly",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "unhappy",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "unhappy",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "unkind",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "unkind",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "untidy",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "untidy",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "unusual",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "unusual",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "warm",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "warm",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "wonderful",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "wonderful",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "yet",
+      "primary_category": "Describing words & adverbs",
+      "categories": "Describing words & adverbs",
+      "item": "yet",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "husband",
+      "primary_category": "Family & friends",
+      "categories": "Family & friends",
+      "item": "husband",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "married",
+      "primary_category": "Family & friends",
+      "categories": "Family & friends",
+      "item": "married",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "surname",
+      "primary_category": "Family & friends",
+      "categories": "Family & friends",
+      "item": "surname",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "wife",
+      "primary_category": "Family & friends",
+      "categories": "Family & friends",
+      "item": "wife",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "butter",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "butter",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "cereal",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "cereal",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "chopsticks",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "chopsticks",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "cookie (biscuit)",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "cookie (UK biscuit)",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "fork",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "fork",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "jam",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "jam",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "knife",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "knife",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "meal",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "meal",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "olives",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "olives",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "piece",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "piece",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "pizza",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "pizza",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "salt",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "salt",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "snack",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "snack",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "spoon",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "spoon",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "strawberry",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "strawberry",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "sugar",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "sugar",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "yoghurt",
+      "primary_category": "Food & drink",
+      "categories": "Food & drink",
+      "item": "yoghurt",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "a few",
+      "primary_category": "Function words & grammar support",
+      "categories": "Function words & grammar support",
+      "item": "a few",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "a little",
+      "primary_category": "Function words & grammar support",
+      "categories": "Function words & grammar support",
+      "item": "a little",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "during",
+      "primary_category": "Function words & grammar support",
+      "categories": "Function words & grammar support",
+      "item": "during",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "each",
+      "primary_category": "Function words & grammar support",
+      "categories": "Function words & grammar support",
+      "item": "each",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "enough",
+      "primary_category": "Function words & grammar support",
+      "categories": "Function words & grammar support",
+      "item": "enough",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "if",
+      "primary_category": "Function words & grammar support",
+      "categories": "Function words & grammar support",
+      "item": "if",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "much",
+      "primary_category": "Function words & grammar support",
+      "categories": "Function words & grammar support",
+      "item": "much",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "other",
+      "primary_category": "Function words & grammar support",
+      "categories": "Function words & grammar support",
+      "item": "other",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "since",
+      "primary_category": "Function words & grammar support",
+      "categories": "Function words & grammar support",
+      "item": "since",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "such",
+      "primary_category": "Function words & grammar support",
+      "categories": "Function words & grammar support",
+      "item": "such",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "through",
+      "primary_category": "Function words & grammar support",
+      "categories": "Function words & grammar support",
+      "item": "through",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "until",
+      "primary_category": "Function words & grammar support",
+      "categories": "Function words & grammar support",
+      "item": "until",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "while",
+      "primary_category": "Function words & grammar support",
+      "categories": "Function words & grammar support",
+      "item": "while",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "without",
+      "primary_category": "Function words & grammar support",
+      "categories": "Function words & grammar support",
+      "item": "without",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "chemist('s)",
+      "primary_category": "Health",
+      "categories": "Health | Places & directions",
+      "item": "chemist('s)",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "fall over",
+      "primary_category": "Health",
+      "categories": "Health",
+      "item": "fall over",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "x-ray",
+      "primary_category": "Health",
+      "categories": "Health",
+      "item": "x-ray",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "card",
+      "primary_category": "Materials",
+      "categories": "Materials",
+      "item": "card",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "David",
+      "primary_category": "Names",
+      "categories": "Names",
+      "item": "David",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "Emma",
+      "primary_category": "Names",
+      "categories": "Names",
+      "item": "Emma",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "Frank",
+      "primary_category": "Names",
+      "categories": "Names",
+      "item": "Frank",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "George",
+      "primary_category": "Names",
+      "categories": "Names",
+      "item": "George",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "Harry",
+      "primary_category": "Names",
+      "categories": "Names",
+      "item": "Harry",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "Helen",
+      "primary_category": "Names",
+      "categories": "Names",
+      "item": "Helen",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "Holly",
+      "primary_category": "Names",
+      "categories": "Names",
+      "item": "Holly",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "Katy",
+      "primary_category": "Names",
+      "categories": "Names",
+      "item": "Katy",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "Michael",
+      "primary_category": "Names",
+      "categories": "Names",
+      "item": "Michael",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "Oliver",
+      "primary_category": "Names",
+      "categories": "Names",
+      "item": "Oliver",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "Richard",
+      "primary_category": "Names",
+      "categories": "Names",
+      "item": "Richard",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "Robert",
+      "primary_category": "Names",
+      "categories": "Names",
+      "item": "Robert",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "Sarah",
+      "primary_category": "Names",
+      "categories": "Names",
+      "item": "Sarah",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "Sophia",
+      "primary_category": "Names",
+      "categories": "Names",
+      "item": "Sophia",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "William",
+      "primary_category": "Names",
+      "categories": "Names",
+      "item": "William",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "million",
+      "primary_category": "Numbers",
+      "categories": "Numbers",
+      "item": "million",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "several",
+      "primary_category": "Numbers",
+      "categories": "Numbers",
+      "item": "several",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "thousand",
+      "primary_category": "Numbers",
+      "categories": "Numbers",
+      "item": "thousand",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "conversation",
+      "primary_category": "Other topic nouns",
+      "categories": "Other topic nouns",
+      "item": "conversation",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "engine",
+      "primary_category": "Other topic nouns",
+      "categories": "Other topic nouns",
+      "item": "engine",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "hole",
+      "primary_category": "Other topic nouns",
+      "categories": "Other topic nouns",
+      "item": "hole",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "information",
+      "primary_category": "Other topic nouns",
+      "categories": "Other topic nouns",
+      "item": "information",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "money",
+      "primary_category": "Other topic nouns",
+      "categories": "Other topic nouns",
+      "item": "money",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "problem",
+      "primary_category": "Other topic nouns",
+      "categories": "Other topic nouns",
+      "item": "problem",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "secret",
+      "primary_category": "Other topic nouns",
+      "categories": "Other topic nouns",
+      "item": "secret",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "wifi",
+      "primary_category": "Other topic nouns",
+      "categories": "Other topic nouns",
+      "item": "wifi",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "zero",
+      "primary_category": "Other topic nouns",
+      "categories": "Other topic nouns",
+      "item": "zero",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "castle",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions | The world around us",
+      "item": "castle",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "club",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions | School",
+      "item": "club",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "college",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions | School",
+      "item": "college",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "corner",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions",
+      "item": "corner",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "east",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions",
+      "item": "east",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "factory",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions | Work",
+      "item": "factory",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "front",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions",
+      "item": "front",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "get to",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions",
+      "item": "get to",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "London",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions",
+      "item": "London",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "middle",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions",
+      "item": "middle",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "museum",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions",
+      "item": "museum",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "north",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions",
+      "item": "north",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "over",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions",
+      "item": "over",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "path",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions",
+      "item": "path",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "post office",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions",
+      "item": "post office",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "right (as in direction)",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions | School",
+      "item": "right (as in direction)",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "skyscraper",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions",
+      "item": "skyscraper",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "south",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions",
+      "item": "south",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "stadium",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions",
+      "item": "stadium",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "straight on",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions",
+      "item": "straight on",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "theatre (theater)",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions",
+      "item": "theatre (US theater)",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "university",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions | School",
+      "item": "university",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "way",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions",
+      "item": "way",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "west",
+      "primary_category": "Places & directions",
+      "categories": "Places & directions",
+      "item": "west",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "competition",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "competition",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "dictionary",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "dictionary",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "flag",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "flag",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "geography",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "geography",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "glue",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "glue",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "group",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "group",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "gym",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "gym",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "history",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "history",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "language",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "language",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "maths (math)",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "maths (US math)",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "online",
+      "primary_category": "School",
+      "categories": "School | Sports & leisure",
+      "item": "online",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "project",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "project",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "science",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "science",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "scissors",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "scissors",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "screen",
+      "primary_category": "School",
+      "categories": "School | The home",
+      "item": "screen",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "student",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "student",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "subject",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "subject",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "timetable",
+      "primary_category": "School",
+      "categories": "School",
+      "item": "timetable",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "cartoon",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "cartoon",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "channel",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "channel",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "chess",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "chess",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "collect",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "collect",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "concert",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "concert",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "diary",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure | The home",
+      "item": "diary",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "drum",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "drum",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "festival",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "festival",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "flashlight (torch)",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "flashlight (UK torch)",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "golf",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "golf",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "invitation",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "invitation",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "join (a club)",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "join (a club)",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "magazine",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "magazine",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "match (football)",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "match (football)",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "member",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "member",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "pop music",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "pop music",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "prize",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "prize",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "puzzle",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "puzzle",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "pyramid",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "pyramid",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "rock music",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "rock music",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "score",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "score",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "ski",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "ski",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "sledge",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "sledge",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "snowball",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "snowball",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "snowboard",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "snowboard",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "snowboarding",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "snowboarding",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "stage (theatre)",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "stage (theatre)",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "suitcase",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "suitcase",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "tent",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "tent",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "tune",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "tune",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "tyre (tire)",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "tyre (US tire)",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "violin",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "violin",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "volleyball",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "volleyball",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "winner",
+      "primary_category": "Sports & leisure",
+      "categories": "Sports & leisure",
+      "item": "winner",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "finger",
+      "primary_category": "The body and the face",
+      "categories": "The body and the face",
+      "item": "finger",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "knee",
+      "primary_category": "The body and the face",
+      "categories": "The body and the face",
+      "item": "knee",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "toe",
+      "primary_category": "The body and the face",
+      "categories": "The body and the face",
+      "item": "toe",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "comb",
+      "primary_category": "The home",
+      "categories": "The home",
+      "item": "comb",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "cooker",
+      "primary_category": "The home",
+      "categories": "The home",
+      "item": "cooker",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "cushion",
+      "primary_category": "The home",
+      "categories": "The home",
+      "item": "cushion",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "entrance",
+      "primary_category": "The home",
+      "categories": "The home | The world around us",
+      "item": "entrance",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "envelope",
+      "primary_category": "The home",
+      "categories": "The home",
+      "item": "envelope",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "fridge",
+      "primary_category": "The home",
+      "categories": "The home",
+      "item": "fridge",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "gate",
+      "primary_category": "The home",
+      "categories": "The home",
+      "item": "gate",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "key",
+      "primary_category": "The home",
+      "categories": "The home",
+      "item": "key",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "oven",
+      "primary_category": "The home",
+      "categories": "The home",
+      "item": "oven",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "shampoo",
+      "primary_category": "The home",
+      "categories": "The home",
+      "item": "shampoo",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "soap",
+      "primary_category": "The home",
+      "categories": "The home",
+      "item": "soap",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "stamp",
+      "primary_category": "The home",
+      "categories": "The home",
+      "item": "stamp",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "telephone",
+      "primary_category": "The home",
+      "categories": "The home",
+      "item": "telephone",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "cave",
+      "primary_category": "The world around us",
+      "categories": "The world around us",
+      "item": "cave",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "desert",
+      "primary_category": "The world around us",
+      "categories": "The world around us",
+      "item": "desert",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "environment",
+      "primary_category": "The world around us",
+      "categories": "The world around us",
+      "item": "environment",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "exit",
+      "primary_category": "The world around us",
+      "categories": "The world around us",
+      "item": "exit",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "future",
+      "primary_category": "The world around us",
+      "categories": "The world around us | Time",
+      "item": "future",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "land",
+      "primary_category": "The world around us",
+      "categories": "The world around us",
+      "item": "land",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "ocean",
+      "primary_category": "The world around us",
+      "categories": "The world around us",
+      "item": "ocean",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "space",
+      "primary_category": "The world around us",
+      "categories": "The world around us",
+      "item": "space",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "stone",
+      "primary_category": "The world around us",
+      "categories": "The world around us",
+      "item": "stone",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "stream",
+      "primary_category": "The world around us",
+      "categories": "The world around us",
+      "item": "stream",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "view",
+      "primary_category": "The world around us",
+      "categories": "The world around us",
+      "item": "view",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "calendar",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "calendar",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "century",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "century",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "date (as in time)",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "date (as in time)",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "December",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "December",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "early",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "early",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "February",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "February",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "hour",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "hour",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "how long",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "how long",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "January",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "January",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "July",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "July",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "June",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "June",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "later",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "later",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "March",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "March",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "midday",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "midday",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "midnight",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "midnight",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "minute",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "minute",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "month",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "month",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "November",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "November",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "October",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "October",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "quarter",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "quarter",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "September",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "September",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "spring",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "spring",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "summer",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "summer",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "tomorrow",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "tomorrow",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "tonight",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "tonight",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "winter",
+      "primary_category": "Time",
+      "categories": "Time",
+      "item": "winter",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "journey",
+      "primary_category": "Transport",
+      "categories": "Transport",
+      "item": "journey",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "motorway",
+      "primary_category": "Transport",
+      "categories": "Transport",
+      "item": "motorway",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "passenger",
+      "primary_category": "Transport",
+      "categories": "Transport",
+      "item": "passenger",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "platform",
+      "primary_category": "Transport",
+      "categories": "Transport",
+      "item": "platform",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "racing (car; bike)",
+      "primary_category": "Transport",
+      "categories": "Transport",
+      "item": "racing (car; bike)",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "railway",
+      "primary_category": "Transport",
+      "categories": "Transport",
+      "item": "railway",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "rocket",
+      "primary_category": "Transport",
+      "categories": "Transport | Work",
+      "item": "rocket",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "spaceship",
+      "primary_category": "Transport",
+      "categories": "Transport",
+      "item": "spaceship",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "taxi",
+      "primary_category": "Transport",
+      "categories": "Transport | Work",
+      "item": "taxi",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "traffic",
+      "primary_category": "Transport",
+      "categories": "Transport",
+      "item": "traffic",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "wheel",
+      "primary_category": "Transport",
+      "categories": "Transport",
+      "item": "wheel",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "camp",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "camp",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "chat",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "chat",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "could (for possibility)",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "could (for possibility)",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "cycle",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "cycle",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "decide",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "decide",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "design",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "design",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "disappear",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "disappear",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "enter (a competition)",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "enter (a competition)",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "explain",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "explain",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "explore",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "explore",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "fetch",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "fetch",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "find out",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "find out",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "follow",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "follow",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "forget",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "forget",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "guess",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "guess",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "happen",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "happen",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "hate",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "hate",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "hope",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "hope",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "hurry",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "hurry",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "improve",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "improve",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "keep",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "keep",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "let",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "let",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "lie (as in lie down)",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "lie (as in lie down)",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "look like",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "look like",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "make sure",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "make sure",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "might",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "might",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "mind",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "mind",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "post",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "post",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "prefer",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "prefer",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "prepare",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "prepare",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "repair",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "repair",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "repeat",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "repeat",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "search",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "search",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "sell",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "sell",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "should",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "should",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "sound",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "sound",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "speak",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "speak",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "spend",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "spend",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "stay",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "stay",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "turn",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "turn",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "turn on",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "turn on",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "visit",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "visit",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "whisper",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "whisper",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "whistle",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "whistle",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "will",
+      "primary_category": "Useful verbs & actions",
+      "categories": "Useful verbs & actions",
+      "item": "will",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "fog",
+      "primary_category": "Weather",
+      "categories": "Weather",
+      "item": "fog",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "foggy",
+      "primary_category": "Weather",
+      "categories": "Weather",
+      "item": "foggy",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "storm",
+      "primary_category": "Weather",
+      "categories": "Weather",
+      "item": "storm",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "business",
+      "primary_category": "Work",
+      "categories": "Work",
+      "item": "business",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "designer",
+      "primary_category": "Work",
+      "categories": "Work",
+      "item": "designer",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "engineer",
+      "primary_category": "Work",
+      "categories": "Work",
+      "item": "engineer",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "fire fighter",
+      "primary_category": "Work",
+      "categories": "Work",
+      "item": "fire fighter",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "journalist",
+      "primary_category": "Work",
+      "categories": "Work",
+      "item": "journalist",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "manager",
+      "primary_category": "Work",
+      "categories": "Work",
+      "item": "manager",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "mechanic",
+      "primary_category": "Work",
+      "categories": "Work",
+      "item": "mechanic",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "meeting",
+      "primary_category": "Work",
+      "categories": "Work",
+      "item": "meeting",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "newspaper",
+      "primary_category": "Work",
+      "categories": "Work",
+      "item": "newspaper",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "office",
+      "primary_category": "Work",
+      "categories": "Work",
+      "item": "office",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "photographer",
+      "primary_category": "Work",
+      "categories": "Work",
+      "item": "photographer",
+      "source_note": ""
+    },
+    {
+      "yle_level": "F",
+      "display_item": "pilot",
+      "primary_category": "Work",
+      "categories": "Work",
+      "item": "pilot",
+      "source_note": ""
+    }
+  ]
+}
