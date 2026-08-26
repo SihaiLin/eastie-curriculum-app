@@ -31,12 +31,16 @@ const forgotPasswordSchema = z.object({
 
 const resetPasswordSchema = z.object({
   token: z.string().min(20),
-  newPassword: z.string().min(8),
+  newPassword: z.string().trim().min(1),
 });
 
 const changePasswordSchema = z.object({
   currentPassword: z.string().min(1),
-  newPassword: z.string().min(8),
+  newPassword: z.string().trim().min(1),
+});
+
+const setPasswordSchema = z.object({
+  newPassword: z.string().trim().min(1),
 });
 
 router.post("/login", async (req, res) => {
@@ -208,7 +212,7 @@ router.post("/forgot-password", async (req, res) => {
 router.post("/reset-password", async (req, res) => {
   const parsed = resetPasswordSchema.safeParse(req.body);
   if (!parsed.success) {
-    res.status(400).json({ error: "Reset token and a new password of at least 8 characters are required." });
+    res.status(400).json({ error: "Reset token and a new password are required." });
     return;
   }
 
@@ -241,7 +245,7 @@ router.post("/reset-password", async (req, res) => {
 router.post("/change-password", requireAuth, async (req: AuthedRequest, res) => {
   const parsed = changePasswordSchema.safeParse(req.body);
   if (!parsed.success || !req.user) {
-    res.status(400).json({ error: "Current password and a new password of at least 8 characters are required." });
+    res.status(400).json({ error: "Current password and a new password are required." });
     return;
   }
 
@@ -255,6 +259,19 @@ router.post("/change-password", requireAuth, async (req: AuthedRequest, res) => 
   db.prepare("UPDATE sessions SET revoked_at = datetime('now') WHERE user_id = ? AND id <> ? AND revoked_at IS NULL").run(user.id, req.sessionId);
 
   res.json({ ok: true, message: "Password changed." });
+});
+
+router.post("/set-password", requireAuth, async (req: AuthedRequest, res) => {
+  const parsed = setPasswordSchema.safeParse(req.body);
+  if (!parsed.success || !req.user) {
+    res.status(400).json({ error: "New password is required." });
+    return;
+  }
+
+  await setUserPassword(req.user.id, parsed.data.newPassword);
+  db.prepare("UPDATE sessions SET revoked_at = datetime('now') WHERE user_id = ? AND id <> ? AND revoked_at IS NULL").run(req.user.id, req.sessionId);
+
+  res.json({ ok: true, message: "Password saved. You can use it next time with your email." });
 });
 
 export const authRouter = router;

@@ -76,6 +76,32 @@ describe("email code auth", () => {
     assert.equal(meResponse.body.user.displayName, "Active Teacher");
   });
 
+  it("allows a code-verified teacher to create a simple password for future logins", async () => {
+    const agent = request.agent(app);
+    const requestResponse = await agent
+      .post("/api/auth/request-login-code")
+      .send({ email: "active.teacher@eastie.test" })
+      .expect(200);
+
+    await agent
+      .post("/api/auth/verify-login-code")
+      .send({ email: "active.teacher@eastie.test", code: requestResponse.body.dev.loginCode })
+      .expect(200);
+
+    await agent
+      .post("/api/auth/set-password")
+      .send({ newPassword: "1" })
+      .expect(200);
+
+    const passwordAgent = request.agent(app);
+    const loginResponse = await passwordAgent
+      .post("/api/auth/login")
+      .send({ email: "active.teacher@eastie.test", password: "1" })
+      .expect(200);
+
+    assert.equal(loginResponse.body.user.email, "active.teacher@eastie.test");
+  });
+
   it("rejects wrong login codes", async () => {
     await request(app)
       .post("/api/auth/request-login-code")

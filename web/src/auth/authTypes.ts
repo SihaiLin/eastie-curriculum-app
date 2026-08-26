@@ -26,5 +26,6 @@ export interface AuthContextValue {
   logout: () => Promise<void>;
   requestLoginCode: (email: string) => Promise<{ devLoginCode?: string; message: string; ok: boolean }>;
   requestPasswordReset: (email: string) => Promise<{ ok: boolean; message: string }>;
+  setPassword: (input: { newPassword: string }) => Promise<{ ok: boolean; message: string }>;
   verifyLoginCode: (input: { code: string; email: string }) => Promise<AuthUser>;
 }

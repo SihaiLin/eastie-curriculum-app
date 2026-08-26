@@ -38,10 +38,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         if (!input.currentPassword.trim() || !input.newPassword.trim()) {
           return { ok: false, message: "Current password and new password are required." };
         }
-        if (input.newPassword.trim().length < 8) {
-          return { ok: false, message: "New password should be at least 8 characters." };
-        }
-
         const data = await fetchJson<{ ok: boolean; message?: string }>("/api/auth/change-password", {
           body: JSON.stringify({
             currentPassword: input.currentPassword,
@@ -115,6 +111,23 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           ok: data.ok,
           message: data.message ?? `If ${normalizedEmail} is an EASTIE account, a reset email will be sent.`,
         };
+      },
+      setPassword: async (input) => {
+        if (!currentUser) {
+          return { ok: false, message: "Please sign in with an email code before creating your password." };
+        }
+        if (!input.newPassword.trim()) {
+          return { ok: false, message: "Enter a password to save." };
+        }
+
+        const data = await fetchJson<{ ok: boolean; message?: string }>("/api/auth/set-password", {
+          body: JSON.stringify({ newPassword: input.newPassword }),
+          credentials: "include",
+          headers: { "Content-Type": "application/json" },
+          method: "POST",
+        });
+
+        return { ok: data.ok, message: data.message ?? "Password saved." };
       },
       verifyLoginCode: async (input) => {
         const data = await fetchJson<{ user: AuthUser }>("/api/auth/verify-login-code", {
