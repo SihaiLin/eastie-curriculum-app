@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EASTIE 新学期课程系统培训</title>
+    <meta
+      name="description"
+      content="EASTIE 新学期课程系统教师培训页，说明课程分布、登录方式、课程浏览、资源使用与反馈流程。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./training.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero__eyebrow">EASTIE curriculum project · Teacher training</div>
+        <div class="hero__grid">
+          <div class="hero__copy">
+            <h1>EASTIE 新学期课程系统培训</h1>
+            <p class="hero__subtitle">课程分布 · 系统登录 · 课程查看 · 教学反馈</p>
+            <p class="hero__note">
+              本页面用于教师培训，帮助老师快速理解新学期课程系统的使用方式。
+            </p>
+            <div class="hero__meta">
+              <a class="site-link" href="https://eastie.sihai.space" target="_blank" rel="noreferrer">
+                https://eastie.sihai.space
+              </a>
+              <span class="meta-chip">Teacher-facing training page</span>
+            </div>
+          </div>
+
+          <aside class="hero__panel">
+            <div class="panel-card panel-card--accent">
+              <div class="panel-card__label">Training focus</div>
+              <div class="panel-card__value">新学期课程系统使用说明</div>
+            </div>
+            <div class="panel-card">
+              <div class="panel-card__label">Login route</div>
+              <div class="panel-card__value">/login</div>
+            </div>
+            <div class="panel-card">
+              <div class="panel-card__label">Production site</div>
+              <div class="panel-card__value">eastie.sihai.space</div>
+            </div>
+          </aside>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="section section--tight">
+          <div class="section__heading">
+            <p class="kicker">Training goals</p>
+            <h2>培训目标</h2>
+          </div>
+          <div class="goal-grid">
+            <div class="goal-card">理解四大课程类别：EL / CC / CE / PE。</div>
+            <div class="goal-card">使用学校邮箱验证码完成登录。</div>
+            <div class="goal-card">找到正确的年级、课程线与 Unit。</div>
+            <div class="goal-card">打开 lesson 页面和资源文件。</div>
+            <div class="goal-card">正确提交 Feedback。</div>
+            <div class="goal-card">遇到页面或资源打不开时知道如何处理。</div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__heading">
+            <p class="kicker">Curriculum structure</p>
+            <h2>课程分布与分类</h2>
+          </div>
+
+          <div class="layout-grid layout-grid--two">
+            <article class="card">
+              <h3>四类课程结构</h3>
+              <table class="matrix">
+                <thead>
+                  <tr>
+                    <th>Short Name</th>
+                    <th>Full Name</th>
+                    <th>中文说明</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>EL</td>
+                    <td>English Language</td>
+                    <td>英语语言课程</td>
+                  </tr>
+                  <tr>
+                    <td>CC</td>
+                    <td>Core Courses</td>
+                    <td>核心课程</td>
+                  </tr>
+                  <tr>
+                    <td>CE</td>
+                    <td>Creative Enrichment</td>
+                    <td>创意拓展课程</td>
+                  </tr>
+                  <tr>
+                    <td>PE</td>
+                    <td>Physical Education</td>
+                    <td>体育课程</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+
+            <article class="card">
+              <h3>当前映射说明</h3>
+              <ul class="bullet-list">
+                <li>PG / PK：EL = English Language；CC = 当前 integrated Core courses，历史上部分路由仍显示为 <code>non-language</code>。</li>
+                <li>K1 / K2 / K3：EL = Power Up / English Language pages。</li>
+                <li>K1 / K2 / K3：CC = Maths、Graded Reading、World Exploration，以及部分发展型核心线。</li>
+                <li>K1 / K2 / K3：CE = Art、Music、Construction、Cooking、Drama、Science、Rhythm / Movement 等创意拓展线。</li>
+                <li>K1 / K2 / K3：PE = Physical Education / sports lines。</li>
+              </ul>
+              <div class="callout">
+                Some current URLs still contain <code>non-language</code>; this is a historical route label.
+                In teacher training, we treat these pages as Core or CE depending on the course line.
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__heading">
+            <p class="kicker">Available online</p>
+            <h2>当前已上线的动态内容</h2>
+          </div>
+          <div class="coverage-grid">
+            <article class="coverage-card">
+              <div class="coverage-card__head">PG / PK</div>
+              <ul>
+                <li>Language: Unit Hello + Units 1-9</li>
+                <li>Core: Units 1-9，当前通过 legacy <code>/non-language/</code> route</li>
+              </ul>
+            </article>
+            <article class="coverage-card">
+              <div class="coverage-card__head">K1</div>
+              <ul>
+                <li>Language: Unit Hello + Units 1-9</li>
+                <li>Core Maths: Units 1-9</li>
+                <li>Core Graded Reading: Units 1-9</li>
+              </ul>
+            </article>
+            <article class="coverage-card">
+              <div class="coverage-card__head">K2</div>
+              <ul>
+                <li>Language: Unit Hello + Units 1-9</li>
+                <li>Core Maths: Units 1-9</li>
+                <li>Core Graded Reading: Units 1-9</li>
+              </ul>
+            </article>
+            <article class="coverage-card">
+              <div class="coverage-card__head">K3</div>
+              <ul>
+                <li>Language: Unit Hello + Units 1-9</li>
+                <li>Core Maths: Units 1-9</li>
+                <li>Core Graded Reading: Units 1-9</li>
+                <li>Some CE lines are still being expanded</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__heading">
+            <p class="kicker">Login guide</p>
+            <h2>登录流程</h2>
+          </div>
+          <div class="flow">
+            <div class="flow__step">1. 打开 <code>https://eastie.sihai.space/login</code></div>
+            <div class="flow__arrow">→</div>
+            <div class="flow__step">2. 输入学校邮箱</div>
+            <div class="flow__arrow">→</div>
+            <div class="flow__step">3. 接收邮箱验证码</div>
+            <div class="flow__arrow">→</div>
+            <div class="flow__step">4. 输入验证码</div>
+            <div class="flow__arrow">→</div>
+            <div class="flow__step">5. 进入课程系统</div>
+          </div>
+          <div class="note-grid">
+            <div class="note-card">当前生产系统使用 email-code login。</div>
+            <div class="note-card">教师请使用已批准的学校邮箱。</div>
+            <div class="note-card">验证码收不到时，先检查垃圾邮箱 / 邮箱可用性，再联系 admin。</div>
+            <div class="note-card">旧浏览器 Basic Auth 不是课程系统的正常登录方式。</div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__heading">
+            <p class="kicker">Navigation</p>
+            <h2>系统导航路径</h2>
+          </div>
+          <div class="path-card">
+            <div class="path-card__path">Grade → Category → Course Line → Unit → Lesson</div>
+            <p>
+              常见顺序是：打开课程首页，选择年级 <strong>PG / PK / K1 / K2 / K3</strong>，
+              再选择课程类别 <strong>EL / CC / CE / PE</strong>，进入 course line 后选择
+              Unit，最后打开 lesson 或 unit 页面。
+            </p>
+            <p class="muted">
+              可把 home icon / curriculum dashboard 当作起点理解，重点是先选年级，再选类别，再看课程线。
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__heading">
+            <p class="kicker">Lesson reading</p>
+            <h2>如何阅读 lesson 页面</h2>
+          </div>
+          <div class="layout-grid layout-grid--two">
+            <article class="card">
+              <h3>常见页面元素</h3>
+              <ul class="bullet-list">
+                <li>Unit overview</li>
+                <li>Course / lesson directory</li>
+                <li>Lesson outcome</li>
+                <li>Source</li>
+                <li>Language / key vocabulary where applicable</li>
+                <li>Teacher routine language</li>
+                <li>Activities or lesson steps</li>
+                <li>Resources</li>
+                <li>Feedback button</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>阅读原则</h3>
+              <ul class="bullet-list">
+                <li>Not every course has exactly the same fields.</li>
+                <li>Language courses、Core courses、Graded Reading、Art/CE courses 可能会有不同结构。</li>
+                <li>教师应跟随页面结构阅读，而不是强行把每节课套入同一个模板。</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__heading">
+            <p class="kicker">Resources</p>
+            <h2>资源使用说明</h2>
+          </div>
+          <div class="layout-grid layout-grid--two">
+            <article class="card">
+              <h3>资源可能的呈现形式</h3>
+              <ul class="bullet-list">
+                <li>PDF</li>
+                <li>audio</li>
+                <li>video</li>
+                <li>book covers</li>
+                <li>Power Up resources</li>
+                <li>RAZ / Graded Reading resources</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>教师操作</h3>
+              <ul class="bullet-list">
+                <li>点击页面上的 PDF / resource 按钮。</li>
+                <li>audio / video 应从资源链接中打开或播放。</li>
+                <li>不要使用旧的本地 file path。</li>
+                <li>资源打不开时，通过 Feedback 或 admin 报告。</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__heading">
+            <p class="kicker">Feedback</p>
+            <h2>反馈流程</h2>
+          </div>
+          <div class="feedback-card">
+            <p class="feedback-card__lead">
+              每个相关 lesson page 都有 Feedback button。反馈不是投诉箱，而是课程改进通道。
+            </p>
+            <div class="feedback-grid">
+              <div class="feedback-box">
+                <h3>适合提交的内容</h3>
+                <ul class="bullet-list">
+                  <li>不清楚的 lesson content</li>
+                  <li>缺失的 resource</li>
+                  <li>错误的 link</li>
+                  <li>classroom implementation issue</li>
+                  <li>teaching 后的 suggestion</li>
+                </ul>
+              </div>
+              <div class="feedback-box">
+                <h3>建议写清楚</h3>
+                <ul class="bullet-list">
+                  <li>what page</li>
+                  <li>what lesson</li>
+                  <li>what issue</li>
+                  <li>what teacher observed or needs</li>
+                </ul>
+              </div>
+            </div>
+            <div class="note-strip">
+              反馈会和用户账号关联，admin 可以查看并更新反馈状态。
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__heading">
+            <p class="kicker">Teacher habits</p>
+            <h2>教师 Do / Do Not</h2>
+          </div>
+          <div class="layout-grid layout-grid--two">
+            <article class="card card--success">
+              <h3>Do</h3>
+              <ul class="bullet-list">
+                <li>使用自己的账号登录。</li>
+                <li>以系统页面作为主要参考。</li>
+                <li>课前先检查 unit 和 lesson。</li>
+                <li>上课前先打开 resources。</li>
+                <li>遇到不清楚或坏掉的内容就提交 feedback。</li>
+              </ul>
+            </article>
+            <article class="card card--warning">
+              <h3>Do not</h3>
+              <ul class="bullet-list">
+                <li>分享 login codes。</li>
+                <li>编辑 source files。</li>
+                <li>依赖旧截图或旧静态页面。</li>
+                <li>只写 “not working” 却不说明 page details。</li>
+                <li>在学校使用范围外下载或传播 licensed resources。</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__heading">
+            <p class="kicker">FAQ</p>
+            <h2>常见问题</h2>
+          </div>
+          <div class="faq-list">
+            <details open>
+              <summary>如果登录后看不到课程内容怎么办？</summary>
+              <p>先确认是否已经进入 curriculum system，再检查年级、课程类别和 Unit 是否选对；必要时重新登录或联系 admin。</p>
+            </details>
+            <details>
+              <summary>资源按钮点不开怎么办？</summary>
+              <p>先刷新页面，再确认网络与资源链接。如果仍打不开，请在 Feedback 中写明页面、课程线、Unit 和资源名称。</p>
+            </details>
+            <details>
+              <summary>为什么有些 URL 还叫 non-language？</summary>
+              <p>这是历史路由标签。培训中可把它理解成 Core 或对应的 CE 路线，不需要把内部命名当成课程分类本身。</p>
+            </details>
+            <details>
+              <summary>每个课程页面结构都一样吗？</summary>
+              <p>不完全一样。不同课程线会有不同字段，老师应先看页面结构，再按照页面内容进行教学。</p>
+            </details>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

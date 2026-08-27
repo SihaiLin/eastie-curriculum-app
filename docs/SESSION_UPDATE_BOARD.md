@@ -3657,6 +3657,37 @@ Typical useful items include:
 - English input remains intentionally visible in agreed input-list/code-block areas such as teacher routine language, optional challenge outputs, songs/chants, and `HighScope KDI`.
 - The frontend activity-title fallback is only a safety net for legacy untranslated headings; accepted source translations should still provide formal Chinese titles.
 
+## 2026-08-26 — Teacher password login after first email-code verification
+
+### Completed
+- Updated auth flow so teachers can use a one-time email code for first access, then create their own password inside the app.
+- Added API route `POST /api/auth/set-password` for signed-in users verified by email-code session.
+- Relaxed password validation for set/change/reset password flows to require only a non-empty password, with no uppercase/number/symbol complexity rule.
+- Reworked the login page so the default path is email + password, with a first-time email-code path that leads to password creation.
+- Preserved the existing seven-day session cookie behavior and logout flow for shared school computers.
+- Added API test coverage for setting a very simple password after email-code login and signing in with it later.
+
+### Files / Paths
+- `api/src/routes/auth.ts`
+- `api/src/routes/auth.test.ts`
+- `web/src/auth/AuthProvider.tsx`
+- `web/src/auth/LoginPage.tsx`
+- `web/src/auth/authTypes.ts`
+
+### Current Status
+- Teachers can use email + password for routine login after first verification.
+- First-time teachers can still request a 6-digit email code.
+- After the code is verified, the UI asks them to create a password before continuing.
+- `npm test` in `api/` passes: 16/16 tests.
+- `npm run build` passes in both `api/` and `web/`.
+
+### Next Step
+- Browser-review the login page on a real teacher account and confirm the first-time code → create password → future password login sequence feels clear.
+
+### Risks / Notes
+- Because password complexity is intentionally relaxed, teacher onboarding should emphasize logging out on shared classroom computers.
+- No GitHub remote or deployment action was performed in this change.
+
 ## 2026-08-25 — Repo Rebuild Plan
 
 ### Completed
@@ -3676,3 +3707,111 @@ Typical useful items include:
 
 ### Risks / Notes
 - The clean repo should stay separate from the historical working project until the scope is explicitly approved.
+
+## 2026-08-25 — Deployment
+
+### Completed
+- Reviewed clean repo deploy readiness from `/Users/Lucia/Desktop/eastie_curriculum_app`.
+- Confirmed `web` and `api` production builds pass.
+- Scoped resource requirement to Unit Hello and Unit 1 only.
+- Added production Graded Reading Unit 1 resources for K1/K2/K3 using the clean app's expected canonical filenames.
+- Verified 158/158 clean-app K1/K2/K3 Graded Reading Unit 1 resource URLs return 200.
+- Re-verified Power Up K1/K2/K3 Unit Hello and Unit 1 manifests and representative PDF/MP3 URLs return 200.
+
+### Files / Paths
+- Local app: `/Users/Lucia/Desktop/eastie_curriculum_app`
+- Local resource source: `/Users/Lucia/Desktop/eastie_curriculum_project/web/public/curriculum-resources/raz/k-graded-reading/k1-u01`
+- Local resource source: `/Users/Lucia/Desktop/eastie_curriculum_project/web/public/curriculum-resources/raz/k-graded-reading/k2-u01`
+- Local resource source: `/Users/Lucia/Desktop/eastie_curriculum_project/web/public/curriculum-resources/raz/k-graded-reading/k3-u01`
+- Production target: `/var/www/eastie-curriculum-app/curriculum-resources/raz/k-graded-reading/`
+
+### Current Status
+- Unit Hello and Unit 1 resources needed by the clean app are available online.
+- Frontend/API code from the clean repo has not yet been deployed.
+
+### Next Step
+- If PM confirms, deploy the clean repo frontend build and API code while preserving the production resource library and SQLite database.
+
+### Risks / Notes
+- Do not sync `web/public` with deletion from the clean repo, because the clean repo intentionally does not contain the large production resource library.
+- If future pages expose Graded Reading Units 2-9, those canonical resource paths still need a separate scoped verification/sync.
+
+## 2026-08-25 — Deployment
+
+### Completed
+- Deployed the clean repo frontend build from `/Users/Lucia/Desktop/eastie_curriculum_app/web`.
+- Deployed the clean repo API code from `/Users/Lucia/Desktop/eastie_curriculum_app/api`.
+- Preserved the production SQLite database, server `.env`, and existing production resource library.
+- Copied new Vite hashed assets to both the app assets directory and the legacy `/assets` directory required by current Nginx routing.
+- Restarted `eastie-curriculum-api`; service is active.
+- Verified `/api/health`, `/curriculum/`, `/curriculum/k1/language/unit-01`, `/curriculum/k2/language/unit-01`, and `/curriculum/k3/language/unit-01`.
+- Verified clean-app K1/K2/K3 Graded Reading Unit 1 resource URLs: 158/158 return 200.
+
+### Files / Paths
+- Frontend source: `/Users/Lucia/Desktop/eastie_curriculum_app/web`
+- API source: `/Users/Lucia/Desktop/eastie_curriculum_app/api`
+- Production frontend: `/var/www/eastie-curriculum-app`
+- Production API: `/opt/eastie-curriculum-api`
+- Production DB preserved: `/var/lib/eastie-curriculum-api/eastie.sqlite`
+- Backup: `/root/eastie_release_backups/20260825_231952_clean_repo_deploy`
+
+### Current Status
+- Clean repo frontend/API are live on production.
+- Launch resource boundary remains Unit Hello + Unit 1.
+
+### Next Step
+- PM/user should log in through the browser and spot-check Unit Hello + Unit 1 pages, especially FT/front-end edits and source buttons.
+
+### Risks / Notes
+- `npm install` reported 4 audit findings in API dependencies; this did not block deployment but should be reviewed separately.
+- Unit 2-9 Graded Reading canonical resource paths were not synced in this release by scope decision.
+
+## 2026-08-27 — Deployment
+
+### Completed
+- Reviewed the new login flow: first access by enterprise email code, then create a personal password for future email/password login.
+- Confirmed the change is committed locally as `cf2f8f7 Add teacher password setup after email verification`.
+- Ran API test/build and frontend build successfully.
+- Checked that `POST /api/auth/set-password` is implemented and covered by an API test.
+
+### Files / Paths
+- `/Users/Lucia/Desktop/eastie_curriculum_app/api/src/routes/auth.ts`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/api/src/routes/auth.test.ts`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/auth/LoginPage.tsx`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/auth/AuthProvider.tsx`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/auth/authTypes.ts`
+
+### Current Status
+- Build/test gate passes locally.
+- Deployment is not yet recommended as-is for the formal login rollout.
+
+### Next Step
+- Before production deploy, tighten `set-password` so it can only be used after an email-code verified session, then update auth docs to match the new default password-login flow.
+
+### Risks / Notes
+- Current backend allows any authenticated session to call `set-password` without entering the current password. This is convenient for onboarding but too broad for a formal login model.
+- `web/public/training/` is untracked and appears in `web/dist`; exclude or intentionally include it before deployment.
+
+## 2026-08-26 — Deployment
+
+### Completed
+- Checked project documentation for the current login model.
+- Confirmed `api/docs/auth_design.md` already documents enterprise email verification-code login.
+- Updated deployment runbook to replace the old teacher-name/shared-password notes with the production email-code login model.
+- Updated `web/README.md` so local paths point to the clean repo and frontend auth routes match the email-code flow.
+
+### Files / Paths
+- `/Users/Lucia/Desktop/eastie_curriculum_app/docs/deployment.md`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/README.md`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/api/docs/auth_design.md`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/docs/SESSION_UPDATE_BOARD.md`
+
+### Current Status
+- Project records now state that production login uses allowlisted EASTIE enterprise emails plus 6-digit verification codes.
+- Old shared-name/password login is documented as not exposed in the production frontend.
+
+### Next Step
+- Commit/push these documentation updates when the current deployment notes are ready to preserve in Git.
+
+### Risks / Notes
+- The API still retains password login as a backend fallback; remove it in a future hardening pass when no longer needed.

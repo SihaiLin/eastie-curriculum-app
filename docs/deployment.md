@@ -1,7 +1,7 @@
 # EASTIE Deployment Runbook
 
 Status: Active production topology  
-Last updated: 2026-08-23
+Last updated: 2026-08-26
 
 This document records the current real deployment setup for `eastie.sihai.space`.
 It replaces the earlier placeholder deployment note.
@@ -11,19 +11,19 @@ It replaces the earlier placeholder deployment note.
 The clean dynamic app workspace is:
 
 ```text
-/Users/Lucia/Desktop/eastie_curriculum_project/
+/Users/Lucia/Desktop/eastie_curriculum_app/
 ```
 
 Frontend app:
 
 ```text
-/Users/Lucia/Desktop/eastie_curriculum_project/web
+/Users/Lucia/Desktop/eastie_curriculum_app/web
 ```
 
 Backend API:
 
 ```text
-/Users/Lucia/Desktop/eastie_curriculum_project/api
+/Users/Lucia/Desktop/eastie_curriculum_app/api
 ```
 
 Historical curriculum source workspace:
@@ -217,20 +217,31 @@ No browser Basic Auth should block:
 /assets/index-*.css
 ```
 
-Current app login account convention:
+Current app login model:
+
+- Login uses allowlisted EASTIE enterprise email addresses plus a 6-digit email verification code.
+- The primary visible frontend flow is:
+  - `POST /api/auth/request-login-code`
+  - `POST /api/auth/verify-login-code`
+  - `GET /api/auth/me`
+  - `POST /api/auth/logout`
+- Only `active` rows in the API `users` table can request or verify codes.
+- Admin/teacher permissions come from `users.role`.
+- `sihai@eastie.com.cn` is the production admin account.
+- Password login remains a backend fallback only; the production frontend should not expose the old shared-name/password login.
+- Do not write plaintext passwords or SMTP secrets into this runbook.
+
+Allowlist source:
 
 ```text
-<teacher-name>@eastie.space
+EASTIE directory workbook -> api npm run import:directory -> users table
 ```
 
-The frontend also accepts teacher names such as `Jackie` and normalizes them to `jackie@eastie.space`.
+Enterprise email import convention:
 
-Current known password convention:
-
-- `Sihai` / `Lucia`: project-specific admin password
-- other teachers: standard teacher password
-
-Do not write plaintext passwords into this runbook.
+- `EASTIE Space = Admin` -> active admin
+- `EASTIE Space = Active` -> active teacher
+- only `@eastie.com.cn` emails are imported by the directory importer
 
 ### Legacy/static surfaces
 

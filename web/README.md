@@ -64,7 +64,7 @@ Do not use Basic Auth. The frontend uses app-level authentication through the Ex
 Run the API first:
 
 ```bash
-cd /Users/Lucia/Desktop/eastie_curriculum_project/api
+cd /Users/Lucia/Desktop/eastie_curriculum_app/api
 cp .env.example .env
 npm install
 npm run seed
@@ -74,28 +74,29 @@ npm run dev
 Run the web app:
 
 ```bash
-cd /Users/Lucia/Desktop/eastie_curriculum_project/web
+cd /Users/Lucia/Desktop/eastie_curriculum_app/web
 npm install
 npm run dev -- --host 127.0.0.1
 ```
 
 The API defaults to `http://localhost:4000`. Vite proxies `/api/*` to that origin in local dev, so frontend calls can use same-origin URLs such as `/api/auth/me` with `credentials: "include"`.
 
-Seed accounts:
+Local seed accounts still exist for development fallback/testing:
 
 ```text
 admin@eastie.demo / demo-password
 teacher@eastie.demo / demo-password
 ```
 
+Production login uses allowlisted EASTIE enterprise email addresses and a 6-digit email verification code. The production frontend should not show the old shared-name/password login.
+
 Auth routes currently used by the frontend:
 
 ```text
-POST /api/auth/login
+POST /api/auth/request-login-code
+POST /api/auth/verify-login-code
 GET  /api/auth/me
 POST /api/auth/logout
-POST /api/auth/forgot-password
-POST /api/auth/change-password
 ```
 
 Lesson feedback currently posts to:
