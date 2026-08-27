@@ -3935,3 +3935,22 @@ Typical useful items include:
 
 ### Risks / Notes
 - The API still retains password login as a backend fallback; remove it in a future hardening pass when no longer needed.
+
+## 2026-08-27 — Versioning
+
+### Completed
+- Established production release versioning notes for `v2026.08.27-r1`.
+- Added release-note folder rules and the first clean-repo production baseline record.
+
+### Files / Paths
+- `/Users/Lucia/Desktop/eastie_curriculum_app/docs/releases/README.md`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/docs/releases/v2026.08.27-r1.md`
+
+### Current Status
+- Release baseline documentation is ready to commit and tag.
+
+### Next Step
+- Use `vYYYY.MM.DD-rN` for future feedback-based production fixes after deployment verification.
+
+### Risks / Notes
+- No application code, curriculum content, or deployment action was performed for this versioning entry.
