@@ -155,7 +155,8 @@ export function LoginPage() {
           </div>
         </div>
         <p className="login-copy">
-          Sign in with your EASTIE teacher email and password. First-time teachers can verify by email code once, then create a simple password for future logins.
+          Sign in with your EASTIE teacher email and personal password. First-time teachers can verify by email code
+          once, then create a password for future logins. The email code is not your password.
         </p>
         <div className="login-art" aria-hidden="true">
           <img src="/assets/eastie_dolphins.png" alt="" />
@@ -193,7 +194,7 @@ export function LoginPage() {
               {isSubmitting ? "Signing in..." : "Sign In"}
             </button>
             <button className="forgot-password-link" onClick={() => switchMode("code")} type="button">
-              First time here? Sign in by email code
+              First time here? Verify by email code and create a password
             </button>
           </form>
         ) : null}

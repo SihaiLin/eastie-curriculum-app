@@ -2,9 +2,20 @@ import { createContext, useContext, useEffect, useMemo, useState, type ReactNode
 import type { AuthContextValue, AuthUser, LoginInput } from "./authTypes";
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
+const CACHED_AUTH_USER_KEY = "eastie.cachedAuthUser";
+
+class ApiError extends Error {
+  constructor(
+    message: string,
+    readonly status: number,
+  ) {
+    super(message);
+    this.name = "ApiError";
+  }
+}
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [currentUser, setCurrentUser] = useState<AuthUser | null>(null);
+  const [currentUser, setCurrentUser] = useState<AuthUser | null>(() => readCachedUser());
   const [isAuthLoading, setIsAuthLoading] = useState(true);
 
   useEffect(() => {
@@ -14,10 +25,19 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       credentials: "include",
     })
       .then((data) => {
-        if (isMounted) setCurrentUser(data.user);
+        if (isMounted) {
+          setCurrentUser(data.user);
+          writeCachedUser(data.user);
+        }
       })
-      .catch(() => {
-        if (isMounted) setCurrentUser(null);
+      .catch((error) => {
+        if (!isMounted) return;
+        if (isNetworkError(error)) {
+          setCurrentUser(readCachedUser());
+          return;
+        }
+        clearCachedUser();
+        setCurrentUser(null);
       })
       .finally(() => {
         if (isMounted) setIsAuthLoading(false);
@@ -63,6 +83,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           method: "POST",
         });
         setCurrentUser(data.user);
+        writeCachedUser(data.user);
         return data.user;
       },
       logout: async () => {
@@ -70,6 +91,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           credentials: "include",
           method: "POST",
         }).catch(() => undefined);
+        clearCachedUser();
         setCurrentUser(null);
       },
       requestLoginCode: async (email) => {
@@ -140,6 +162,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           method: "POST",
         });
         setCurrentUser(data.user);
+        writeCachedUser(data.user);
         return data.user;
       },
     }),
@@ -166,8 +189,33 @@ async function fetchJson<T>(input: RequestInfo | URL, init?: RequestInit): Promi
   const data = await response.json().catch(() => ({}));
 
   if (!response.ok) {
-    throw new Error(typeof data.error === "string" ? data.error : "Request failed.");
+    throw new ApiError(typeof data.error === "string" ? data.error : "Request failed.", response.status);
   }
 
   return data as T;
+}
+
+function isNetworkError(error: unknown) {
+  return !(error instanceof ApiError);
+}
+
+function readCachedUser(): AuthUser | null {
+  if (typeof window === "undefined") return null;
+  const raw = window.sessionStorage.getItem(CACHED_AUTH_USER_KEY);
+  if (!raw) return null;
+  try {
+    return JSON.parse(raw) as AuthUser;
+  } catch {
+    return null;
+  }
+}
+
+function writeCachedUser(user: AuthUser) {
+  if (typeof window === "undefined") return;
+  window.sessionStorage.setItem(CACHED_AUTH_USER_KEY, JSON.stringify(user));
+}
+
+function clearCachedUser() {
+  if (typeof window === "undefined") return;
+  window.sessionStorage.removeItem(CACHED_AUTH_USER_KEY);
 }

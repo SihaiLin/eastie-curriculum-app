@@ -3792,6 +3792,126 @@ Typical useful items include:
 - Current backend allows any authenticated session to call `set-password` without entering the current password. This is convenient for onboarding but too broad for a formal login model.
 - `web/public/training/` is untracked and appears in `web/dist`; exclude or intentionally include it before deployment.
 
+## 2026-08-27 — Deployment
+
+### Completed
+- Deployed the personal-password login rollout to production.
+- Production frontend now serves the new bundle `index-C8erkhAk.js`.
+- Production API was updated and `eastie-curriculum-api` restarted successfully.
+- Verified `/api/health` returns 200.
+- Verified unauthenticated `POST /api/auth/set-password` returns 401.
+- Verified production `sessions` table now has `auth_method` with default `'password'`.
+- Verified `/curriculum/`, `/curriculum/k1/language/unit-01`, representative RAZ Unit 1 PDF, and representative Power Up Unit Hello manifest still return 200.
+
+### Files / Paths
+- Frontend source: `/Users/Lucia/Desktop/eastie_curriculum_app/web`
+- API source: `/Users/Lucia/Desktop/eastie_curriculum_app/api`
+- Production frontend: `/var/www/eastie-curriculum-app`
+- Production API: `/opt/eastie-curriculum-api`
+- Production DB preserved: `/var/lib/eastie-curriculum-api/eastie.sqlite`
+- Backup: `/root/eastie_release_backups/20260827_085723_password_setup_deploy`
+
+### Current Status
+- Teachers can use the new flow: first-time email code verification, then personal password setup for future login.
+- `set-password` is restricted to email-code sessions; password-authenticated users must use `change-password`.
+
+### Next Step
+- PM/user should perform one real browser test with an active teacher email: request code, verify code, set password, logout, then log back in with email/password.
+
+### Risks / Notes
+- `npm install` still reports 4 API dependency audit findings; review separately.
+- This deployment intentionally did not sync `dist/training/` or the full `web/public` tree.
+
+## 2026-08-27 — Deployment
+
+### Completed
+- Added `charlypadillachalirui@eastie.com.cn` to the production login allowlist.
+- Set the account as `teacher` / `active`.
+- Verified the account can request an email login code through production `/api/auth/request-login-code`.
+
+### Files / Paths
+- Production DB: `/var/lib/eastie-curriculum-api/eastie.sqlite`
+
+### Current Status
+- `charlypadillachalirui@eastie.com.cn` can use the first-time email-code login flow and then set a personal password.
+
+### Next Step
+- Teacher should open `/login`, request a code with the enterprise email, verify it, and create a personal password.
+
+### Risks / Notes
+- This was a direct production allowlist update, not a directory workbook import. If the directory workbook remains the long-term source of truth, add this teacher there too before the next full import.
+
+## 2026-08-27 — Deployment
+
+### Completed
+- Investigated teacher report that an already opened page appears logged out when the computer loses network access.
+- Found the frontend auth bootstrap treated any `/api/auth/me` failure as logged-out, including offline/network errors.
+- Added a local frontend fix so authenticated user state is cached in tab-scoped `sessionStorage`.
+- The app now clears cached auth only on real API auth failures, while network failures keep the already-open session view available.
+- Ran `web npm run build` successfully.
+
+### Files / Paths
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/auth/AuthProvider.tsx`
+
+### Current Status
+- Fix is local only and not yet deployed.
+
+### Next Step
+- Commit and deploy the frontend if PM wants the offline-short-disconnect behavior fixed in production immediately.
+
+### Risks / Notes
+- This preserves page access only for the already-open browser tab while offline; server-backed actions still require network and a valid session.
+
+## 2026-08-27 — Deployment
+
+### Completed
+- Deployed the frontend-only fix for short network disconnects causing an already-open page to appear logged out.
+- Production `/login` and `/curriculum/` now load `index-j-0hUg91.js`.
+- Verified new JS/CSS assets return 200.
+- Verified `/api/health`, `/curriculum/k1/language/unit-01`, and a representative Unit 1 RAZ PDF still return 200.
+
+### Files / Paths
+- Frontend source: `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/auth/AuthProvider.tsx`
+- Production frontend: `/var/www/eastie-curriculum-app`
+- Legacy asset copy: `/var/www/eastie.sihai.space/assets`
+- Backup: `/root/eastie_release_backups/20260827_091520_offline_auth_frontend_fix`
+
+### Current Status
+- Frontend fix is live.
+- API, SQLite database, and curriculum resources were not changed.
+
+### Next Step
+- Commit this frontend fix in the development session so Git history matches production.
+
+### Risks / Notes
+- The fix preserves already-open tab state during network failure; saving feedback/FT edits still requires network connectivity.
+
+## 2026-08-27 — Deployment
+
+### Completed
+- Clarified login/change-password copy after teacher feedback that the email code was mistaken for the current password.
+- Updated login page copy to say teachers use a personal password and that the email code is not the password.
+- Updated the Change Password dialog to explain that current password means the personal password previously created.
+- Deployed the frontend-only copy fix to production.
+- Production `/login` and `/curriculum/` now load `index-DUf7orze.js`.
+- Verified JS/CSS assets, `/api/health`, `/curriculum/k1/language/unit-01`, and a representative Power Up manifest return 200.
+
+### Files / Paths
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/auth/LoginPage.tsx`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/auth/ChangePasswordDialog.tsx`
+- Production frontend: `/var/www/eastie-curriculum-app`
+- Legacy asset copy: `/var/www/eastie.sihai.space/assets`
+- Backup: `/root/eastie_release_backups/20260827_125224_password_copy_frontend_fix`
+
+### Current Status
+- The production UI now distinguishes personal password from the 6-digit email code more clearly.
+
+### Next Step
+- Commit the frontend copy fix in the development session so Git history matches production.
+
+### Risks / Notes
+- API, SQLite database, and curriculum resources were not changed.
+
 ## 2026-08-26 — Deployment
 
 ### Completed

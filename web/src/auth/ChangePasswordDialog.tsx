@@ -55,7 +55,9 @@ export function ChangePasswordDialog({
           </button>
         </div>
         <p className="auth-dialog-copy">
-          Signed in as <strong>{currentUser?.email}</strong>. Password changes are handled by the EASTIE API.
+          Signed in as <strong>{currentUser?.email}</strong>. Current password means the personal password you created
+          before, not the 6-digit email code. If you have not created a password yet, log out and use the first-time
+          email-code flow on the login page.
         </p>
         <form className="login-form" onSubmit={handleSubmit}>
           <label>
