@@ -102,6 +102,24 @@ describe("email code auth", () => {
     assert.equal(loginResponse.body.user.email, "active.teacher@eastie.test");
   });
 
+  it("blocks password-authenticated sessions from directly setting a password", async () => {
+    const passwordAgent = request.agent(app);
+    await passwordAgent
+      .post("/api/auth/login")
+      .send({ email: "active.teacher@eastie.test", password: "1" })
+      .expect(200);
+
+    await passwordAgent
+      .post("/api/auth/set-password")
+      .send({ newPassword: "2" })
+      .expect(403);
+
+    await passwordAgent
+      .post("/api/auth/change-password")
+      .send({ currentPassword: "1", newPassword: "2" })
+      .expect(200);
+  });
+
   it("rejects wrong login codes", async () => {
     await request(app)
       .post("/api/auth/request-login-code")

@@ -4,25 +4,26 @@ import { config, isProduction } from "./config.js";
 import { addDays, hashToken } from "./crypto.js";
 import { db } from "./db.js";
 import { findUserById, toAuthUser } from "./users.js";
-import type { AuthedRequest } from "./types.js";
+import type { AuthedRequest, AuthMethod } from "./types.js";
 
 interface SessionRow {
   id: string;
   user_id: string;
   token_hash: string;
+  auth_method: AuthMethod;
   expires_at: string;
   revoked_at: string | null;
 }
 
-export function createSession(userId: string) {
+export function createSession(userId: string, authMethod: AuthMethod = "password") {
   const token = crypto.randomBytes(32).toString("base64url");
   const sessionId = crypto.randomUUID();
   const expiresAt = addDays(config.sessionDays);
 
   db.prepare(`
-    INSERT INTO sessions (id, user_id, token_hash, expires_at)
-    VALUES (?, ?, ?, ?)
-  `).run(sessionId, userId, hashToken(token), expiresAt);
+    INSERT INTO sessions (id, user_id, token_hash, auth_method, expires_at)
+    VALUES (?, ?, ?, ?, ?)
+  `).run(sessionId, userId, hashToken(token), authMethod, expiresAt);
 
   return { expiresAt, token };
 }
@@ -83,6 +84,7 @@ export function requireAuth(req: AuthedRequest, res: Response, next: NextFunctio
 
   req.user = toAuthUser(user);
   req.sessionId = session.id;
+  req.authMethod = session.auth_method;
   next();
 }
 

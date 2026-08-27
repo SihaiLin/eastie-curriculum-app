@@ -2,6 +2,7 @@ import type { Request } from "express";
 
 export type UserRole = "admin" | "teacher";
 export type UserStatus = "active" | "disabled";
+export type AuthMethod = "email_code" | "password";
 
 export interface AuthUser {
   id: string;
@@ -12,6 +13,7 @@ export interface AuthUser {
 }
 
 export interface AuthedRequest extends Request {
+  authMethod?: AuthMethod;
   user?: AuthUser;
   sessionId?: string;
 }

@@ -60,7 +60,7 @@ router.post("/login", async (req, res) => {
     return;
   }
 
-  const session = createSession(user.id);
+  const session = createSession(user.id, "password");
   setSessionCookie(res, session.token);
   res.json({ user: toAuthUser(user) });
 });
@@ -172,7 +172,7 @@ router.post("/verify-login-code", (req, res) => {
   }
 
   db.prepare("UPDATE email_login_codes SET used_at = datetime('now') WHERE id = ?").run(loginCode.id);
-  const session = createSession(user.id);
+  const session = createSession(user.id, "email_code");
   setSessionCookie(res, session.token);
   res.json({ user: toAuthUser(user) });
 });
@@ -265,6 +265,10 @@ router.post("/set-password", requireAuth, async (req: AuthedRequest, res) => {
   const parsed = setPasswordSchema.safeParse(req.body);
   if (!parsed.success || !req.user) {
     res.status(400).json({ error: "New password is required." });
+    return;
+  }
+  if (req.authMethod !== "email_code") {
+    res.status(403).json({ error: "Please verify your email with a login code before setting a password." });
     return;
   }
 

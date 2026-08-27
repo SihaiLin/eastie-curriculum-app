@@ -26,6 +26,7 @@ export function migrate() {
       id TEXT PRIMARY KEY,
       user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
       token_hash TEXT NOT NULL UNIQUE,
+      auth_method TEXT NOT NULL DEFAULT 'password' CHECK (auth_method IN ('email_code', 'password')),
       expires_at TEXT NOT NULL,
       created_at TEXT NOT NULL DEFAULT (datetime('now')),
       revoked_at TEXT
@@ -160,6 +161,7 @@ export function migrate() {
   `);
 
   addColumnIfMissing("users", "status", "TEXT NOT NULL DEFAULT 'active' CHECK (status IN ('active', 'disabled'))");
+  addColumnIfMissing("sessions", "auth_method", "TEXT NOT NULL DEFAULT 'password' CHECK (auth_method IN ('email_code', 'password'))");
   widenLanguageOverrideLevels();
 }
 
