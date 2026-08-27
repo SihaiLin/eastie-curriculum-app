@@ -3954,3 +3954,23 @@ Typical useful items include:
 
 ### Risks / Notes
 - No application code, curriculum content, or deployment action was performed for this versioning entry.
+
+## 2026-08-27 — Versioning
+
+### Completed
+- Added an active process rule for versioning and change recording so new frontend/API sessions know how to record work.
+- Updated `RULES_INDEX.md` to point the rule center and session-start prompt at the clean repo.
+
+### Files / Paths
+- `/Users/Lucia/Desktop/eastie_curriculum_app/docs/rules/process/versioning_and_change_recording.md`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/docs/RULES_INDEX.md`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/docs/SESSION_UPDATE_BOARD.md`
+
+### Current Status
+- Future sessions can read the new rule to decide when to update `SESSION_UPDATE_BOARD.md`, create release notes, and tag production releases.
+
+### Next Step
+- Include this rule in frontend/web session start prompts when handing off future work.
+
+### Risks / Notes
+- No application code, curriculum content, deployment, or remote push was performed.

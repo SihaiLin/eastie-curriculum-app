@@ -11,13 +11,13 @@ This file does not define the detailed rules for each curriculum level or engine
 The project-level rule center is:
 
 ```text
-/Users/Lucia/Desktop/eastie_curriculum_project/docs/
+/Users/Lucia/Desktop/eastie_curriculum_app/docs/
 ```
 
 The rule registry folder is:
 
 ```text
-/Users/Lucia/Desktop/eastie_curriculum_project/docs/rules/
+/Users/Lucia/Desktop/eastie_curriculum_app/docs/rules/
 ```
 
 The historical curriculum workspace remains a source and reference workspace:
@@ -248,8 +248,10 @@ Current project process references:
   `/Users/Lucia/Desktop/eastie_curriculum_project/docs/rules/process/k2_unit_01_non_language_assembly_checklist.md`
 - Session Progress Reporting:
   `/Users/Lucia/Desktop/eastie_curriculum_project/docs/rules/process/session_progress_reporting.md`
+- Versioning and Change Recording: Active rule for frontend/API session updates, production release notes, `vYYYY.MM.DD-rN` tags, and local Git commit reporting in the clean repo. Read this before frontend work, production release tracking, or version baseline tasks:
+  `/Users/Lucia/Desktop/eastie_curriculum_app/docs/rules/process/versioning_and_change_recording.md`
 - Session Update Board:
-  `/Users/Lucia/Desktop/eastie_curriculum_project/docs/SESSION_UPDATE_BOARD.md`
+  `/Users/Lucia/Desktop/eastie_curriculum_app/docs/SESSION_UPDATE_BOARD.md`
 
 If a process rule becomes stable and reusable, copy or summarize it into `docs/rules/process/` and add it here.
 
@@ -335,12 +337,12 @@ Use this when starting another session:
 
 ```text
 Before working, read:
-/Users/Lucia/Desktop/eastie_curriculum_project/docs/RULES_INDEX.md
+/Users/Lucia/Desktop/eastie_curriculum_app/docs/RULES_INDEX.md
 
 Then read the rule document relevant to your task.
 
 If you create or finalize a new rule document, save it under:
-/Users/Lucia/Desktop/eastie_curriculum_project/docs/rules/
+/Users/Lucia/Desktop/eastie_curriculum_app/docs/rules/
 
 Then update RULES_INDEX.md so future sessions can find it.
 ```
