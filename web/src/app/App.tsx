@@ -115,6 +115,26 @@ export function App() {
           }
         />
         <Route
+          path="/curriculum/k1/non-language/:unitSlug/course-c"
+          element={
+            <ProtectedRoute>
+              <AppLayout language={language} onLanguageChange={setLanguage}>
+                <UnitPage language={language} />
+              </AppLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/curriculum/k1/non-language/:unitSlug/course-c/:lessonSlug"
+          element={
+            <ProtectedRoute>
+              <AppLayout language={language} onLanguageChange={setLanguage}>
+                <UnitPage language={language} />
+              </AppLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
           path="/curriculum/k2/non-language/:unitSlug"
           element={
             <ProtectedRoute>

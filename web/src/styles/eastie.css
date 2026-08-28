@@ -4380,7 +4380,8 @@ button.k-language-token:focus-visible {
 
 .lesson-week-group summary {
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(72px, auto) minmax(0, 1fr);
   gap: 10px;
   align-items: baseline;
   padding: 20px 62px;
@@ -4418,6 +4419,25 @@ button.k-language-token:focus-visible {
   font-size: 1.08rem;
   font-weight: 880;
   white-space: nowrap;
+}
+
+.lesson-week-group summary strong {
+  min-width: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.lesson-week-group summary:hover,
+.lesson-week-group.active summary {
+  background: var(--eastie-teal-soft);
+  outline: 2px solid rgba(21, 54, 92, 0.12);
+  outline-offset: -2px;
+}
+
+.lesson-week-group.active summary strong {
+  color: var(--eastie-navy-dark);
 }
 
 .lesson-week-list {
@@ -5275,6 +5295,62 @@ a.source-ref:focus-visible {
   margin-top: 10px;
   color: var(--eastie-teal);
   font-weight: 850;
+}
+
+.k-week-overview-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.k-week-overview-head h3 {
+  margin-bottom: 4px;
+}
+
+.k-week-summary-grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.k-week-summary-line {
+  display: grid;
+  grid-template-columns: minmax(132px, 0.28fr) minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  padding: 12px 14px;
+  background: rgba(255, 253, 248, 0.72);
+  border: 1px solid var(--border-card);
+  border-radius: 8px;
+}
+
+.k-week-summary-line span {
+  color: var(--eastie-teal);
+  font-size: 0.78rem;
+  font-weight: 880;
+  text-transform: uppercase;
+}
+
+.k-week-summary-line strong {
+  min-width: 0;
+  color: var(--eastie-navy-dark);
+  font-size: 0.96rem;
+  font-weight: 760;
+  line-height: 1.5;
+}
+
+.k-week-summary-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+}
+
+.k-week-summary-chip-row .k-language-token {
+  max-width: 100%;
+  white-space: normal;
 }
 
 .k2-placeholder-field {

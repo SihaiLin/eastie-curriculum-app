@@ -8,6 +8,15 @@ import { k1LanguageUnit06 } from "./generated/k1LanguageUnit06";
 import { k1LanguageUnit07 } from "./generated/k1LanguageUnit07";
 import { k1LanguageUnit08 } from "./generated/k1LanguageUnit08";
 import { k1LanguageUnit09 } from "./generated/k1LanguageUnit09";
+import { k1NonLanguageUnit01 } from "./generated/k1Unit01NonLanguageUnit01";
+import { k1NonLanguageUnit02 } from "./generated/k1Unit02NonLanguageUnit02";
+import { k1NonLanguageUnit03 } from "./generated/k1Unit03NonLanguageUnit03";
+import { k1NonLanguageUnit04 } from "./generated/k1Unit04NonLanguageUnit04";
+import { k1NonLanguageUnit05 } from "./generated/k1Unit05NonLanguageUnit05";
+import { k1NonLanguageUnit06 } from "./generated/k1Unit06NonLanguageUnit06";
+import { k1NonLanguageUnit07 } from "./generated/k1Unit07NonLanguageUnit07";
+import { k1NonLanguageUnit08 } from "./generated/k1Unit08NonLanguageUnit08";
+import { k1NonLanguageUnit09 } from "./generated/k1Unit09NonLanguageUnit09";
 import { k2LanguageUnit00 } from "./generated/k2LanguageUnit00";
 import { k2LanguageUnit01 } from "./generated/k2LanguageUnit01";
 import { k2LanguageUnit02 } from "./generated/k2LanguageUnit02";
@@ -106,6 +115,96 @@ function unitPath(level: CurriculumLevel, courseType: CourseType, unitNumber: nu
 }
 
 export const dynamicUnitManifest: DynamicUnitEntry[] = [
+  {
+    level: "K1",
+    courseType: "non-language",
+    unitNumber: 1,
+    path: unitPath("K1", "non-language", 1),
+    label: "K1 Non-Language Unit 1 Self-Care",
+    renderer: "non-language",
+    status: "active-prototype",
+    unit: k1NonLanguageUnit01,
+  },
+  {
+    level: "K1",
+    courseType: "non-language",
+    unitNumber: 2,
+    path: unitPath("K1", "non-language", 2),
+    label: "K1 Non-Language Unit 2 Self-Care",
+    renderer: "non-language",
+    status: "active-prototype",
+    unit: k1NonLanguageUnit02,
+  },
+  {
+    level: "K1",
+    courseType: "non-language",
+    unitNumber: 3,
+    path: unitPath("K1", "non-language", 3),
+    label: "K1 Non-Language Unit 3 Self-Care",
+    renderer: "non-language",
+    status: "active-prototype",
+    unit: k1NonLanguageUnit03,
+  },
+  {
+    level: "K1",
+    courseType: "non-language",
+    unitNumber: 4,
+    path: unitPath("K1", "non-language", 4),
+    label: "K1 Non-Language Unit 4 Self-Care",
+    renderer: "non-language",
+    status: "active-prototype",
+    unit: k1NonLanguageUnit04,
+  },
+  {
+    level: "K1",
+    courseType: "non-language",
+    unitNumber: 5,
+    path: unitPath("K1", "non-language", 5),
+    label: "K1 Non-Language Unit 5 Self-Care",
+    renderer: "non-language",
+    status: "active-prototype",
+    unit: k1NonLanguageUnit05,
+  },
+  {
+    level: "K1",
+    courseType: "non-language",
+    unitNumber: 6,
+    path: unitPath("K1", "non-language", 6),
+    label: "K1 Non-Language Unit 6 Self-Care",
+    renderer: "non-language",
+    status: "active-prototype",
+    unit: k1NonLanguageUnit06,
+  },
+  {
+    level: "K1",
+    courseType: "non-language",
+    unitNumber: 7,
+    path: unitPath("K1", "non-language", 7),
+    label: "K1 Non-Language Unit 7 Self-Care",
+    renderer: "non-language",
+    status: "active-prototype",
+    unit: k1NonLanguageUnit07,
+  },
+  {
+    level: "K1",
+    courseType: "non-language",
+    unitNumber: 8,
+    path: unitPath("K1", "non-language", 8),
+    label: "K1 Non-Language Unit 8 Self-Care",
+    renderer: "non-language",
+    status: "active-prototype",
+    unit: k1NonLanguageUnit08,
+  },
+  {
+    level: "K1",
+    courseType: "non-language",
+    unitNumber: 9,
+    path: unitPath("K1", "non-language", 9),
+    label: "K1 Non-Language Unit 9 Self-Care",
+    renderer: "non-language",
+    status: "active-prototype",
+    unit: k1NonLanguageUnit09,
+  },
   {
     level: "PG",
     courseType: "non-language",

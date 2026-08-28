@@ -38,6 +38,33 @@ Use this when a graded reading content session or graded reading frontend sessio
 - ...
 ```
 
+## 2026-08-28 — Web
+
+### Completed
+- Integrated K1 Non-Language Course C / PSED and Course D / Self-Care for Units 1-9 into the dynamic curriculum app.
+- Generated runtime TypeScript snapshots from the accepted historical source markdown and zh-CN translation files.
+- Opened K1 dashboard Core Courses links for PSED and Self-Care Units 1-9.
+- Fixed K1 `course-c` routing so PSED uses the dynamic non-language UnitPage instead of the legacy graded-reading renderer.
+- Restored K Language Source fallback display: when resource buttons cannot be resolved, raw source references now show under `References`.
+
+### Files / Paths
+- Source roots: `/Users/Lucia/Desktop/Codex_workspace/PG_PK_Language_Syllabus/06_curriculum_design/k1/non_language_courses/unit_*/`
+- Generated app data: `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/curriculum/generated/k1Unit*NonLanguageUnit*.ts`
+- Dashboard / routing: `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/curriculum/curriculumDashboardConfig.ts`, `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/app/App.tsx`
+
+### Current Status
+- Local frontend build passed with `cd /Users/Lucia/Desktop/eastie_curriculum_app/web && npm run build`.
+- Local dev server is running on `http://127.0.0.1:5173/`; API health is OK on `http://127.0.0.1:4000/api/health`.
+- Production deployment is blocked by SSH access: `root@124.220.44.111` returned `Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password)`.
+
+### Next Step
+- Deploy the current frontend build to production after commit/tag, following `/Users/Lucia/Desktop/eastie_curriculum_app/docs/deployment.md`.
+
+### Risks / Notes
+- Course source markdown remains in the historical curriculum workspace; generated TypeScript files are runtime snapshots.
+- Normal frontend deploy scope remains `web/dist/index.html` and `web/dist/assets/`; do not upload the full resource library.
+- A deployment session with valid server credentials can deploy commit `1d08e4f` using the normal frontend deploy flow.
+
 Typical useful items include:
 
 - resource cleanup completed;

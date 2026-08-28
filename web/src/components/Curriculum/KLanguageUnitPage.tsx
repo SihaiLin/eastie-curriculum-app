@@ -84,6 +84,7 @@ export function KLanguageUnitPage({ unit }: { unit: LanguageUnitData }) {
   const options = [
     { label: "Unit 1 Overview", value: getUnitPath(unit) },
     ...unit.weeks.flatMap((week) => [
+      { label: `Week ${week.week} Overview · ${shortWeekLabel(week)}`, value: `${getUnitPath(unit)}/${week.id}` },
       ...week.lessons.map((lesson) => ({
         label: `Week ${week.week} Day ${getDayNumber(week, lesson)} · ${lesson.title}`,
         value: `${getUnitPath(unit)}/${lesson.id}`,
@@ -118,9 +119,14 @@ export function KLanguageUnitPage({ unit }: { unit: LanguageUnitData }) {
             <span>Unit 1 Overview</span>
           </button>
           {unit.weeks.map((week) => (
-            <details className="lesson-week-group" data-week={week.week} key={week.id} open>
-              <summary>
+            <details className={`lesson-week-group${selectedId === week.id ? " active" : ""}`} data-week={week.week} key={week.id} open>
+              <summary
+                onClick={() => {
+                  window.location.href = `${getUnitPath(unit)}/${week.id}`;
+                }}
+              >
                 <span>Week {week.week}</span>
+                <strong>{shortWeekLabel(week)}</strong>
               </summary>
               <div className="lesson-week-list">
                 {week.lessons.map((lesson) => (
@@ -310,12 +316,50 @@ function KWeekOverview({
   unit: LanguageUnitData;
   week: LanguageUnitData["weeks"][number];
 }) {
+  const [summaryOpen, setSummaryOpen] = useState(false);
+  const overviewOverrides = useUnitLanguageOverrides(unit);
+  const weekSummary = useMemo(
+    () => buildWeekLanguageSummary(unit, week, overviewOverrides.overridesByLesson),
+    [overviewOverrides.overridesByLesson, unit, week],
+  );
+  const teacherSummaryText = buildWeekSummaryText({
+    unitTitle: unit.title,
+    weekTheme: shortWeekLabel(week),
+    keywords: weekSummary.keywords,
+    targetLanguage: weekSummary.targetLanguage,
+    phonics: weekSummary.phonics,
+    songs: weekSummary.songs,
+  });
+
   return (
     <>
       <section className="lesson-field-card unit-overview-field">
         <div className="lesson-field-body">
-          <h3>Week {week.week} Overview</h3>
+          <div className="k-week-overview-head">
+            <div>
+              <h3>Week {week.week} Overview</h3>
+              <p className="muted">
+                Auto-generated from this week's lesson content.
+                {overviewOverrides.status === "loading" ? " Loading teacher edits..." : null}
+              </p>
+            </div>
+            <button className="k-language-summary-button" type="button" onClick={() => setSummaryOpen(true)}>
+              Generate Week Summary
+            </button>
+          </div>
           <p>{week.weeklyOutcome}</p>
+          <div className="k-week-summary-grid">
+            <SummaryLine label="Unit Theme" value={unit.title} />
+            <SummaryLine label="Week Theme" value={shortWeekLabel(week)} />
+            <SummaryLine label="Key Words">
+              <SummaryChipRow items={weekSummary.keywords} emptyText="No keywords listed yet" />
+            </SummaryLine>
+            <SummaryLine label="Target Language">
+              <SummaryChipRow items={weekSummary.targetLanguage} emptyText="No target language listed yet" sentence />
+            </SummaryLine>
+            <SummaryLine label="Phonics" value={weekSummary.phonics.join(" / ")} />
+            <SummaryLine label="Songs" value={weekSummary.songs.join(", ")} />
+          </div>
         </div>
       </section>
       {week.coreLanguage ? (
@@ -347,7 +391,41 @@ function KWeekOverview({
           </div>
         </div>
       </section>
+      {summaryOpen ? <DailySummaryDialog title="Week Summary" text={teacherSummaryText} onClose={() => setSummaryOpen(false)} /> : null}
     </>
+  );
+}
+
+function SummaryLine({ label, value, children }: { label: string; value?: string; children?: ReactNode }) {
+  return (
+    <div className="k-week-summary-line">
+      <span>{label}</span>
+      {children ?? <strong>{value || "Not listed yet"}</strong>}
+    </div>
+  );
+}
+
+function SummaryChipRow({
+  emptyText,
+  items,
+  sentence = false,
+}: {
+  emptyText: string;
+  items: ClassifiedLanguageItem[];
+  sentence?: boolean;
+}) {
+  if (!items.length) return <strong>{emptyText}</strong>;
+  return (
+    <div className="k-week-summary-chip-row">
+      {items.map((item) => (
+        <span
+          className={`k-language-token source-${(item.source ?? "PU").toLowerCase()}${sentence ? " selected-as-sentence" : ""}`}
+          key={`${sentence ? "target" : "keyword"}-${item.text}`}
+        >
+          {item.text}
+        </span>
+      ))}
+    </div>
   );
 }
 
@@ -874,7 +952,7 @@ function SourceDisplay({ value, lessonId, level, unitNumber }: { value: string; 
     return () => { active = false; };
   }, [level, unitNumber]);
 
-  const { pdfItems, pupilBookAudio, activityBookAudio, sharedAudio } = buildPowerUpSourceGroups(value, lessonId, manifest);
+  const { pdfItems, pupilBookAudio, activityBookAudio, sharedAudio, otherItems } = buildPowerUpSourceGroups(value, lessonId, manifest);
   return (
     <div className="source-ref-row">
       {pdfItems.length > 0 ? (
@@ -915,6 +993,16 @@ function SourceDisplay({ value, lessonId, level, unitNumber }: { value: string; 
                 </div>
               </div>
             ) : null}
+          </div>
+        </div>
+      ) : null}
+      {otherItems.length > 0 ? (
+        <div className="source-ref-group">
+          <div className="source-ref-group-title">References</div>
+          <div className="source-ref-group-items">
+            {otherItems.map((res) => (
+              <SourceButton key={res.label} resource={res} />
+            ))}
           </div>
         </div>
       ) : null}
@@ -1590,6 +1678,49 @@ function buildUnitLanguageSummary(unit: LanguageUnitData, overridesByLesson: Uni
   };
 }
 
+function buildWeekLanguageSummary(
+  unit: LanguageUnitData,
+  week: LanguageUnitData["weeks"][number],
+  overridesByLesson: UnitOverrideMap,
+) {
+  const keywordGroups: ClassifiedLanguageItem[][] = [];
+  const targetGroups: ClassifiedLanguageItem[][] = [];
+  const phonics: string[] = [];
+  const songs: string[] = [];
+
+  for (const lesson of week.lessons) {
+    const base = buildLanguageFocus(unit.unitId, lesson);
+    const overrides = overridesByLesson[lesson.id] ?? {};
+    const keywordOverride = overrides["Keywords"];
+    const targetOverride = overrides["Target Language"];
+    const phonicsOverride = overrides["Phonics Content"];
+    const songOverride = overrides["Circle Time Song"];
+
+    keywordGroups.push(
+      keywordOverride?.type === "items"
+        ? keywordOverride.items.map((text) => ({ text, source: "PU" as const }))
+        : base.keywords,
+    );
+    targetGroups.push(
+      targetOverride?.type === "items"
+        ? targetOverride.items.map((text) => ({ text, source: "PU" as const }))
+        : base.targetLanguage,
+    );
+
+    const phonicsText = phonicsOverride?.type === "text" ? phonicsOverride.text : lesson.fields["Phonics Content"] ?? "";
+    const songText = songOverride?.type === "text" ? songOverride.text : lesson.fields["Circle Time Song"] ?? "";
+    if (!isContentTBD(phonicsText)) phonics.push(...splitSummaryItems(phonicsText));
+    if (!isContentTBD(songText)) songs.push(...splitSummaryItems(songText));
+  }
+
+  return {
+    keywords: mergeClassifiedItems(...keywordGroups),
+    targetLanguage: mergeClassifiedItems(...targetGroups),
+    phonics: uniqueSummaryItems(phonics),
+    songs: uniqueSummaryItems(songs),
+  };
+}
+
 /** Placeholder text used when a field has no real content yet. */
 const TBD_MARKERS = [
   "TBD",
@@ -1649,6 +1780,45 @@ function buildDailySummaryText(opts: {
   return lines.join("\n").replace(/\n+$/, "\n");
 }
 
+function buildWeekSummaryText(opts: {
+  unitTitle: string;
+  weekTheme: string;
+  keywords: ClassifiedLanguageItem[];
+  targetLanguage: ClassifiedLanguageItem[];
+  phonics: string[];
+  songs: string[];
+}): string {
+  const blocks: Array<{ label: string; body: string }> = [
+    { label: "Unit Theme", body: opts.unitTitle },
+    { label: "Week Theme", body: opts.weekTheme },
+    { label: "Key Words", body: joinLanguageItems(opts.keywords, ", ") },
+    { label: "Target Language", body: joinLanguageItems(opts.targetLanguage, " / ") },
+    { label: "Phonics", body: opts.phonics.join(" / ") || "Not listed yet" },
+    { label: "Songs", body: opts.songs.join(", ") || "Not listed yet" },
+  ];
+
+  return blocks.map((block) => `${block.label}: ${block.body}`).join("\n") + "\n";
+}
+
+function splitSummaryItems(value: string): string[] {
+  return value
+    .split(/\n|[;,，、|｜]/)
+    .map((item) => item.replace(/^[-*]\s*/, "").trim())
+    .filter(Boolean);
+}
+
+function uniqueSummaryItems(items: string[]): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const item of items) {
+    const key = item.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(item);
+  }
+  return out;
+}
+
 /** Copies text to the clipboard, with a legacy fallback for non-secure contexts. */
 async function copySummaryText(text: string): Promise<boolean> {
   try {
@@ -1675,7 +1845,7 @@ async function copySummaryText(text: string): Promise<boolean> {
   }
 }
 
-function DailySummaryDialog({ text, onClose }: { text: string; onClose: () => void }) {
+function DailySummaryDialog({ text, onClose, title = "Daily Summary" }: { text: string; onClose: () => void; title?: string }) {
   const [value, setValue] = useState(text);
   const [copied, setCopied] = useState(false);
 
@@ -1692,14 +1862,14 @@ function DailySummaryDialog({ text, onClose }: { text: string; onClose: () => vo
       className="k-language-summary-overlay"
       role="dialog"
       aria-modal="true"
-      aria-label="Daily Summary"
+      aria-label={title}
       onMouseDown={(event) => {
         if (event.target === event.currentTarget) onClose();
       }}
     >
       <div className="k-language-summary-modal">
         <div className="k-language-summary-head">
-          <h3>Daily Summary</h3>
+          <h3>{title}</h3>
           <button
             className="k-language-summary-close"
             type="button"

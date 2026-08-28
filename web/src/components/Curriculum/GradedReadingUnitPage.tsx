@@ -1,5 +1,5 @@
 import { Link, useLocation, useParams } from "react-router-dom";
-import { type ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { useAppLanguage } from "../../app/LanguageContext";
 import {
   getKGradedReadingUnit,
@@ -635,10 +635,23 @@ function groupUnitOutcomes(outcomes: readonly string[]) {
 }
 
 function MathLessonView({ lesson, unit }: { lesson: KMathLesson; unit: KMathUnit }) {
+  const [summaryOpen, setSummaryOpen] = useState(false);
+  const dailySummaryText = buildMathDailySummaryText(lesson);
+
   return (
     <article className="lesson-details math-lesson-page">
       <div className="lesson-details-content">
-        <h2 className="section-heading">Lesson {lesson.lessonNumber}: {lesson.title}</h2>
+        <div className="k-language-day-header non-language-lesson-header">
+          <div>
+            <p className="lesson-page-kicker">Lesson {lesson.lessonNumber}</p>
+            <h2 className="section-heading">Lesson {lesson.lessonNumber}: {lesson.title}</h2>
+          </div>
+          <div className="k-language-day-header-actions">
+            <button className="k-language-summary-button" type="button" onClick={() => setSummaryOpen(true)}>
+              Generate Daily Summary
+            </button>
+          </div>
+        </div>
 
       <MathInfoBlock icon="◎" kind="outcome" title="Lesson Outcome">
         <div className="math-outcome-stack">
@@ -703,9 +716,31 @@ function MathLessonView({ lesson, unit }: { lesson: KMathLesson; unit: KMathUnit
       <div className="graded-lesson-feedback">
         <FeedbackButton context={createMathFeedbackContext(unit, lesson)} label="Lesson Feedback" />
       </div>
+      {summaryOpen ? <DailySummaryDialog text={dailySummaryText} onClose={() => setSummaryOpen(false)} /> : null}
       </div>
     </article>
   );
+}
+
+function buildMathDailySummaryText(lesson: KMathLesson) {
+  const ladder = [
+    `Domain: ${lesson.ladder.domain}`,
+    `Stage Focus: ${lesson.ladder.stageFocus}`,
+    `How This Lesson Supports the Ladder: ${lesson.ladder.support}`,
+  ].join("\n");
+  const games = lesson.activities
+    .map((activity, index) => `${index + 1}. ${activity.title}`)
+    .join("\n");
+
+  return [
+    ["Math Growing Ladder", ladder],
+    ["Theme Story Context", lesson.themeStoryContext],
+    ["Activities", games],
+  ]
+    .filter(([, body]) => body.trim())
+    .map(([label, body]) => `${label}:\n${body.trim()}`)
+    .join("\n\n")
+    .concat("\n");
 }
 
 function GradedReadingLessonView({
@@ -1041,6 +1076,78 @@ function localizeArtUnit(unit: KArtUnit | undefined, language: LanguageCode): KA
     overview: translation.overview,
     lessons: translation.lessons,
   };
+}
+
+async function copySummaryText(text: string): Promise<boolean> {
+  try {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text);
+      return true;
+    }
+  } catch {
+    // fall through to legacy path
+  }
+
+  try {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    const ok = document.execCommand("copy");
+    document.body.removeChild(ta);
+    return ok;
+  } catch {
+    return false;
+  }
+}
+
+function DailySummaryDialog({ text, onClose }: { text: string; onClose: () => void }) {
+  const [value, setValue] = useState(text);
+  const [copied, setCopied] = useState(false);
+
+  async function handleCopy() {
+    const ok = await copySummaryText(value);
+    setCopied(ok);
+    if (ok) window.setTimeout(() => setCopied(false), 2000);
+  }
+
+  return (
+    <div
+      className="k-language-summary-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Daily Summary"
+      onMouseDown={(event) => {
+        if (event.target === event.currentTarget) onClose();
+      }}
+    >
+      <div className="k-language-summary-modal">
+        <div className="k-language-summary-head">
+          <h3>Daily Summary</h3>
+          <button className="k-language-summary-close" type="button" aria-label="Close" onClick={onClose}>
+            ×
+          </button>
+        </div>
+        <textarea
+          className="k-language-summary-text"
+          value={value}
+          spellCheck={false}
+          onChange={(event) => setValue(event.target.value)}
+        />
+        <div className="k-language-summary-actions">
+          <button className="k-language-summary-copy" type="button" onClick={handleCopy}>
+            {copied ? "Copied" : "Copy"}
+          </button>
+          <button className="k-language-summary-close-btn" type="button" onClick={onClose}>
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 function createMathFeedbackContext(unit: KMathUnit, lesson: KMathLesson): FeedbackContext {

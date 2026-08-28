@@ -103,7 +103,7 @@ function pgPkCourseRoute(level: CurriculumLevel, unit: DashboardUnitLabel, legac
   return `/curriculum/${level.toLowerCase()}/non-language/${unitSlug(unit)}/course-${legacyCourse}`;
 }
 
-function kCourseRoute(level: CurriculumLevel, unit: DashboardUnitLabel, legacyCourse: "a" | "b" | "c") {
+function kCourseRoute(level: CurriculumLevel, unit: DashboardUnitLabel, legacyCourse: "a" | "b" | "c" | "d") {
   if (unit === "UH") return undefined;
   return `/curriculum/${level.toLowerCase()}/non-language/${unitSlug(unit)}/course-${legacyCourse}`;
 }
@@ -204,8 +204,8 @@ function makeKDashboard(level: "K1" | "K2" | "K3"): DashboardCourseType[] {
   const coreCourseLines: DashboardCourseLine[] = [
     ...(level === "K1"
       ? [
-          makeCourseLine(level, "CC", "Self-Care & Daily Routine Experience", "Self-Care", "self-care-daily-routine", () => undefined),
-          makeCourseLine(level, "CC", "PSED & Safety", "PSED & Safety", "psed-safety", () => undefined),
+          makeCourseLine(level, "CC", "Self-Care & Daily Routine Experience", "Self-Care", "self-care-daily-routine", (unit) => kCourseRoute(level, unit, "d"), UNIT_1_TO_9),
+          makeCourseLine(level, "CC", "PSED & Safety", "PSED & Safety", "psed-safety", (unit) => kCourseRoute(level, unit, "c"), UNIT_1_TO_9),
         ]
       : []),
     makeCourseLine(level, "CC", "Maths", "Maths", "maths", (unit) => kCourseRoute(level, unit, "a"), UNIT_1_TO_9),

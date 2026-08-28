@@ -17,9 +17,11 @@ const level = getArg("--level") ?? "pg";
 const unit = getArg("--unit") ?? "08";
 const sourceRoot = getArg("--source-root");
 const unitNameArg = getArg("--unit-name");
+const onlyCourseArg = getArg("--only-course") ?? getArg("--course");
+const onlyCourseSlugArg = getArg("--course-slug");
 
 if (!sourceRoot || !fs.existsSync(sourceRoot)) {
-  console.error("Usage: node scripts/sync-non-language-unit.mjs --level pg|pk --unit 08 --source-root <path> [--unit-name 'Unit Name']");
+  console.error("Usage: node scripts/sync-non-language-unit.mjs --level pg|pk|k1 --unit 08 --source-root <path> [--unit-name 'Unit Name'] [--only-course d --course-slug self_care]");
   console.error(`Provided source-root: ${sourceRoot}`);
   process.exit(1);
 }
@@ -30,6 +32,13 @@ const expectedLessonCount = UNIT === "00" ? 1 : 4;
 const prefix = `${level.toLowerCase()}Unit${UNIT}`;
 const exportPrefix = `${level.toLowerCase()}NonLanguageUnit${UNIT}`;
 const dataVar = `${prefix}NonLanguage`;
+const onlyCourses = onlyCourseArg
+  ? onlyCourseArg.split(",").map((course) => course.trim().toUpperCase()).filter(Boolean)
+  : [];
+const onlyCourse = onlyCourses[0];
+const onlyCourseSlugs = onlyCourseSlugArg
+  ? onlyCourseSlugArg.split(",").map((slug) => slug.trim().toLowerCase()).filter(Boolean)
+  : [];
 
 const zhDir = path.join(sourceRoot, "02_translations/zh_cn");
 const outputPath = path.join(webRoot, `src/curriculum/generated/${prefix}Markdown.ts`);
@@ -131,9 +140,29 @@ function extractCodeBlocks(text) {
 
 function splitLanguageItems(text) {
   return text
-    .split(/｜|\r?\n/)
+    .split(/｜|\r?\n|,/)
     .map((item) => item.trim())
     .filter(Boolean);
+}
+
+function extractLessonOutcomeSummary(sectionText) {
+  const subs = extractSubsections(sectionText);
+  if (subs.length) {
+    return subs
+      .map((sub) => {
+        const body = sub.body
+          .map((line) => line.trim())
+          .filter((line) => line && !line.startsWith("---"))[0] ?? "";
+        return body ? `${stripInlineMarkdown(sub.title)}: ${stripInlineMarkdown(body)}` : "";
+      })
+      .filter(Boolean)
+      .join(" ");
+  }
+
+  return sectionText
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => line && !line.startsWith("#") && !line.startsWith("---"))[0] ?? "";
 }
 
 function extractActivitySeeds(sectionText) {
@@ -178,8 +207,7 @@ function parseLessonBlock(text) {
   const activitiesSection = sections.find((s) => /suggested activit|建议活动|suggested game/i.test(s.title));
 
   const outcome = outcomeSection
-    ? extractValue(outcomeSection.body.join("\n"), "Cognitive Objectives") ||
-      (outcomeSection.body.map(l => l.trim()).filter(Boolean)[0] ?? "")
+    ? extractLessonOutcomeSummary(outcomeSection.body.join("\n"))
     : "";
 
   const codeBlocks = languageSection ? extractCodeBlocks(languageSection.body.join("\n")) : [];
@@ -400,31 +428,56 @@ const levelUpper = LEVEL;
 
 console.log(`Syncing ${levelUpper} Non-Language Unit ${UNIT}...`);
 
-const commonInfoDir = path.join(sourceRoot, "00_common_info");
+const commonInfoDir = fs.existsSync(path.join(sourceRoot, "00_common_info"))
+  ? path.join(sourceRoot, "00_common_info")
+  : path.join(sourceRoot, "00_unit_overview");
 if (!fs.existsSync(commonInfoDir)) throw new Error(`Missing common info directory: ${commonInfoDir}`);
 const commonInfoFiles = fs.readdirSync(commonInfoDir).filter(f => f.endsWith(".md") && !f.includes("zh_cn"));
-if (!commonInfoFiles.length) throw new Error(`No English markdown found in ${commonInfoDir}`);
-const commonInfoEnPath = path.join(commonInfoDir, commonInfoFiles[0]);
-const commonInfoZhPath = path.join(zhDir, "00_common_info", commonInfoFiles[0].replace(".md", "_zh_cn.md"));
+if (!commonInfoFiles.length && !onlyCourses.length) throw new Error(`No English markdown found in ${commonInfoDir}`);
+const commonInfoEnPath = commonInfoFiles.length ? path.join(commonInfoDir, commonInfoFiles[0]) : null;
+const commonInfoZhDir = path.basename(commonInfoDir);
+const commonInfoZhPath = commonInfoFiles.length
+  ? path.join(zhDir, commonInfoZhDir, commonInfoFiles[0].replace(".md", "_zh_cn.md"))
+  : null;
 
-const enCommon = readFile(commonInfoEnPath);
-const zhCommon = fs.existsSync(commonInfoZhPath) ? readFile(commonInfoZhPath) : "";
+const enCommon = commonInfoEnPath
+  ? readFile(commonInfoEnPath)
+  : `# ${LEVEL} Unit ${Number(UNIT)} Non-Language Course ${onlyCourses.join(", ")}\n\n## Theme Overview\n\n${unitNameArg ?? `${LEVEL} Unit ${Number(UNIT)}`}\n`;
+const zhCommon = commonInfoZhPath && fs.existsSync(commonInfoZhPath) ? readFile(commonInfoZhPath) : "";
 
 const unitTitle = unitNameArg || extractUnitTitle(enCommon);
 const unitTitleZh = zhCommon.trim() ? extractUnitTitle(zhCommon) : unitTitle;
 const themeSlug = unitTitle.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
 const courseDir = path.join(sourceRoot, "01_course_tracks");
-const courseFiles = fs.readdirSync(courseDir).filter(f => f.endsWith(".md") && !f.includes("zh")).sort();
+const allCourseFiles = fs.readdirSync(courseDir).filter(f => f.endsWith(".md") && !f.includes("zh")).sort();
 const zhCourseDir = path.join(zhDir, "01_course_tracks");
 
-const courseCodes = ["A", "B", "C1", "C2", "D", "E", "F", "G"];
+const allCourseCodes = ["A", "B", "C1", "C2", "D", "E", "F", "G"];
+const courseCodes = onlyCourses.length ? onlyCourses : allCourseCodes;
+const courseFiles = onlyCourses.length
+  ? onlyCourses.map((course, index) => {
+      const requiredSlug = onlyCourseSlugs[index] ?? "";
+      return allCourseFiles.find((file) => {
+        const normalized = file.toLowerCase();
+        const lowerCode = course.toLowerCase();
+        return normalized.includes(`_course_${lowerCode}_`) &&
+          (!requiredSlug || normalized.includes(requiredSlug));
+      });
+    }).filter(Boolean)
+  : allCourseFiles;
+
+if (onlyCourses.length && courseFiles.length !== onlyCourses.length) {
+  throw new Error(`Expected ${onlyCourses.length} course files (${onlyCourses.join(", ")}), found ${courseFiles.length} in ${courseDir}`);
+}
 
 const markdownPairs = [];
 const courseData = [];
 
 const commonInfoVar = `${prefix}CommonInfoMarkdown`;
-markdownPairs.push([commonInfoVar, commonInfoEnPath, commonInfoZhPath]);
+if (commonInfoEnPath) {
+  markdownPairs.push([commonInfoVar, commonInfoEnPath, commonInfoZhPath]);
+}
 
 for (let i = 0; i < courseCodes.length; i++) {
   const code = courseCodes[i];
@@ -487,14 +540,18 @@ for (const [exportName, enPath, zhPath] of markdownPairs) {
   generatedMarkdownExports.push(`export const ${exportName}: LocalizedText = ${JSON.stringify({ en, zh }, null, 2)};`);
 }
 
+if (!commonInfoEnPath) {
+  generatedMarkdownExports.push(`export const ${commonInfoVar}: LocalizedText = ${JSON.stringify({ en: enCommon, zh: zhCommon }, null, 2)};`);
+}
+
 if (validationIssues.length > 0) {
   throw new Error(`${levelUpper} Unit ${UNIT} markdown validation failed:\n- ${validationIssues.join("\n- ")}`);
 }
 
-const courseImports = courseCodes.map((code, i) => {
-  if (!courseFiles[i]) return "";
+const courseImports = courseData.map((course) => {
+  const code = course.code;
   return `import { ${prefix}Course${code}Markdown } from "./${prefix}Markdown";`;
-}).filter(Boolean).join("\n");
+}).join("\n");
 
 const courseEntries = courseData.map((cd, i) => {
   const markdownVar = `${prefix}Course${cd.code}Markdown`;
@@ -615,6 +672,6 @@ console.log(`Courses: ${courseData.length}; lessons parsed: ${courseData.reduce(
 console.log(`Generated: ${outputPath}`);
 console.log(`Generated: ${dataOutputPath}`);
 
-if (!fs.existsSync(path.join(sourceRoot, "02_translations/zh_cn/00_common_info"))) {
+if (!onlyCourses.length && !fs.existsSync(path.join(sourceRoot, "02_translations/zh_cn/00_common_info"))) {
   console.warn("Warning: Chinese translations directory not found. Bilingual fields may be incomplete.");
 }
