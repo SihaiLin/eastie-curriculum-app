@@ -3,6 +3,7 @@
 
 import type { CurriculumUnit } from "../types";
 import { k1Unit02CommonInfoMarkdown } from "./k1Unit02Markdown";
+import { k1Unit02CourseAMarkdown } from "./k1Unit02Markdown";
 import { k1Unit02CourseCMarkdown } from "./k1Unit02Markdown";
 import { k1Unit02CourseDMarkdown } from "./k1Unit02Markdown";
 
@@ -32,6 +33,242 @@ export const k1NonLanguageUnit02: CurriculumUnit = {
   overviewSections: [],
   courses: [
   {
+    code: "A",
+    title: { en: "Math / Math Growing Ladder", zh: "数学 / 数学成长阶梯" },
+    purpose: { en: "", zh: "" },
+    sourceMarkdown: k1Unit02CourseAMarkdown,
+    lessons: [
+        {
+            "number": 1,
+            "week": 1,
+            "title": {
+                "en": "Count the Classroom Things",
+                "zh": "数一数教室物品"
+            },
+            "outcome": {
+                "en": "1. Cognitive Objectives: Children understand that classroom objects can be counted one by one, and that the last number said tells how many objects are in the group. 2. Skill-based Objectives: Children point to, touch, move, or cover each classroom object once while counting. They count small groups of pencils, bags, books, chairs, crayons, or flashcards within 10 and begin to match groups to number cards 1-5. 3. Affective Objectives: Children build confidence counting objects from their own classroom and participate with curiosity in a familiar school setting.",
+                "zh": "1. 认知目标: 幼儿理解“数一数教室物品”中的核心数学关系，并把它与“在学校”主题中的具体人物、物品、场景或常规联系起来。重点是通过可见材料和实际操作建立理解。 2. 技能目标: 幼儿练习与“数数到 10”相关的操作，如数数、匹配、比较、排列、分类、测量、表示数量变化或解决简单问题，并在教师支持下用物品、图片、手势或数字记录自己的想法。 3. 情感目标: 幼儿在熟悉的“在学校”情境中建立参与数学活动的信心，愿意观察、尝试、检查，并与同伴分享自己的发现。"
+            },
+            "languageFocus": [
+                "bag",
+                "classroom",
+                "pencil",
+                "playground",
+                "teacher",
+                "book",
+                "chair",
+                "crayon",
+                "one",
+                "two",
+                "three",
+                "four",
+                "five",
+                "six",
+                "seven",
+                "eight",
+                "nine",
+                "ten",
+                "How many?",
+                "count"
+            ],
+            "activitySeeds": [
+                "Classroom Things Count Mission",
+                "Classroom Things Number Rescue",
+                "Classroom Things Count-and-Check Display"
+            ],
+            "languageFocusZh": [
+                "bag",
+                "classroom",
+                "pencil",
+                "playground",
+                "teacher",
+                "book",
+                "chair",
+                "crayon",
+                "one",
+                "two",
+                "three",
+                "four",
+                "five",
+                "six",
+                "seven",
+                "eight",
+                "nine",
+                "ten",
+                "How many?",
+                "count"
+            ],
+            "activitySeedsZh": [
+                "教室物品任务",
+                "教室物品救援",
+                "教室物品检查"
+            ]
+        },
+        {
+            "number": 2,
+            "week": 1,
+            "title": {
+                "en": "Put It In, On, or Under",
+                "zh": "放在里面、上面或下面"
+            },
+            "outcome": {
+                "en": "1. Cognitive Objectives: Children understand that objects can be placed in different positions and that position words help describe where an object is. 2. Skill-based Objectives: Children place classroom objects in, on, or under a table, chair, box, bag, cupboard, or bookcase. They follow positional instructions and check the object location by looking, pointing, or moving the object. 3. Affective Objectives: Children develop confidence following spatial instructions and enjoy moving familiar school objects in a playful classroom routine.",
+                "zh": "1. 认知目标: 幼儿理解“放在里面、上面或下面”中的核心数学关系，并把它与“在学校”主题中的具体人物、物品、场景或常规联系起来。重点是通过可见材料和实际操作建立理解。 2. 技能目标: 幼儿练习与“位置与时间概念”相关的操作，如数数、匹配、比较、排列、分类、测量、表示数量变化或解决简单问题，并在教师支持下用物品、图片、手势或数字记录自己的想法。 3. 情感目标: 幼儿在熟悉的“在学校”情境中建立参与数学活动的信心，愿意观察、尝试、检查，并与同伴分享自己的发现。"
+            },
+            "languageFocus": [
+                "bag",
+                "pencil",
+                "book",
+                "chair",
+                "table",
+                "box",
+                "classroom",
+                "in",
+                "on",
+                "under",
+                "Where?",
+                "put",
+                "here"
+            ],
+            "activitySeeds": [
+                "It In, On, or Under Helper Job",
+                "It In, On, or Under Place-and-Check Game",
+                "It In, On, or Under Job Board"
+            ],
+            "languageFocusZh": [
+                "bag",
+                "pencil",
+                "book",
+                "chair",
+                "table",
+                "box",
+                "classroom",
+                "in",
+                "on",
+                "under",
+                "Where?",
+                "put",
+                "here"
+            ],
+            "activitySeedsZh": [
+                "放入放上放下下面",
+                "放入放上放下下面",
+                "放入放上放下下面"
+            ]
+        },
+        {
+            "number": 3,
+            "week": 1,
+            "title": {
+                "en": "Sort the School Things",
+                "zh": "分类学校物品"
+            },
+            "outcome": {
+                "en": "1. Cognitive Objectives: Children begin to understand that objects can be grouped by one clear attribute, such as what they are, what colour they are, how big they are, or how they are used. 2. Skill-based Objectives: Children sort classroom objects or picture cards into groups by one attribute. They place objects into matching groups, check whether an object belongs, and adjust when an object is in the wrong group. 3. Affective Objectives: Children develop careful observation and persistence while organizing familiar classroom materials.",
+                "zh": "1. 认知目标: 幼儿理解“分类学校物品”中的核心数学关系，并把它与“在学校”主题中的具体人物、物品、场景或常规联系起来。重点是通过可见材料和实际操作建立理解。 2. 技能目标: 幼儿练习与“形状特征与模式”相关的操作，如数数、匹配、比较、排列、分类、测量、表示数量变化或解决简单问题，并在教师支持下用物品、图片、手势或数字记录自己的想法。 3. 情感目标: 幼儿在熟悉的“在学校”情境中建立参与数学活动的信心，愿意观察、尝试、检查，并与同伴分享自己的发现。"
+            },
+            "languageFocus": [
+                "bag",
+                "pencil",
+                "book",
+                "chair",
+                "crayon",
+                "table",
+                "classroom",
+                "same",
+                "different",
+                "colour",
+                "big",
+                "small",
+                "sort",
+                "group"
+            ],
+            "activitySeeds": [
+                "School Things Helper Job",
+                "School Things Place-and-Check Game",
+                "School Things Job Board"
+            ],
+            "languageFocusZh": [
+                "bag",
+                "pencil",
+                "book",
+                "chair",
+                "crayon",
+                "table",
+                "classroom",
+                "same",
+                "different",
+                "colour",
+                "big",
+                "small",
+                "sort",
+                "group"
+            ],
+            "activitySeedsZh": [
+                "学校物品任务",
+                "学校物品救援",
+                "学校物品检查"
+            ]
+        },
+        {
+            "number": 4,
+            "week": 1,
+            "title": {
+                "en": "Classroom Math Hunt",
+                "zh": "教室数学寻宝"
+            },
+            "outcome": {
+                "en": "1. Cognitive Objectives: Children understand that counting, position, and sorting can be used together to solve simple classroom tasks. 2. Skill-based Objectives: Children find classroom objects, count small groups within 10, place objects in/on/under classroom furniture or containers, and sort selected objects by one clear attribute. 3. Affective Objectives: Children build confidence and independence as classroom math helpers, and participate actively in a shared class challenge.",
+                "zh": "1. 认知目标: 幼儿理解“教室数学寻宝”中的核心数学关系，并把它与“在学校”主题中的具体人物、物品、场景或常规联系起来。重点是通过可见材料和实际操作建立理解。 2. 技能目标: 幼儿练习与“位置与时间概念”相关的操作，如数数、匹配、比较、排列、分类、测量、表示数量变化或解决简单问题，并在教师支持下用物品、图片、手势或数字记录自己的想法。 3. 情感目标: 幼儿在熟悉的“在学校”情境中建立参与数学活动的信心，愿意观察、尝试、检查，并与同伴分享自己的发现。"
+            },
+            "languageFocus": [
+                "classroom",
+                "bag",
+                "pencil",
+                "book",
+                "chair",
+                "table",
+                "box",
+                "in",
+                "on",
+                "under",
+                "count",
+                "sort",
+                "same",
+                "different",
+                "How many?"
+            ],
+            "activitySeeds": [
+                "Classroom Math Hunt Helper Job",
+                "Classroom Math Hunt Place-and-Check Game",
+                "Classroom Math Hunt Job Board"
+            ],
+            "languageFocusZh": [
+                "classroom",
+                "bag",
+                "pencil",
+                "book",
+                "chair",
+                "table",
+                "box",
+                "in",
+                "on",
+                "under",
+                "count",
+                "sort",
+                "same",
+                "different",
+                "How many?"
+            ],
+            "activitySeedsZh": [
+                "教室数学寻宝小帮手任务",
+                "教室数学寻宝放一放并检查游戏",
+                "教室数学寻宝任务板"
+            ]
+        }
+    ],
+  },
+  {
     code: "C",
     title: { en: "Social and Emotional Learning", zh: "个人、社会与情绪发展" },
     purpose: { en: "", zh: "" },
@@ -46,7 +283,7 @@ export const k1NonLanguageUnit02: CurriculumUnit = {
             },
             "outcome": {
                 "en": "1. Cognitive Objectives: Children begin to understand a familiar social-emotional idea related to trusting familiar school adults. 2. Skill-based Objectives: Children practise how to identify a trusted adult and seek support with adult modelling, visual cues, puppet support, and repeated opportunities. 3. Affective Objectives: Children feel safer, more connected, and more willing to participate in classroom relationships and routines.",
-                "zh": "1. 认知目标: 幼儿开始理解一个与trusting familiar school adults相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
+                "zh": "1. 认知目标: 幼儿开始理解一个与信任熟悉的学校成人相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
             },
             "languageFocus": [
                 "teacher",
@@ -84,7 +321,7 @@ export const k1NonLanguageUnit02: CurriculumUnit = {
             },
             "outcome": {
                 "en": "1. Cognitive Objectives: Children begin to understand a familiar social-emotional idea related to entering and staying with a small group. 2. Skill-based Objectives: Children practise how to join a group space with support with adult modelling, visual cues, puppet support, and repeated opportunities. 3. Affective Objectives: Children feel safer, more connected, and more willing to participate in classroom relationships and routines.",
-                "zh": "1. 认知目标: 幼儿开始理解一个与entering and staying with a small group相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
+                "zh": "1. 认知目标: 幼儿开始理解一个与进入并留在小组中相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
             },
             "languageFocus": [
                 "group",
@@ -122,7 +359,7 @@ export const k1NonLanguageUnit02: CurriculumUnit = {
             },
             "outcome": {
                 "en": "1. Cognitive Objectives: Children begin to understand a familiar social-emotional idea related to understanding simple safety and social rules. 2. Skill-based Objectives: Children practise how to follow one familiar school rule in context with adult modelling, visual cues, puppet support, and repeated opportunities. 3. Affective Objectives: Children feel safer, more connected, and more willing to participate in classroom relationships and routines.",
-                "zh": "1. 认知目标: 幼儿开始理解一个与understanding simple safety and social rules相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
+                "zh": "1. 认知目标: 幼儿开始理解一个与理解简单的安全和社交规则相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
             },
             "languageFocus": [
                 "walk",
@@ -160,7 +397,7 @@ export const k1NonLanguageUnit02: CurriculumUnit = {
             },
             "outcome": {
                 "en": "1. Cognitive Objectives: Children begin to understand a familiar social-emotional idea related to managing ending and goodbye routines. 2. Skill-based Objectives: Children practise how to join a predictable end-of-day goodbye routine with adult modelling, visual cues, puppet support, and repeated opportunities. 3. Affective Objectives: Children feel safer, more connected, and more willing to participate in classroom relationships and routines.",
-                "zh": "1. 认知目标: 幼儿开始理解一个与managing ending and goodbye routines相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
+                "zh": "1. 认知目标: 幼儿开始理解一个与管理结束和告别常规相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
             },
             "languageFocus": [
                 "goodbye",

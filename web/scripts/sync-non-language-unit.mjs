@@ -461,8 +461,10 @@ const courseFiles = onlyCourses.length
       return allCourseFiles.find((file) => {
         const normalized = file.toLowerCase();
         const lowerCode = course.toLowerCase();
-        return normalized.includes(`_course_${lowerCode}_`) &&
-          (!requiredSlug || normalized.includes(requiredSlug));
+        const codeMatches = normalized.includes(`_course_${lowerCode}_`);
+        const slugMatches = Boolean(requiredSlug && normalized.includes(requiredSlug));
+        return (codeMatches || slugMatches) &&
+          (!requiredSlug || slugMatches);
       });
     }).filter(Boolean)
   : allCourseFiles;

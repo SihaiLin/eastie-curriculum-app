@@ -3,6 +3,7 @@
 
 import type { CurriculumUnit } from "../types";
 import { k1Unit03CommonInfoMarkdown } from "./k1Unit03Markdown";
+import { k1Unit03CourseAMarkdown } from "./k1Unit03Markdown";
 import { k1Unit03CourseCMarkdown } from "./k1Unit03Markdown";
 import { k1Unit03CourseDMarkdown } from "./k1Unit03Markdown";
 
@@ -89,6 +90,216 @@ export const k1NonLanguageUnit03: CurriculumUnit = {
 ],
   courses: [
   {
+    code: "A",
+    title: { en: "Math / Math Growing Ladder", zh: "数学 / 数学成长阶梯" },
+    purpose: { en: "", zh: "" },
+    sourceMarkdown: k1Unit03CourseAMarkdown,
+    lessons: [
+        {
+            "number": 1,
+            "week": 1,
+            "title": {
+                "en": "Count the Fruit Basket",
+                "zh": "数一数水果篮"
+            },
+            "outcome": {
+                "en": "1. Cognitive Objectives: Children understand that a group of food items can be counted one by one, and that the last number said tells how many items are in the group. 2. Skill-based Objectives: Children touch, move, or point to each food item once while counting. They count small groups of fruit or food cards within 10 and begin to match spoken numbers with actual quantities. 3. Affective Objectives: Children build confidence in counting familiar food items and participate with curiosity in a playful food discovery context.",
+                "zh": "1. 认知目标: 幼儿理解“数一数水果篮”中的核心数学关系，并把它与“食物与饮品”主题中的具体人物、物品、场景或常规联系起来。重点是通过可见材料和实际操作建立理解。 2. 技能目标: 幼儿练习与“数数到 10”相关的操作，如数数、匹配、比较、排列、分类、测量、表示数量变化或解决简单问题，并在教师支持下用物品、图片、手势或数字记录自己的想法。 3. 情感目标: 幼儿在熟悉的“食物与饮品”情境中建立参与数学活动的信心，愿意观察、尝试、检查，并与同伴分享自己的发现。"
+            },
+            "languageFocus": [
+                "banana",
+                "grapes",
+                "orange",
+                "watermelon",
+                "food",
+                "fruit",
+                "one",
+                "two",
+                "three",
+                "four",
+                "five",
+                "six",
+                "seven",
+                "eight",
+                "nine",
+                "ten",
+                "How many?",
+                "There are ...",
+                "more",
+                "same"
+            ],
+            "activitySeeds": [
+                "Fruit Basket Count Mission",
+                "Fruit Basket Number Rescue",
+                "Fruit Basket Count-and-Check Display"
+            ],
+            "languageFocusZh": [
+                "banana",
+                "grapes",
+                "orange",
+                "watermelon",
+                "food",
+                "fruit",
+                "one",
+                "two",
+                "three",
+                "four",
+                "five",
+                "six",
+                "seven",
+                "eight",
+                "nine",
+                "ten",
+                "How many?",
+                "There are ...",
+                "more",
+                "same"
+            ],
+            "activitySeedsZh": [
+                "水果篮任务",
+                "水果篮救援",
+                "水果篮检查"
+            ]
+        },
+        {
+            "number": 2,
+            "week": 1,
+            "title": {
+                "en": "One for Each Plate",
+                "zh": "每个盘子一个"
+            },
+            "outcome": {
+                "en": "1. Cognitive Objectives: Children understand that \"one for each\" means every plate, person, or character gets exactly one item. They begin to notice whether a group has enough, not enough, or extra items. 2. Skill-based Objectives: Children distribute food items one by one to plates, characters, or classmates. They check whether each place has one item and adjust when there are too many or too few. 3. Affective Objectives: Children develop care, fairness, and confidence while serving food in a shared pretend-play situation.",
+                "zh": "1. 认知目标: 幼儿理解“每个盘子一个”中的核心数学关系，并把它与“食物与饮品”主题中的具体人物、物品、场景或常规联系起来。重点是通过可见材料和实际操作建立理解。 2. 技能目标: 幼儿练习与“位置与时间概念”相关的操作，如数数、匹配、比较、排列、分类、测量、表示数量变化或解决简单问题，并在教师支持下用物品、图片、手势或数字记录自己的想法。 3. 情感目标: 幼儿在熟悉的“食物与饮品”情境中建立参与数学活动的信心，愿意观察、尝试、检查，并与同伴分享自己的发现。"
+            },
+            "languageFocus": [
+                "plate",
+                "carrot",
+                "egg",
+                "burger",
+                "rice",
+                "one for each",
+                "enough",
+                "more",
+                "same",
+                "not enough"
+            ],
+            "activitySeeds": [
+                "One for Each Plate Helper Job",
+                "One for Each Plate Place-and-Check Game",
+                "One for Each Plate Job Board"
+            ],
+            "languageFocusZh": [
+                "plate",
+                "carrot",
+                "egg",
+                "burger",
+                "rice",
+                "one for each",
+                "enough",
+                "more",
+                "same",
+                "not enough"
+            ],
+            "activitySeedsZh": [
+                "每个盘子一个小帮手任务",
+                "每个盘子一个放一放并检查游戏",
+                "每个盘子一个任务板"
+            ]
+        },
+        {
+            "number": 3,
+            "week": 1,
+            "title": {
+                "en": "Rabbit Gets More Food",
+                "zh": "小兔得到更多食物"
+            },
+            "outcome": {
+                "en": "1. Cognitive Objectives: Children begin to understand that putting two small groups together makes a larger group. They notice that adding more food changes the total quantity. 2. Skill-based Objectives: Children combine two small groups of food within 5, count all items to find the total, and record the result using dots, drawings, stickers, or simple picture marks. 3. Affective Objectives: Children develop curiosity and persistence as they solve small food stories and check their answers with real objects.",
+                "zh": "1. 认知目标: 幼儿理解“小兔得到更多食物”中的核心数学关系，并把它与“食物与饮品”主题中的具体人物、物品、场景或常规联系起来。重点是通过可见材料和实际操作建立理解。 2. 技能目标: 幼儿练习与“用实物进行添加和拿走”相关的操作，如数数、匹配、比较、排列、分类、测量、表示数量变化或解决简单问题，并在教师支持下用物品、图片、手势或数字记录自己的想法。 3. 情感目标: 幼儿在熟悉的“食物与饮品”情境中建立参与数学活动的信心，愿意观察、尝试、检查，并与同伴分享自己的发现。"
+            },
+            "languageFocus": [
+                "rabbit",
+                "hungry",
+                "carrot",
+                "apple",
+                "more",
+                "put together",
+                "now",
+                "altogether",
+                "How many now?"
+            ],
+            "activitySeeds": [
+                "Rabbit Gets More Food Story Mission",
+                "Rabbit Gets More Food Change Check",
+                "Rabbit Gets More Food Number Story"
+            ],
+            "languageFocusZh": [
+                "rabbit",
+                "hungry",
+                "carrot",
+                "apple",
+                "more",
+                "put together",
+                "now",
+                "altogether",
+                "How many now?"
+            ],
+            "activitySeedsZh": [
+                "小兔得到更多食物故事任务",
+                "小兔得到更多食物变化检查",
+                "小兔得到更多食物数字故事"
+            ]
+        },
+        {
+            "number": 4,
+            "week": 1,
+            "title": {
+                "en": "Hungry Rabbit Takes Away",
+                "zh": "饿了的小兔拿走食物"
+            },
+            "outcome": {
+                "en": "1. Cognitive Objectives: Children begin to understand that taking away makes a group smaller. They notice that the number left can be found by counting the remaining objects. 2. Skill-based Objectives: Children remove 1-2 food items from a group within 5, count how many are left, and record the change by moving, covering, crossing out, or drawing food items. 3. Affective Objectives: Children build confidence in solving simple \"what is left?\" problems and enjoy acting out math through a food story.",
+                "zh": "1. 认知目标: 幼儿理解“饿了的小兔拿走食物”中的核心数学关系，并把它与“食物与饮品”主题中的具体人物、物品、场景或常规联系起来。重点是通过可见材料和实际操作建立理解。 2. 技能目标: 幼儿练习与“用实物进行添加和拿走”相关的操作，如数数、匹配、比较、排列、分类、测量、表示数量变化或解决简单问题，并在教师支持下用物品、图片、手势或数字记录自己的想法。 3. 情感目标: 幼儿在熟悉的“食物与饮品”情境中建立参与数学活动的信心，愿意观察、尝试、检查，并与同伴分享自己的发现。"
+            },
+            "languageFocus": [
+                "eat",
+                "hungry",
+                "carrot",
+                "apple",
+                "watermelon",
+                "take away",
+                "left",
+                "less",
+                "all gone",
+                "How many left?"
+            ],
+            "activitySeeds": [
+                "Hungry Rabbit Takes Away Story Mission",
+                "Hungry Rabbit Takes Away Change Check",
+                "Hungry Rabbit Takes Away Number Story"
+            ],
+            "languageFocusZh": [
+                "eat",
+                "hungry",
+                "carrot",
+                "apple",
+                "watermelon",
+                "take away",
+                "left",
+                "less",
+                "all gone",
+                "How many left?"
+            ],
+            "activitySeedsZh": [
+                "饿了的小兔拿走食物故事任务",
+                "饿了的小兔拿走食物变化检查",
+                "饿了的小兔拿走食物数字故事"
+            ]
+        }
+    ],
+  },
+  {
     code: "C",
     title: { en: "Social and Emotional Learning", zh: "个人、社会与情绪发展" },
     purpose: { en: "", zh: "" },
@@ -103,7 +314,7 @@ export const k1NonLanguageUnit03: CurriculumUnit = {
             },
             "outcome": {
                 "en": "1. Cognitive Objectives: Children begin to understand a familiar social-emotional idea related to social participation during snack. 2. Skill-based Objectives: Children practise how to sit near peers and participate in snack routine with adult modelling, visual cues, puppet support, and repeated opportunities. 3. Affective Objectives: Children feel safer, more connected, and more willing to participate in classroom relationships and routines.",
-                "zh": "1. 认知目标: 幼儿开始理解一个与social participation during snack相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
+                "zh": "1. 认知目标: 幼儿开始理解一个与点心时间的社会参与相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
             },
             "languageFocus": [
                 "snack",
@@ -141,7 +352,7 @@ export const k1NonLanguageUnit03: CurriculumUnit = {
             },
             "outcome": {
                 "en": "1. Cognitive Objectives: Children begin to understand a familiar social-emotional idea related to making a simple food or drink choice. 2. Skill-based Objectives: Children practise how to make a supported choice using gesture, card, word, or short phrase with adult modelling, visual cues, puppet support, and repeated opportunities. 3. Affective Objectives: Children feel safer, more connected, and more willing to participate in classroom relationships and routines.",
-                "zh": "1. 认知目标: 幼儿开始理解一个与making a simple food or drink choice相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
+                "zh": "1. 认知目标: 幼儿开始理解一个与做出简单的食物或饮品选择相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
             },
             "languageFocus": [
                 "choose",
@@ -179,7 +390,7 @@ export const k1NonLanguageUnit03: CurriculumUnit = {
             },
             "outcome": {
                 "en": "1. Cognitive Objectives: Children begin to understand a familiar social-emotional idea related to waiting during serving or food play. 2. Skill-based Objectives: Children practise how to wait briefly with adult cue and take a turn with adult modelling, visual cues, puppet support, and repeated opportunities. 3. Affective Objectives: Children feel safer, more connected, and more willing to participate in classroom relationships and routines.",
-                "zh": "1. 认知目标: 幼儿开始理解一个与waiting during serving or food play相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
+                "zh": "1. 认知目标: 幼儿开始理解一个与在分发或食物游戏中等待相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
             },
             "languageFocus": [
                 "wait",
@@ -217,7 +428,7 @@ export const k1NonLanguageUnit03: CurriculumUnit = {
             },
             "outcome": {
                 "en": "1. Cognitive Objectives: Children begin to understand a familiar social-emotional idea related to noticing care and appreciation. 2. Skill-based Objectives: Children practise how to receive or pass an item and join a thank-you routine with adult modelling, visual cues, puppet support, and repeated opportunities. 3. Affective Objectives: Children feel safer, more connected, and more willing to participate in classroom relationships and routines.",
-                "zh": "1. 认知目标: 幼儿开始理解一个与noticing care and appreciation相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
+                "zh": "1. 认知目标: 幼儿开始理解一个与注意照料和感谢相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
             },
             "languageFocus": [
                 "thank you",

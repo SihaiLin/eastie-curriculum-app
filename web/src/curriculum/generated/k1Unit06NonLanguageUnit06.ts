@@ -3,6 +3,7 @@
 
 import type { CurriculumUnit } from "../types";
 import { k1Unit06CommonInfoMarkdown } from "./k1Unit06Markdown";
+import { k1Unit06CourseAMarkdown } from "./k1Unit06Markdown";
 import { k1Unit06CourseCMarkdown } from "./k1Unit06Markdown";
 import { k1Unit06CourseDMarkdown } from "./k1Unit06Markdown";
 
@@ -32,6 +33,284 @@ export const k1NonLanguageUnit06: CurriculumUnit = {
   overviewSections: [],
   courses: [
   {
+    code: "A",
+    title: { en: "Math / Math Growing Ladder", zh: "数学 / 数学成长阶梯" },
+    purpose: { en: "", zh: "" },
+    sourceMarkdown: k1Unit06CourseAMarkdown,
+    lessons: [
+        {
+            "number": 1,
+            "week": 1,
+            "title": {
+                "en": "More, Less, or Equal Toy Boxes",
+                "zh": "玩具盒更多、更少或一样多"
+            },
+            "outcome": {
+                "en": "1. Cognitive Objectives: Children understand that two toy groups can be compared by counting each group and checking which group has more, less, or the same amount. 2. Skill-based Objectives: Children count toys within 10, match toy groups to numerals 1-10, compare two groups, and show more, less, or equal using objects, gestures, or simple comparison mats. 3. Affective Objectives: Children build confidence in comparing familiar toys and participate with curiosity in a playful toy-box situation.",
+                "zh": "1. 认知目标: 幼儿理解“玩具盒更多、更少或一样多”中的核心数学关系，并把它与“玩具”主题中的具体人物、物品、场景或常规联系起来。重点是通过可见材料和实际操作建立理解。 2. 技能目标: 幼儿练习与“理解数量关系”相关的操作，如数数、匹配、比较、排列、分类、测量、表示数量变化或解决简单问题，并在教师支持下用物品、图片、手势或数字记录自己的想法。 3. 情感目标: 幼儿在熟悉的“玩具”情境中建立参与数学活动的信心，愿意观察、尝试、检查，并与同伴分享自己的发现。"
+            },
+            "languageFocus": [
+                "board game",
+                "camera",
+                "doll",
+                "teddy",
+                "train",
+                "ball",
+                "balloon",
+                "bike",
+                "car",
+                "plane",
+                "toy box",
+                "more",
+                "less",
+                "same",
+                "equal",
+                "one",
+                "two",
+                "three",
+                "four",
+                "five",
+                "six",
+                "seven",
+                "eight",
+                "nine",
+                "ten"
+            ],
+            "activitySeeds": [
+                "Toy Boxes Count Mission",
+                "Toy Boxes Number Rescue",
+                "Toy Boxes Count-and-Check Display"
+            ],
+            "languageFocusZh": [
+                "board game",
+                "camera",
+                "doll",
+                "teddy",
+                "train",
+                "ball",
+                "balloon",
+                "bike",
+                "car",
+                "plane",
+                "toy box",
+                "more",
+                "less",
+                "same",
+                "equal",
+                "one",
+                "two",
+                "three",
+                "four",
+                "five",
+                "six",
+                "seven",
+                "eight",
+                "nine",
+                "ten"
+            ],
+            "activitySeedsZh": [
+                "玩具盒任务",
+                "玩具盒救援",
+                "玩具盒检查"
+            ]
+        },
+        {
+            "number": 2,
+            "week": 1,
+            "title": {
+                "en": "Sort the Toy Shop",
+                "zh": "整理玩具商店"
+            },
+            "outcome": {
+                "en": "1. Cognitive Objectives: Children understand that toys can be grouped with purpose and that the same toy can belong to different groups depending on the sorting rule. 2. Skill-based Objectives: Children sort toys by one clear criterion and begin sorting by two criteria, such as toy type and colour, toy type and size, or toy type and material. They explain sorting decisions through pointing, placing, or short labels. 3. Affective Objectives: Children develop flexible thinking and care for shared materials as they organise a pretend toy shop.",
+                "zh": "1. 认知目标: 幼儿理解“整理玩具商店”中的核心数学关系，并把它与“玩具”主题中的具体人物、物品、场景或常规联系起来。重点是通过可见材料和实际操作建立理解。 2. 技能目标: 幼儿练习与“测量与分类”相关的操作，如数数、匹配、比较、排列、分类、测量、表示数量变化或解决简单问题，并在教师支持下用物品、图片、手势或数字记录自己的想法。 3. 情感目标: 幼儿在熟悉的“玩具”情境中建立参与数学活动的信心，愿意观察、尝试、检查，并与同伴分享自己的发现。"
+            },
+            "languageFocus": [
+                "toy shop",
+                "toy box",
+                "car",
+                "train",
+                "bike",
+                "plane",
+                "doll",
+                "teddy",
+                "ball",
+                "balloon",
+                "board game",
+                "big",
+                "small",
+                "colour",
+                "material",
+                "wood",
+                "metal",
+                "plastic",
+                "soft",
+                "sort",
+                "group",
+                "same",
+                "different"
+            ],
+            "activitySeeds": [
+                "Toy Shop Helper Job",
+                "Toy Shop Place-and-Check Game",
+                "Toy Shop Job Board"
+            ],
+            "languageFocusZh": [
+                "toy shop",
+                "toy box",
+                "car",
+                "train",
+                "bike",
+                "plane",
+                "doll",
+                "teddy",
+                "ball",
+                "balloon",
+                "board game",
+                "big",
+                "small",
+                "colour",
+                "material",
+                "wood",
+                "metal",
+                "plastic",
+                "soft",
+                "sort",
+                "group",
+                "same",
+                "different"
+            ],
+            "activitySeedsZh": [
+                "玩具商店任务",
+                "玩具商店救援",
+                "玩具商店检查"
+            ]
+        },
+        {
+            "number": 3,
+            "week": 1,
+            "title": {
+                "en": "Measure the Toy Road",
+                "zh": "测量玩具道路"
+            },
+            "outcome": {
+                "en": "1. Cognitive Objectives: Children begin to understand that length and distance can be measured using repeated same-size units, and that longer roads need more units than shorter roads. 2. Skill-based Objectives: Children build toy roads, measure them with blocks, hands, or steps, compare longer and shorter roads, and record the measurement with objects, dots, or simple number cards. 3. Affective Objectives: Children show persistence while measuring and checking, and enjoy using toys and blocks to solve practical classroom problems.",
+                "zh": "1. 认知目标: 幼儿理解“测量玩具道路”中的核心数学关系，并把它与“玩具”主题中的具体人物、物品、场景或常规联系起来。重点是通过可见材料和实际操作建立理解。 2. 技能目标: 幼儿练习与“测量与分类”相关的操作，如数数、匹配、比较、排列、分类、测量、表示数量变化或解决简单问题，并在教师支持下用物品、图片、手势或数字记录自己的想法。 3. 情感目标: 幼儿在熟悉的“玩具”情境中建立参与数学活动的信心，愿意观察、尝试、检查，并与同伴分享自己的发现。"
+            },
+            "languageFocus": [
+                "car",
+                "train",
+                "bike",
+                "plane",
+                "road",
+                "track",
+                "runway",
+                "block",
+                "hand",
+                "step",
+                "long",
+                "short",
+                "longer",
+                "shorter",
+                "measure",
+                "count",
+                "start",
+                "end"
+            ],
+            "activitySeeds": [
+                "Toy Road Helper Job",
+                "Toy Road Place-and-Check Game",
+                "Toy Road Job Board"
+            ],
+            "languageFocusZh": [
+                "car",
+                "train",
+                "bike",
+                "plane",
+                "road",
+                "track",
+                "runway",
+                "block",
+                "hand",
+                "step",
+                "long",
+                "short",
+                "longer",
+                "shorter",
+                "measure",
+                "count",
+                "start",
+                "end"
+            ],
+            "activitySeedsZh": [
+                "玩具道路任务",
+                "玩具道路救援",
+                "玩具道路检查"
+            ]
+        },
+        {
+            "number": 4,
+            "week": 1,
+            "title": {
+                "en": "Toy Number Stories",
+                "zh": "玩具数字故事"
+            },
+            "outcome": {
+                "en": "1. Cognitive Objectives: Children begin to connect joining and taking-away actions with early mathematical symbols. They understand that + means putting together, - means taking away, and = shows the total or result. 2. Skill-based Objectives: Children act out simple toy number stories within 5, place object groups together or take objects away, match actions to +, -, and = symbol cards, and show the story with toys, pictures, dots, or simple number cards. 3. Affective Objectives: Children build confidence in telling and solving small math stories and show curiosity about how actions can be represented with symbols.",
+                "zh": "1. 认知目标: 幼儿理解“玩具数字故事”中的核心数学关系，并把它与“玩具”主题中的具体人物、物品、场景或常规联系起来。重点是通过可见材料和实际操作建立理解。 2. 技能目标: 幼儿练习与“符号初探”相关的操作，如数数、匹配、比较、排列、分类、测量、表示数量变化或解决简单问题，并在教师支持下用物品、图片、手势或数字记录自己的想法。 3. 情感目标: 幼儿在熟悉的“玩具”情境中建立参与数学活动的信心，愿意观察、尝试、检查，并与同伴分享自己的发现。"
+            },
+            "languageFocus": [
+                "teddy",
+                "doll",
+                "train",
+                "car",
+                "ball",
+                "toy box",
+                "in",
+                "out",
+                "more",
+                "take away",
+                "left",
+                "altogether",
+                "plus",
+                "minus",
+                "equals",
+                "how many now?",
+                "how many left?"
+            ],
+            "activitySeeds": [
+                "Toy Number Stories Story Mission",
+                "Toy Number Stories Change Check",
+                "Toy Number Stories Number Story"
+            ],
+            "languageFocusZh": [
+                "teddy",
+                "doll",
+                "train",
+                "car",
+                "ball",
+                "toy box",
+                "in",
+                "out",
+                "more",
+                "take away",
+                "left",
+                "altogether",
+                "plus",
+                "minus",
+                "equals",
+                "how many now?",
+                "how many left?"
+            ],
+            "activitySeedsZh": [
+                "玩具数字故事故事任务",
+                "玩具数字故事变化检查",
+                "玩具数字故事数字故事"
+            ]
+        }
+    ],
+  },
+  {
     code: "C",
     title: { en: "Social and Emotional Learning", zh: "个人、社会与情绪发展" },
     purpose: { en: "", zh: "" },
@@ -46,7 +325,7 @@ export const k1NonLanguageUnit06: CurriculumUnit = {
             },
             "outcome": {
                 "en": "1. Cognitive Objectives: Children begin to understand a familiar social-emotional idea related to turn-taking with attractive toys. 2. Skill-based Objectives: Children practise how to wait and take a toy turn with support with adult modelling, visual cues, puppet support, and repeated opportunities. 3. Affective Objectives: Children feel safer, more connected, and more willing to participate in classroom relationships and routines.",
-                "zh": "1. 认知目标: 幼儿开始理解一个与turn-taking with attractive toys相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
+                "zh": "1. 认知目标: 幼儿开始理解一个与围绕有吸引力的玩具进行轮流相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
             },
             "languageFocus": [
                 "toy",
@@ -84,7 +363,7 @@ export const k1NonLanguageUnit06: CurriculumUnit = {
             },
             "outcome": {
                 "en": "1. Cognitive Objectives: Children begin to understand a familiar social-emotional idea related to handling frustration in toy play. 2. Skill-based Objectives: Children practise how to use a support strategy when upset with adult modelling, visual cues, puppet support, and repeated opportunities. 3. Affective Objectives: Children feel safer, more connected, and more willing to participate in classroom relationships and routines.",
-                "zh": "1. 认知目标: 幼儿开始理解一个与handling frustration in toy play相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
+                "zh": "1. 认知目标: 幼儿开始理解一个与处理玩具游戏中的挫败感相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
             },
             "languageFocus": [
                 "sad",
@@ -122,7 +401,7 @@ export const k1NonLanguageUnit06: CurriculumUnit = {
             },
             "outcome": {
                 "en": "1. Cognitive Objectives: Children begin to understand a familiar social-emotional idea related to entering peer play gently. 2. Skill-based Objectives: Children practise how to ask or gesture to join play with adult modelling, visual cues, puppet support, and repeated opportunities. 3. Affective Objectives: Children feel safer, more connected, and more willing to participate in classroom relationships and routines.",
-                "zh": "1. 认知目标: 幼儿开始理解一个与entering peer play gently相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
+                "zh": "1. 认知目标: 幼儿开始理解一个与温和地加入同伴游戏相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
             },
             "languageFocus": [
                 "play",
@@ -160,7 +439,7 @@ export const k1NonLanguageUnit06: CurriculumUnit = {
             },
             "outcome": {
                 "en": "1. Cognitive Objectives: Children begin to understand a familiar social-emotional idea related to cooperating after toy play. 2. Skill-based Objectives: Children practise how to join a cooperative toy clean-up routine with adult modelling, visual cues, puppet support, and repeated opportunities. 3. Affective Objectives: Children feel safer, more connected, and more willing to participate in classroom relationships and routines.",
-                "zh": "1. 认知目标: 幼儿开始理解一个与cooperating after toy play相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
+                "zh": "1. 认知目标: 幼儿开始理解一个与在玩具游戏后合作整理相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
             },
             "languageFocus": [
                 "team",

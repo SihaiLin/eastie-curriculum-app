@@ -8,6 +8,39 @@ Read this before asking:
 - what is currently in progress;
 - what should be picked up next.
 
+## 2026-08-30 — Local frontend curriculum sync
+
+### Completed
+- Loaded K1 Non-Language Course A Math / Math Growing Ladder translations into the local frontend for Units 1-9.
+- Re-synced K1 non-language generated data so Units 1-9 now expose Course A, Course C, and Course D together.
+- Fixed the K1 Unit 1 Course A route so the lesson page uses the dynamic Markdown renderer instead of the old graded-reading page.
+- Fixed the dynamic `UnitPage` path fallback so fixed routes such as `/curriculum/k1/non-language/unit-01/course-a/lesson-01` can still resolve `unit-01`.
+- Re-enabled the top Unit 1-9 switcher for K1 Course A after all math units were confirmed available.
+- Verified `web npm run build` passes after the sync and route fixes.
+
+### Files / Paths
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/scripts/sync-non-language-unit.mjs`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/app/App.tsx`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/components/Curriculum/UnitPage.tsx`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/components/Layout/AppLayout.tsx`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/curriculum/generated/k1Unit01Markdown.ts`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/curriculum/generated/k1Unit01NonLanguageUnit01.ts`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/curriculum/generated/k1Unit02Markdown.ts` through `k1Unit09Markdown.ts`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/curriculum/generated/k1Unit02NonLanguageUnit02.ts` through `k1Unit09NonLanguageUnit09.ts`
+
+### Current Status
+- Local K1 non-language Math pages can now be reviewed in English or Chinese from `/curriculum/k1/non-language/unit-01/course-a/lesson-01`.
+- K1 Course A Unit 1-9 navigation should no longer lead to `Course not found`.
+
+### Next Step
+- PM/user should browser-review a few representative K1 Math lessons across Units 1-9 in Chinese mode.
+- If approved, hand off the local changes to the deployment session; this session remains local-only.
+
+### Risks / Notes
+- Original source Markdown files in `/Users/Lucia/Desktop/Codex_workspace/PG_PK_Language_Syllabus/` were not modified by the frontend sync.
+- This was not a production deployment.
+- Several generated files and frontend route/layout changes remain local repo changes until committed.
+
 ## How To Use
 
 - Add one short entry after a meaningful work block.

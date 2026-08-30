@@ -3,6 +3,7 @@
 
 import type { CurriculumUnit } from "../types";
 import { k1Unit01CommonInfoMarkdown } from "./k1Unit01Markdown";
+import { k1Unit01CourseAMarkdown } from "./k1Unit01Markdown";
 import { k1Unit01CourseCMarkdown } from "./k1Unit01Markdown";
 import { k1Unit01CourseDMarkdown } from "./k1Unit01Markdown";
 
@@ -89,6 +90,254 @@ export const k1NonLanguageUnit01: CurriculumUnit = {
 ],
   courses: [
   {
+    code: "A",
+    title: { en: "Math / Math Growing Ladder", zh: "数学 / 数学成长阶梯" },
+    purpose: { en: "", zh: "" },
+    sourceMarkdown: k1Unit01CourseAMarkdown,
+    lessons: [
+        {
+            "number": 1,
+            "week": 1,
+            "title": {
+                "en": "Count the Family Picture",
+                "zh": "数一数家庭照片"
+            },
+            "outcome": {
+                "en": "1. Cognitive Objectives: Children understand that people, friends, family members, and pets in a picture can be counted one by one. They begin to notice that the final number said tells how many are in the group. 2. Skill-based Objectives: Children point to, touch, move, or cover each person or character once while counting. They count small groups within 10 and begin to answer \"How many?\" using fingers, number words, or number cards. 3. Affective Objectives: Children build confidence counting familiar people and characters, and participate with interest in a warm friends-and-family context.",
+                "zh": "1. 认知目标: 幼儿理解图片中的人物、朋友、家庭成员和宠物可以一个一个地数。他们开始注意到，最后说出的数字表示这一组一共有多少。 2. 技能目标: 幼儿在数数时，对每个人物或角色进行一次指点、触摸、移动或覆盖。他们数出 10 以内的小组数量，并开始用手指、数字词或数字卡回答 How many?。 3. 情感目标: 幼儿在数熟悉的人物和角色时建立信心，并在温暖的朋友与家庭情境中有兴趣地参与。"
+            },
+            "languageFocus": [
+                "man",
+                "woman",
+                "boy",
+                "girl",
+                "family",
+                "friend",
+                "pet",
+                "one",
+                "two",
+                "three",
+                "four",
+                "five",
+                "six",
+                "seven",
+                "eight",
+                "nine",
+                "ten",
+                "How many?",
+                "Who's this?"
+            ],
+            "activitySeeds": [
+                "Family Photo Detective",
+                "One Sticker for Each Person",
+                "Number Doorbell"
+            ],
+            "languageFocusZh": [
+                "man",
+                "woman",
+                "boy",
+                "girl",
+                "family",
+                "friend",
+                "pet",
+                "one",
+                "two",
+                "three",
+                "four",
+                "five",
+                "six",
+                "seven",
+                "eight",
+                "nine",
+                "ten",
+                "How many?",
+                "Who's this?"
+            ],
+            "activitySeedsZh": [
+                "家庭照片小侦探",
+                "每人一个小标记",
+                "数字门铃检查"
+            ]
+        },
+        {
+            "number": 2,
+            "week": 1,
+            "title": {
+                "en": "Match the Age Number",
+                "zh": "匹配年龄数字"
+            },
+            "outcome": {
+                "en": "1. Cognitive Objectives: Children understand that a written number can represent a quantity, such as an age or a group of objects. They begin to connect numerals 1-5 with familiar quantities. 2. Skill-based Objectives: Children match number cards 1-5 to ages, fingers, candles, counters, or character cards. They show a number using fingers or objects and place the matching numeral nearby. 3. Affective Objectives: Children feel comfortable using numbers connected to themselves and familiar characters, and participate in a playful age-number matching task.",
+                "zh": "1. 认知目标: 幼儿理解书写数字可以表示一个数量，例如年龄或一组物品的数量。他们开始把 1-5 的数字符号与熟悉的数量联系起来。 2. 技能目标: 幼儿把 1-5 的数字卡与年龄、手指、蜡烛、计数物或角色卡进行匹配。他们用手指或物品表示一个数字，并把匹配的数字符号放在旁边。 3. 情感目标: 幼儿在使用与自己和熟悉角色有关的数字时感到自在，并参与有趣的年龄与数字匹配任务。"
+            },
+            "languageFocus": [
+                "friend",
+                "family",
+                "boy",
+                "girl",
+                "age",
+                "number",
+                "one",
+                "two",
+                "three",
+                "four",
+                "five",
+                "How old?",
+                "How many?",
+                "match"
+            ],
+            "activitySeeds": [
+                "Birthday Badge Rescue",
+                "Show It Like a Friend",
+                "Candle Party Check"
+            ],
+            "languageFocusZh": [
+                "friend",
+                "family",
+                "boy",
+                "girl",
+                "age",
+                "number",
+                "one",
+                "two",
+                "three",
+                "four",
+                "five",
+                "How old?",
+                "How many?",
+                "match"
+            ],
+            "activitySeedsZh": [
+                "生日徽章救援",
+                "像朋友一样表示数字",
+                "蜡烛派对检查"
+            ]
+        },
+        {
+            "number": 3,
+            "week": 1,
+            "title": {
+                "en": "More Friends, Fewer Friends",
+                "zh": "更多朋友，更少朋友"
+            },
+            "outcome": {
+                "en": "1. Cognitive Objectives: Children begin to understand that two groups can be compared by quantity. They notice when one group has more, one group has less, or both groups have the same amount. 2. Skill-based Objectives: Children count or match two small groups of people, friends, or character cards. They compare groups using one-to-one matching, lining up, or counting, and show more, less, or same with gestures or objects. 3. Affective Objectives: Children develop curiosity and confidence when comparing groups, and learn to check carefully instead of guessing quickly.",
+                "zh": "1. 认知目标: 幼儿开始理解两组物品可以按数量进行比较。他们注意到一组可能更多，一组可能更少，也可能两组数量相同。 2. 技能目标: 幼儿数出或匹配两组少量的人物、朋友或角色卡。他们通过一一配对、排队或数数来比较两组，并用手势或物品表示更多、更少或相同。 3. 情感目标: 幼儿在比较数量时发展好奇心和信心，并学习仔细检查，而不是快速猜测。"
+            },
+            "languageFocus": [
+                "friend",
+                "boy",
+                "girl",
+                "group",
+                "more",
+                "less",
+                "same",
+                "count",
+                "match",
+                "How many?",
+                "one",
+                "two",
+                "three",
+                "four",
+                "five"
+            ],
+            "activitySeeds": [
+                "Playground Line Check",
+                "Find Every Friend a Partner",
+                "Picnic Plate Mystery"
+            ],
+            "languageFocusZh": [
+                "friend",
+                "boy",
+                "girl",
+                "group",
+                "more",
+                "less",
+                "same",
+                "count",
+                "match",
+                "How many?",
+                "one",
+                "two",
+                "three",
+                "four",
+                "five"
+            ],
+            "activitySeedsZh": [
+                "游乐场排队检查",
+                "给每个朋友找伙伴",
+                "野餐盘小谜题"
+            ]
+        },
+        {
+            "number": 4,
+            "week": 1,
+            "title": {
+                "en": "Make a Family Number Display",
+                "zh": "制作家庭数字展示"
+            },
+            "outcome": {
+                "en": "1. Cognitive Objectives: Children understand that numbers can be used to describe familiar people and family groups. They begin to see number order and quantity as useful tools for organizing information. 2. Skill-based Objectives: Children count family members, friends, pets, or character cards, choose or place number cards, arrange number cards from 1-10 with support, and add drawings, photos, counters, or stickers to a shared number display. 3. Affective Objectives: Children feel ownership and pride when contributing to a class math display connected to friends and family.",
+                "zh": "1. 认知目标: 幼儿理解数字可以用来描述熟悉的人和家庭组。他们开始把数字顺序和数量看作组织信息的有用工具。 2. 技能目标: 幼儿数家庭成员、朋友、宠物或角色卡，选择或放置数字卡，在支持下排列 1-10 的数字卡，并把绘画、照片、计数物或贴纸加入共同的数字展示中。 3. 情感目标: 幼儿在为与朋友和家庭有关的班级数学展示做贡献时，产生拥有感和自豪感。"
+            },
+            "languageFocus": [
+                "family",
+                "friend",
+                "mum",
+                "dad",
+                "brother",
+                "sister",
+                "pet",
+                "number",
+                "count",
+                "order",
+                "one",
+                "two",
+                "three",
+                "four",
+                "five",
+                "six",
+                "seven",
+                "eight",
+                "nine",
+                "ten"
+            ],
+            "activitySeeds": [
+                "My Family Number Postcard",
+                "Number Parade Helpers",
+                "Friends-and-Family Gallery"
+            ],
+            "languageFocusZh": [
+                "family",
+                "friend",
+                "mum",
+                "dad",
+                "brother",
+                "sister",
+                "pet",
+                "number",
+                "count",
+                "order",
+                "one",
+                "two",
+                "three",
+                "four",
+                "five",
+                "six",
+                "seven",
+                "eight",
+                "nine",
+                "ten"
+            ],
+            "activitySeedsZh": [
+                "我的家庭数字明信片",
+                "数字游行小帮手",
+                "朋友与家庭画廊"
+            ]
+        }
+    ],
+  },
+  {
     code: "C",
     title: { en: "Social and Emotional Learning", zh: "个人、社会与情绪发展" },
     purpose: { en: "", zh: "" },
@@ -103,7 +352,7 @@ export const k1NonLanguageUnit01: CurriculumUnit = {
             },
             "outcome": {
                 "en": "1. Cognitive Objectives: Children begin to understand a familiar social-emotional idea related to belonging with familiar people. 2. Skill-based Objectives: Children practise how to greet a familiar adult or peer with gesture, eye contact, word, or supported phrase with adult modelling, visual cues, puppet support, and repeated opportunities. 3. Affective Objectives: Children feel safer, more connected, and more willing to participate in classroom relationships and routines.",
-                "zh": "1. 认知目标: 幼儿开始理解一个与belonging with familiar people相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
+                "zh": "1. 认知目标: 幼儿开始理解一个与熟悉的人建立归属感相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
             },
             "languageFocus": [
                 "friend",
@@ -141,7 +390,7 @@ export const k1NonLanguageUnit01: CurriculumUnit = {
             },
             "outcome": {
                 "en": "1. Cognitive Objectives: Children begin to understand a familiar social-emotional idea related to recognizing comfort and separation feelings. 2. Skill-based Objectives: Children practise how to choose or point to a feeling card and accept comfort routine with adult modelling, visual cues, puppet support, and repeated opportunities. 3. Affective Objectives: Children feel safer, more connected, and more willing to participate in classroom relationships and routines.",
-                "zh": "1. 认知目标: 幼儿开始理解一个与recognizing comfort and separation feelings相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
+                "zh": "1. 认知目标: 幼儿开始理解一个与认识安慰感和分离感受相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
             },
             "languageFocus": [
                 "happy",
@@ -179,7 +428,7 @@ export const k1NonLanguageUnit01: CurriculumUnit = {
             },
             "outcome": {
                 "en": "1. Cognitive Objectives: Children begin to understand a familiar social-emotional idea related to using gentle hands and friendly body space. 2. Skill-based Objectives: Children practise how to practise gentle touch, waiting, and turn-taking in shared play with adult modelling, visual cues, puppet support, and repeated opportunities. 3. Affective Objectives: Children feel safer, more connected, and more willing to participate in classroom relationships and routines.",
-                "zh": "1. 认知目标: 幼儿开始理解一个与using gentle hands and friendly body space相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
+                "zh": "1. 认知目标: 幼儿开始理解一个与使用温柔的手和友好的身体空间相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
             },
             "languageFocus": [
                 "gentle hands",
@@ -217,7 +466,7 @@ export const k1NonLanguageUnit01: CurriculumUnit = {
             },
             "outcome": {
                 "en": "1. Cognitive Objectives: Children begin to understand a familiar social-emotional idea related to joining a simple group identity routine. 2. Skill-based Objectives: Children practise how to participate in a shared class-family routine with adult modelling, visual cues, puppet support, and repeated opportunities. 3. Affective Objectives: Children feel safer, more connected, and more willing to participate in classroom relationships and routines.",
-                "zh": "1. 认知目标: 幼儿开始理解一个与joining a simple group identity routine相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
+                "zh": "1. 认知目标: 幼儿开始理解一个与参与简单的集体身份常规相关的熟悉社会情绪概念。 2. 技能目标: 幼儿在成人示范、视觉提示、玩偶支持和重复机会中，练习如何围绕该社会情绪常规作出回应。 3. 情感目标: 幼儿在教室关系和常规中感到更安全、更有连接感，也更愿意参与。"
             },
             "languageFocus": [
                 "class",

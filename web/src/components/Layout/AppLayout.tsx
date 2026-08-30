@@ -139,7 +139,15 @@ function isKnownCourseUnit(level: string, courseSlug: string, unitNum: number) {
     return unitNum >= 1 && unitNum <= 9;
   }
 
-  if (["k1", "k2", "k3"].includes(normalizedLevel) && (normalizedCourse === "course-a" || normalizedCourse === "course-b")) {
+  if (normalizedLevel === "k1" && normalizedCourse === "course-a") {
+    return unitNum >= 1 && unitNum <= 9;
+  }
+
+  if (["k1", "k2", "k3"].includes(normalizedLevel) && normalizedCourse === "course-b") {
+    return unitNum >= 1 && unitNum <= 9;
+  }
+
+  if (normalizedLevel === "k1" && (normalizedCourse === "course-c" || normalizedCourse === "course-d")) {
     return unitNum >= 1 && unitNum <= 9;
   }
 

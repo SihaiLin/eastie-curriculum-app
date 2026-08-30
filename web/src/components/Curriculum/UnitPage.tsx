@@ -1,5 +1,5 @@
 import { Fragment, useMemo, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { FeedbackButton } from "../Feedback/FeedbackButton";
 import { createFeedbackPayload } from "../../feedback/feedbackContext";
 import { getDynamicUnitEntry } from "../../curriculum/dynamicUnitManifest";
@@ -9,9 +9,11 @@ import type { CourseTrack, CurriculumUnit, LanguageCode, LanguageSection as Lang
 
 export function UnitPage({ language }: { language: LanguageCode }) {
   const params = useParams();
-  const unitNumber = parseUnitSlug(params.unitSlug);
-  const entry = getDynamicUnitEntry(params.level ?? "", params.courseType ?? "", unitNumber);
-  const selectedCourseCode = params.courseSlug?.replace("course-", "").toUpperCase();
+  const location = useLocation();
+  const pathParams = parseCurriculumPath(location.pathname);
+  const unitNumber = parseUnitSlug(params.unitSlug ?? pathParams.unitSlug);
+  const entry = getDynamicUnitEntry(params.level ?? pathParams.level, params.courseType ?? pathParams.courseType, unitNumber);
+  const selectedCourseCode = (params.courseSlug ?? pathParams.courseSlug)?.replace("course-", "").toUpperCase();
   const selectedLessonNumber = parseLessonSlug(params.lessonSlug);
 
   if (!entry) {
@@ -61,6 +63,17 @@ export function UnitPage({ language }: { language: LanguageCode }) {
       unit={unit}
     />
   );
+}
+
+function parseCurriculumPath(pathname: string) {
+  const parts = pathname.split("/").filter(Boolean);
+  const curriculumIndex = parts.indexOf("curriculum");
+  return {
+    level: curriculumIndex >= 0 ? parts[curriculumIndex + 1] ?? "" : "",
+    courseType: curriculumIndex >= 0 ? parts[curriculumIndex + 2] ?? "" : "",
+    unitSlug: curriculumIndex >= 0 ? parts[curriculumIndex + 3] ?? "" : "",
+    courseSlug: curriculumIndex >= 0 ? parts[curriculumIndex + 4] ?? "" : "",
+  };
 }
 
 function parseUnitSlug(unitSlug: string | undefined) {
@@ -1594,7 +1607,7 @@ function splitDelimitedItems(text: string) {
 }
 
 function splitLanguageChipItems(text: string) {
-  return text.split(/｜|\r?\n/).map(cleanDisplayItem).filter(Boolean);
+  return text.split(/｜|\r?\n|[,，;；、]/).map(cleanDisplayItem).filter(Boolean);
 }
 
 function cleanDisplayItem(item: string) {

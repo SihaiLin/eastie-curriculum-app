@@ -79,7 +79,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <UnitPage language={language} />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -89,7 +89,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <UnitPage language={language} />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -259,7 +259,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <UnitPage language={language} />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -269,7 +269,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <UnitPage language={language} />
               </AppLayout>
             </ProtectedRoute>
           }
