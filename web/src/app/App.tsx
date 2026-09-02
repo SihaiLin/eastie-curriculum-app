@@ -1,19 +1,48 @@
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { Navigate, Route, Routes, useLocation, useParams } from "react-router-dom";
-import { AdminFeedbackPage } from "../admin/AdminFeedbackPage";
 import { AdminRoute } from "../auth/AdminRoute";
-import { LoginPage } from "../auth/LoginPage";
 import { ProtectedRoute } from "../auth/ProtectedRoute";
 import { AppLayout } from "../components/Layout/AppLayout";
-import { CurriculumHome } from "../components/Curriculum/CurriculumHome";
-import { CurriculumStatusPage } from "../components/Curriculum/CurriculumStatusPage";
-import { GradedReadingUnitPage } from "../components/Curriculum/GradedReadingUnitPage";
-import { KLanguageCanonicalPreviewPage } from "../components/Curriculum/KLanguageCanonicalPreviewPage";
-import { KLanguageUnitCentricPreviewPage } from "../components/Curriculum/KLanguageUnitCentricPreviewPage";
-import { LanguageClassificationReviewPage } from "../components/Curriculum/LanguageClassificationReviewPage";
-import { PowerUpResourceReviewPage } from "../components/Curriculum/PowerUpResourceReviewPage";
-import { UnitPage } from "../components/Curriculum/UnitPage";
 import type { LanguageCode } from "../curriculum/types";
+
+const AdminFeedbackPage = lazy(() =>
+  import("../admin/AdminFeedbackPage").then((module) => ({ default: module.AdminFeedbackPage })),
+);
+const LoginPage = lazy(() =>
+  import("../auth/LoginPage").then((module) => ({ default: module.LoginPage })),
+);
+const CurriculumHome = lazy(() =>
+  import("../components/Curriculum/CurriculumHome").then((module) => ({ default: module.CurriculumHome })),
+);
+const CurriculumStatusPage = lazy(() =>
+  import("../components/Curriculum/CurriculumStatusPage").then((module) => ({ default: module.CurriculumStatusPage })),
+);
+const GradedReadingUnitPage = lazy(() =>
+  import("../components/Curriculum/GradedReadingUnitPage").then((module) => ({ default: module.GradedReadingUnitPage })),
+);
+const KLanguageCanonicalPreviewPage = lazy(() =>
+  import("../components/Curriculum/KLanguageCanonicalPreviewPage").then((module) => ({
+    default: module.KLanguageCanonicalPreviewPage,
+  })),
+);
+const KLanguageUnitCentricPreviewPage = lazy(() =>
+  import("../components/Curriculum/KLanguageUnitCentricPreviewPage").then((module) => ({
+    default: module.KLanguageUnitCentricPreviewPage,
+  })),
+);
+const LanguageClassificationReviewPage = lazy(() =>
+  import("../components/Curriculum/LanguageClassificationReviewPage").then((module) => ({
+    default: module.LanguageClassificationReviewPage,
+  })),
+);
+const PowerUpResourceReviewPage = lazy(() =>
+  import("../components/Curriculum/PowerUpResourceReviewPage").then((module) => ({
+    default: module.PowerUpResourceReviewPage,
+  })),
+);
+const UnitPage = lazy(() =>
+  import("../components/Curriculum/UnitPage").then((module) => ({ default: module.UnitPage })),
+);
 
 export function App() {
   const [language, setLanguage] = useState<LanguageCode>("en");
@@ -21,7 +50,8 @@ export function App() {
   return (
     <>
       <ScrollToTop />
-      <Routes>
+      <Suspense fallback={<RouteLoadingFallback />}>
+        <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/" element={<Navigate to="/curriculum" replace />} />
         <Route
@@ -432,8 +462,21 @@ export function App() {
             </ProtectedRoute>
           }
         />
-      </Routes>
+        </Routes>
+      </Suspense>
     </>
+  );
+}
+
+function RouteLoadingFallback() {
+  return (
+    <main className="unit-page">
+      <section className="content">
+        <section className="dashboard-section">
+          <p className="auth-status">Loading EASTIE page...</p>
+        </section>
+      </section>
+    </main>
   );
 }
 

@@ -79,6 +79,7 @@ import { pkLanguageUnit08 } from "./generated/pkLanguageUnit08";
 import { pkLanguageUnit09 } from "./generated/pkLanguageUnit09";
 import type { LanguageUnitData } from "../components/Curriculum/LanguageUnitPage";
 import type { CourseType, CurriculumLevel, CurriculumUnit } from "./types";
+import { unitPath } from "./dynamicUnitPaths";
 
 type DynamicUnitBase = {
   level: CurriculumLevel;
@@ -108,11 +109,6 @@ export type DynamicUnitEntry =
   | NonLanguageDynamicUnitEntry
   | PgPkLanguageDynamicUnitEntry
   | KLanguageDynamicUnitEntry;
-
-function unitPath(level: CurriculumLevel, courseType: CourseType, unitNumber: number) {
-  const unitSlug = unitNumber === 0 ? "unit-uh" : `unit-${String(unitNumber).padStart(2, "0")}`;
-  return `/curriculum/${level.toLowerCase()}/${courseType}/${unitSlug}`;
-}
 
 export const dynamicUnitManifest: DynamicUnitEntry[] = [
   {
@@ -925,15 +921,7 @@ export function getDynamicUnitPath(
   courseType: string,
   unitNumber: number,
 ) {
-  if (
-    ["k1", "k2", "k3"].includes(level.toLowerCase()) &&
-    courseType === "non-language" &&
-    unitNumber >= 1 &&
-    unitNumber <= 9
-  ) {
-    return `/curriculum/${level.toLowerCase()}/non-language/unit-${String(unitNumber).padStart(2, "0")}`;
-  }
-  return getDynamicUnitEntry(level, courseType, unitNumber)?.path ?? null;
+  return unitPath(level as CurriculumLevel, normalizeManifestCourseType(courseType), unitNumber);
 }
 
 function normalizeManifestCourseType(courseType: string): CourseType {

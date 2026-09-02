@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { LanguageProvider } from "../../app/LanguageContext";
 import { useAuth } from "../../auth/AuthProvider";
 import { ChangePasswordDialog } from "../../auth/ChangePasswordDialog";
-import { getDynamicUnitPath } from "../../curriculum/dynamicUnitManifest";
+import { getDynamicUnitPath } from "../../curriculum/dynamicUnitPaths";
 import type { LanguageCode } from "../../curriculum/types";
 import { LanguageToggle } from "../LanguageToggle/LanguageToggle";
 
