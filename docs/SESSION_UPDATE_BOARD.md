@@ -41,6 +41,58 @@ Read this before asking:
 - This was not a production deployment.
 - Several generated files and frontend route/layout changes remain local repo changes until committed.
 
+## 2026-09-02 — Web bundle optimization
+
+### Completed
+- Completed phase 1 frontend bundle optimization without restructuring generated curriculum data.
+- Added route-level `React.lazy` splitting for login, curriculum, admin, review, and unit pages.
+- Detached `AppLayout` unit navigation from the heavy `dynamicUnitManifest` import by adding a lightweight dynamic unit path helper.
+- Added a shared route loading fallback: `Loading EASTIE page...`.
+- Verified `web npm run build` passes.
+
+### Files / Paths
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/app/App.tsx`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/components/Layout/AppLayout.tsx`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/curriculum/dynamicUnitPaths.ts`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/curriculum/dynamicUnitManifest.ts`
+
+### Current Status
+- Main JS bundle dropped from the previous single `index-qwsgbC65.js` at `8.3MB` raw to `index-B3gym3x4.js` at `252.00KB` raw / `78.94KB` gzip.
+- Heavy curriculum data is now emitted as lazy chunks, including `dynamicUnitManifest-CsEuith6.js` at `5.55MB` raw / `874.44KB` gzip and `GradedReadingUnitPage-DTR5Q_P0.js` at `2.09MB` raw / `254.01KB` gzip.
+- Further reductions require phase 2 async unit loaders / per-unit generated data splitting.
+
+### Next Step
+- Deployment session can deploy and verify production loading speed after this work is committed.
+- If production still needs smaller unit-route chunks, continue with dynamic manifest async loader and per-unit K math/reading/art data splitting.
+
+### Risks / Notes
+- This phase intentionally did not perform a large generated curriculum data refactor.
+- Rare review pages and curriculum data can still load large lazy chunks when those routes are opened.
+
+## 2026-09-03 — Country Exploration
+
+### Completed
+- Added Country Exploration curriculum schema and country repetition logic rule documents.
+- Registered shared Country Exploration rules in the curriculum rules README.
+- Added a K1/K2/K3 Country Exploration country-list prototype to the curriculum dashboard.
+
+### Files / Paths
+- `/Users/Lucia/Desktop/eastie_curriculum_app/docs/rules/curriculum/country_exploration_schema.md`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/docs/rules/curriculum/country_exploration_repetition_logic.md`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/docs/rules/curriculum/README.md`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/components/Curriculum/CurriculumHome.tsx`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/styles/eastie.css`
+
+### Current Status
+- Local only and ready for PM/frontend review.
+- Country chips are a dashboard prototype; individual country pages are still in design.
+
+### Next Step
+- Confirm the country library navigation model before building country detail routes.
+
+### Risks / Notes
+- No production deployment or remote push was performed.
+
 ## How To Use
 
 - Add one short entry after a meaningful work block.
@@ -3880,6 +3932,25 @@ Typical useful items include:
 
 ### Risks / Notes
 - `npm install` still reports 4 API dependency audit findings; review separately.
+
+## 2026-08-31 — Deployment
+
+### Completed
+- Located Damien's production account: `damienleroux@eastie.com.cn`.
+- Set a temporary personal password directly in the production `users` table because email delivery is not working for this teacher.
+- Verified password login succeeds, `/api/auth/me` returns the expected teacher account, and logout succeeds.
+
+### Files / Paths
+- Production DB: `/var/lib/eastie-curriculum-api/eastie.sqlite`
+
+### Current Status
+- Damien can log in with email/password while email-code delivery is being investigated.
+
+### Next Step
+- Ask Damien to sign in and then optionally change the password from the account menu.
+
+### Risks / Notes
+- Password value was not written into project docs. Treat the manually shared password as temporary.
 - This deployment intentionally did not sync `dist/training/` or the full `web/public` tree.
 
 ## 2026-08-27 — Deployment
@@ -3972,6 +4043,32 @@ Typical useful items include:
 ### Risks / Notes
 - API, SQLite database, and curriculum resources were not changed.
 
+## 2026-08-30 — Deployment
+
+### Completed
+- Deployed commit `5320d542dceabf14d8d1e27b912baf279629c8e0` to production.
+- Frontend now serves `index-qwsgbC65.js` and `index-DRcDUOpa.css`.
+- API code was synced, built, and `eastie-curriculum-api` was restarted successfully.
+- Verified `/api/health`, `/login`, `/curriculum/`, K1 Course C/D routes, a representative K1 language Unit 1 route, and representative Unit Hello/Unit 1 resources.
+- Confirmed `dist/training/` was not deployed and production has no `/var/www/eastie-curriculum-app/training` directory.
+
+### Files / Paths
+- Frontend source: `/Users/Lucia/Desktop/eastie_curriculum_app/web`
+- API source: `/Users/Lucia/Desktop/eastie_curriculum_app/api`
+- Production frontend: `/var/www/eastie-curriculum-app`
+- Production API: `/opt/eastie-curriculum-api`
+- Backup: `/root/eastie_release_backups/20260830_163838_k1_course_cd_deploy`
+
+### Current Status
+- Latest K1 non-language Course C/D unit snapshots are live.
+- Training page remains excluded from production deployment.
+
+### Next Step
+- PM/user should browser-check the newly exposed K1 Course C/D pages while logged in.
+
+### Risks / Notes
+- `npm install` still reports 4 API dependency audit findings; review separately.
+
 ## 2026-08-26 — Deployment
 
 ### Completed
@@ -4034,3 +4131,46 @@ Typical useful items include:
 
 ### Risks / Notes
 - No application code, curriculum content, deployment, or remote push was performed.
+## 2026-09-02 — Deployment
+
+### Completed
+- Enabled gzip compression for production Nginx text assets on `eastie.sihai.space`.
+- Verified the main frontend JS bundle now returns `Content-Encoding: gzip`.
+- Verified the current JS transfer artifact is about `1.3M` compressed instead of `8.3M` uncompressed.
+- Verified the current CSS transfer artifact is about `21K` compressed.
+
+### Files / Paths
+- Production Nginx config: `/etc/nginx/conf.d/eastie.sihai.space.conf`
+- Backup: `/root/eastie_release_backups/nginx_eastie_gzip_20260902_105557.conf`
+
+### Current Status
+- First-load network weight is reduced, but the frontend bundle is still structurally large.
+- `/curriculum/` remains reachable with `200 OK`.
+
+### Next Step
+- Frontend session should continue with bundle splitting/lazy loading and clearer loading states.
+
+### Risks / Notes
+- This was an Nginx-only performance mitigation; no frontend build, API deploy, database change, or resource sync was performed.
+
+## 2026-09-02 — Deployment
+
+### Completed
+- Updated production Nginx so the public EASTIE homepage at `/` no longer inherits the old Basic Auth prompt.
+- Kept `/curriculum/` on the current app login flow.
+- Verified `/term_growth_reports/` still returns Basic Auth protection.
+- Verified homepage CSS and crest image load publicly.
+
+### Files / Paths
+- Production Nginx config: `/etc/nginx/conf.d/eastie.sihai.space.conf`
+- Backup: `/root/eastie_release_backups/nginx_eastie_home_public_20260902_101913.conf`
+
+### Current Status
+- `https://eastie.sihai.space/` returns `200 OK` for the homepage.
+- `https://eastie.sihai.space/curriculum/` returns `200 OK`.
+
+### Next Step
+- PM/user should open the bare domain on a machine that previously failed and confirm the homepage is visible.
+
+### Risks / Notes
+- This was an Nginx-only route/auth change; no frontend build, API deploy, or resource sync was performed.
