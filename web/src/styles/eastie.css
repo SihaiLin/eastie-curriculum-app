@@ -6416,9 +6416,9 @@ a.source-ref:focus-visible {
 }
 
 .country-exploration-toggle {
-  display: inline-flex;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: center;
   gap: 8px;
   width: 100%;
   min-height: 34px;
@@ -6433,6 +6433,17 @@ a.source-ref:focus-visible {
   font-weight: 900;
   line-height: 1;
   transition: transform 0.16s ease, border-color 0.16s ease, background 0.16s ease, box-shadow 0.16s ease;
+}
+
+.country-exploration-toggle > span:not(.country-exploration-toggle-icon) {
+  justify-self: start;
+}
+
+.country-exploration-toggle small {
+  color: var(--eastie-teal);
+  font-size: 0.72rem;
+  font-weight: 900;
+  white-space: nowrap;
 }
 
 .country-exploration-toggle:hover {
@@ -6456,6 +6467,39 @@ a.source-ref:focus-visible {
   line-height: 1;
 }
 
+.country-exploration-groups {
+  display: grid;
+  gap: 10px;
+}
+
+.country-exploration-group {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid rgba(17, 43, 74, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 253, 247, 0.58);
+}
+
+.country-exploration-group.is-current {
+  border-color: rgba(247, 185, 30, 0.48);
+  background: rgba(255, 250, 240, 0.92);
+  box-shadow: 0 10px 24px rgba(247, 185, 30, 0.12);
+}
+
+.country-exploration-group h4 {
+  margin: 0;
+  color: var(--eastie-navy-dark);
+  font-size: 0.78rem;
+  font-weight: 950;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.country-exploration-group.is-current h4 {
+  color: #b27612;
+}
+
 .country-exploration-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -6475,6 +6519,19 @@ a.source-ref:focus-visible {
   background: rgba(255, 253, 247, 0.82);
   color: var(--eastie-navy-dark);
   cursor: default;
+  text-decoration: none;
+}
+
+.country-exploration-chip.is-available {
+  cursor: pointer;
+  transition: transform 0.16s ease, border-color 0.16s ease, background 0.16s ease, box-shadow 0.16s ease;
+}
+
+.country-exploration-chip.is-available:hover {
+  border-color: var(--eastie-yellow);
+  background: #fffaf0;
+  box-shadow: 0 8px 20px rgba(247, 185, 30, 0.18);
+  transform: translateY(-1px);
 }
 
 .country-exploration-flag {
@@ -6518,6 +6575,113 @@ a.source-ref:focus-visible {
 
 .course-lesson-sidebar .sidebar-link {
   border-top: 1px solid var(--border-card);
+}
+
+.country-exploration-page .sidebar h2 {
+  display: block;
+}
+
+.country-hero-focus {
+  max-width: 72ch;
+  margin: 0;
+  color: var(--text-main);
+  font-size: 1rem;
+  font-weight: 760;
+  line-height: 1.55;
+}
+
+.country-overview-grid {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.country-info-card .unit8-card-body {
+  gap: 10px;
+}
+
+.country-info-card h3 {
+  margin: 0;
+  color: var(--eastie-navy-dark);
+  font-size: 1.16rem;
+  line-height: 1.25;
+}
+
+.country-info-card p,
+.country-info-card ul {
+  max-width: 78ch;
+  margin: 0;
+  color: var(--text-main);
+  line-height: 1.62;
+}
+
+.country-info-card h5 {
+  margin: 8px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid rgba(17, 43, 74, 0.1);
+  color: var(--eastie-teal);
+  font-size: 0.78rem;
+  font-weight: 950;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.country-info-card ul {
+  display: grid;
+  gap: 7px;
+  padding-left: 20px;
+}
+
+.country-sub-panel p,
+.country-sub-panel ul {
+  max-width: none;
+}
+
+.country-activity-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.country-activity-list .country-sub-panel {
+  display: grid;
+  gap: 8px;
+}
+
+.country-language-chip-list {
+  margin: 2px 0 10px;
+}
+
+.country-lesson-map {
+  grid-template-columns: 1fr;
+}
+
+.country-lesson-map .math-sequence-card {
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.country-lesson-map .math-sequence-card span {
+  color: var(--eastie-teal);
+}
+
+.country-lesson-map .math-sequence-card small {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  font-weight: 650;
+  letter-spacing: 0;
+  line-height: 1.5;
+  text-transform: none;
+  white-space: normal;
+}
+
+.country-lesson-document .lesson-details-content {
+  display: grid;
+  gap: 14px;
 }
 
 .course-lesson-sidebar .lesson-nav-link {

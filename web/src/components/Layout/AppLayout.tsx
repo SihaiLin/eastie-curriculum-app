@@ -23,6 +23,7 @@ export function AppLayout({
   const isCurriculumHome = normalizedPathname === "/curriculum";
   const isStatusPage = location.pathname === "/curriculum/status";
   const isLanguageUnit = location.pathname.includes("/language/");
+  const isCountryExploration = location.pathname.includes("/core/world-exploration/");
   const curriculumMatch = location.pathname.match(/^\/curriculum\/(pg|pk|k1|k2|k3)\/(language|non-language)\//);
   const currentLevel = curriculumMatch?.[1];
   const currentCourseType = curriculumMatch?.[2];
@@ -59,7 +60,7 @@ export function AppLayout({
           </span>
         </a>
         <nav className="topnav" aria-label="Main navigation">
-          {!isCurriculumHome && (
+          {!isCurriculumHome && !isCountryExploration && (
             <>
               <a className="home-link" href="/curriculum" aria-label="Curriculum home">
                 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">

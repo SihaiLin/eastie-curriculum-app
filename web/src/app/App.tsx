@@ -17,6 +17,11 @@ const CurriculumHome = lazy(() =>
 const CurriculumStatusPage = lazy(() =>
   import("../components/Curriculum/CurriculumStatusPage").then((module) => ({ default: module.CurriculumStatusPage })),
 );
+const CountryExplorationPage = lazy(() =>
+  import("../components/Curriculum/CountryExplorationPage").then((module) => ({
+    default: module.CountryExplorationPage,
+  })),
+);
 const GradedReadingUnitPage = lazy(() =>
   import("../components/Curriculum/GradedReadingUnitPage").then((module) => ({ default: module.GradedReadingUnitPage })),
 );
@@ -90,6 +95,26 @@ export function App() {
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
                 <PowerUpResourceReviewPage />
+              </AppLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/curriculum/:level/core/world-exploration/:countrySlug"
+          element={
+            <ProtectedRoute>
+              <AppLayout language={language} onLanguageChange={setLanguage}>
+                <CountryExplorationPage language={language} />
+              </AppLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/curriculum/:level/core/world-exploration/:countrySlug/:lessonSlug"
+          element={
+            <ProtectedRoute>
+              <AppLayout language={language} onLanguageChange={setLanguage}>
+                <CountryExplorationPage language={language} />
               </AppLayout>
             </ProtectedRoute>
           }

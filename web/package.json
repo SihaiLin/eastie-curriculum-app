@@ -18,6 +18,7 @@
     "sync:math:k2-unit-01": "node scripts/sync-k-math-units.mjs",
     "sync:art:k-unit": "node scripts/sync-k-art-unit.mjs",
     "sync:art:k2-unit-01": "npm run sync:art:k-unit -- --level=k2 --unit=1",
+    "sync:country-exploration": "node scripts/sync-country-exploration.mjs",
     "sync:power-up:resources": "node scripts/sync-power-up-resources.mjs",
     "sync:power-up:unit-01-resources": "npm run sync:power-up:resources -- --unit 01",
     "sync:pg-unit-01": "npm run sync:non-language -- --level pg --unit 01 --unit-name \"Hello and My Class\" --source-root /Users/Lucia/Desktop/Codex_workspace/PG_PK_Language_Syllabus/06_curriculum_design/pg/non_language_courses/unit_01_hello_and_my_class",

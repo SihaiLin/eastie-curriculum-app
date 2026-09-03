@@ -93,6 +93,34 @@ Read this before asking:
 ### Risks / Notes
 - No production deployment or remote push was performed.
 
+## 2026-09-03 — Country Exploration Web
+
+### Completed
+- Added hand-managed Country Exploration source Markdown for China, USA, Kenya, and Germany across K1/K2/K3 with English and Chinese files.
+- Added a sync script and generated Country Exploration runtime data snapshot.
+- Added Country Exploration detail routes and page rendering for country overview and four lessons per grade.
+- Updated the curriculum dashboard country list to link into available country pages.
+- Verified `npm run sync:country-exploration` and `npm run build` pass in `web/`.
+
+### Files / Paths
+- `/Users/Lucia/Desktop/eastie_curriculum_app/docs/curriculum/country_exploration/`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/scripts/sync-country-exploration.mjs`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/curriculum/countryExploration/`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/components/Curriculum/CountryExplorationPage.tsx`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/components/Curriculum/CurriculumHome.tsx`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/app/App.tsx`
+
+### Current Status
+- Local only and build-verified.
+- Country Exploration supports the initial four-country library but has not been deployed.
+
+### Next Step
+- PM/frontend review should check the dashboard entry points and representative country overview/lesson pages before deployment.
+
+### Risks / Notes
+- Full country resource assets are not part of this change.
+- Existing large lazy chunks remain; `CountryExplorationPage` now builds as its own lazy chunk.
+
 ## How To Use
 
 - Add one short entry after a meaningful work block.

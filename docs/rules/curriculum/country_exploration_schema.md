@@ -317,6 +317,18 @@ File names:
 
 Lesson files should be concise and execution-oriented. They should tell teachers what this lesson is about, what children should do, what language the teacher can use, and what activities can be selected or combined.
 
+### Frontend-Facing Markdown Contract
+
+The lesson Markdown structure should stay friendly to frontend parsing:
+
+- Each lesson file may keep `# {Country} · {Grade} · Lesson {Number}` as the H1.
+- Each lesson file may keep `## {Lesson Title}` immediately after the H1. This should be the first non-numbered H2. The frontend may use it as the page title and should not render it as a content card.
+- Real content sections should use numbered H2 headings: `## 1. Lesson Identity`, `## 2. Lesson Focus`, `## 3. Learning Objectives`, `## 4. Teacher Language`, and `## 5. Suggested Games and Activities`.
+- Activity titles should use H3 headings in the format `### Activity {Number}: {Activity Name}`.
+- Inside each activity, keep field labels exactly as bold labels: `**Purpose:**`, `**Materials:**`, `**Preparation:**`, `**How to Play / Do:**`, and `**Teacher Notes:**`.
+- Teacher Language should stay as short bullet lists because the frontend displays those items as chips.
+- Lesson Identity can remain in the Markdown for source clarity, even if the frontend hides it on the lesson page to avoid repeating metadata.
+
 ### Lesson Schema
 
 ```md
