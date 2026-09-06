@@ -121,6 +121,30 @@ Read this before asking:
 - Full country resource assets are not part of this change.
 - Existing large lazy chunks remain; `CountryExplorationPage` now builds as its own lazy chunk.
 
+## 2026-09-06 — PG/PK Non-Language Web
+
+### Completed
+- Added dynamic renderer support for the optional lesson section `Extension for Ready Children` / `给准备好的儿童的延伸活动`.
+- Rendered the extension as its own light dashed block after existing Markdown activity/game sections when present.
+- Re-synced PG Unit 1 generated data so the first test lessons can display the new section.
+- Verified `npm run build` passes in `web/`.
+
+### Files / Paths
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/components/Curriculum/UnitPage.tsx`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/styles/eastie.css`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/curriculum/generated/pgUnit01Markdown.ts`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/curriculum/generated/pgUnit01NonLanguageUnit01.ts`
+
+### Current Status
+- PG/PK non-language dynamic lessons now tolerate the new optional extension section.
+- Older lessons without this section continue to render without an empty block.
+
+### Next Step
+- PM/frontend review should check PG Unit 1 Course A-G / C1 / C2 Lesson 1 in English and Chinese.
+
+### Risks / Notes
+- Only PG Unit 1 generated data was re-synced in this pass; the shared renderer is ready for PK once matching PK source Markdown includes the section.
+
 ## How To Use
 
 - Add one short entry after a meaningful work block.
@@ -4159,6 +4183,35 @@ Typical useful items include:
 
 ### Risks / Notes
 - No application code, curriculum content, deployment, or remote push was performed.
+## 2026-09-03 — Deployment
+
+### Completed
+- Deployed clean-repo commit `17830b20e42672079615a3797f6fc3decc2808e3` (`Add Country Exploration content pages`) to production.
+- Built and deployed the optimized frontend output while excluding `web/dist/training/`.
+- Synced frontend hashed assets to both the dynamic app asset root and the legacy `/assets` root required by current Nginx routing.
+- Updated API code, preserved production `.env` and SQLite DB, rebuilt API, and restarted `eastie-curriculum-api`.
+- Verified API tests locally before deployment: 17/17 passed.
+
+### Files / Paths
+- Local repo: `/Users/Lucia/Desktop/eastie_curriculum_app`
+- Production frontend: `/var/www/eastie-curriculum-app`
+- Production API: `/opt/eastie-curriculum-api`
+- Production DB preserved: `/var/lib/eastie-curriculum-api/eastie.sqlite`
+- Backup: `/root/eastie_release_backups/20260903_17830b2`
+
+### Current Status
+- Production frontend now references `index-KlnmOE19.js`.
+- Main JS gzip transfer is about `78K`; heavy curriculum data is split into lazy chunks.
+- `eastie-curriculum-api` is active with `NRestarts=0`.
+- `web/public/training` was not deployed.
+
+### Next Step
+- PM/user should browser-check login and the newly added Country Exploration pages from a normal teacher account.
+
+### Risks / Notes
+- Server-side `npm install` reports 6 audit findings; review separately from this deployment.
+- `dynamicUnitManifest-DBbBDcm7.js` is still a large lazy chunk, so deeper per-unit data splitting remains a future frontend optimization.
+
 ## 2026-09-02 — Deployment
 
 ### Completed

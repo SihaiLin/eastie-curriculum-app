@@ -1923,6 +1923,7 @@ function getSectionKind(title: string): string {
   if (normalized.includes("teacher routine") || normalized.includes("teacher input") || normalized.includes("教师常规") || normalized.includes("教师输入")) return "teacher";
   if (normalized.includes("lesson outcome") || normalized === "outcome" || normalized.includes("课程目标")) return "outcome";
   if (normalized.includes("suggested activit") || normalized.includes("suggested game") || normalized.includes("建议活动")) return "activity";
+  if (normalized.includes("extension for ready children") || normalized.includes("给准备好的儿童的延伸活动")) return "extension";
   if (normalized.includes("language") || normalized.includes("语言")) return "language";
   if (normalized.includes("weekly") || normalized.includes("每周") || normalized.includes("子主题")) return "weekly";
   if (normalized.includes("song") || normalized.includes("chant") || normalized.includes("歌曲") || normalized.includes("韵律")) return "songs";
@@ -1938,6 +1939,7 @@ function getOrbClass(kind: string) {
   if (kind === "songs" || kind === "boundary" || kind === "outcome") return "field-outcome";
   if (kind === "observation") return "field-response";
   if (kind === "resources" || kind === "activity") return "field-activity";
+  if (kind === "extension") return "field-challenge";
   return "field-step";
 }
 
@@ -1951,5 +1953,6 @@ function getOrbLabel(kind: string) {
   if (kind === "observation") return "◎";
   if (kind === "outcome") return "◎";
   if (kind === "activity") return "✦";
+  if (kind === "extension") return "+";
   return "↗";
 }
