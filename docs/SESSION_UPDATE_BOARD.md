@@ -8,6 +8,27 @@ Read this before asking:
 - what is currently in progress;
 - what should be picked up next.
 
+## 2026-09-08 — K Non-Language Page Naming Cleanup
+
+### Completed
+- Renamed the shared K non-language renderer from `GradedReadingUnitPage.tsx` to `KNonLanguageCoursePage.tsx`.
+- Updated the App route lazy import to use the new renderer name.
+- No route, UI, data, or behavior changes were intended.
+
+### Current Status
+- The file name now matches its actual responsibility: the shared K non-language renderer currently covers Course A Math, Course B Graded Reading, and Course C Art.
+- `DailySummaryDialog` may still appear in the shared renderer, but current support should be understood as Math lesson view only unless a later task explicitly extends it to Graded Reading or Art.
+
+### Next Step
+- Later, split internal K non-language views by course line when the feature surface grows:
+  - Math view
+  - Graded Reading view
+  - Art view
+
+### Risks / Notes
+- Do not infer Graded Reading or Art daily-summary support from the shared renderer name or imports.
+- This was a naming/alignment cleanup only.
+
 ## 2026-08-30 — Local frontend curriculum sync
 
 ### Completed
@@ -144,6 +165,47 @@ Read this before asking:
 
 ### Risks / Notes
 - Only PG Unit 1 generated data was re-synced in this pass; the shared renderer is ready for PK once matching PK source Markdown includes the section.
+
+## 2026-09-08 — K Non-Language Web Naming
+
+### Completed
+- Renamed the shared K non-language course page component from `GradedReadingUnitPage` to `KNonLanguageCoursePage`.
+- Updated route-level lazy imports and route elements to use the new component name.
+- Verified `npm run build` passes in `web/`.
+
+### Files / Paths
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/app/App.tsx`
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/components/Curriculum/KNonLanguageCoursePage.tsx`
+
+### Current Status
+- The file name now reflects the actual responsibility: Course A Math, Course B Graded Reading, and Course C Art for K non-language routes.
+- No page behavior was intentionally changed.
+
+### Next Step
+- Split Math, Graded Reading, and Art views into smaller files later when a larger cleanup pass is appropriate.
+
+### Risks / Notes
+- This is a naming cleanup only; Graded Reading still does not yet have its own `Generate Daily Summary` feature.
+
+## 2026-09-08 — K Graded Reading Daily Summary
+
+### Completed
+- Added `Generate Daily Summary` to K Graded Reading lesson pages.
+- Summary includes book title with Level, Language Pattern, Story Context, and activity/game titles only.
+- Supports both core book and optional support book without rendering empty support sections.
+- Verified `npm run build` passes in `web/`.
+
+### Files / Paths
+- `/Users/Lucia/Desktop/eastie_curriculum_app/web/src/components/Curriculum/KNonLanguageCoursePage.tsx`
+
+### Current Status
+- Graded Reading lesson pages now match the daily summary workflow used by other lesson pages.
+
+### Next Step
+- PM/frontend review should check representative K1/K2/K3 Course B lesson pages and confirm the summary copy format.
+
+### Risks / Notes
+- This pass did not split the large shared K non-language course component; that cleanup remains a later step.
 
 ## How To Use
 
@@ -4183,6 +4245,57 @@ Typical useful items include:
 
 ### Risks / Notes
 - No application code, curriculum content, deployment, or remote push was performed.
+## 2026-09-07 — Deployment/Auth
+
+### Completed
+- Located Susie in the EASTIE directory as `xuxia@eastie.com.cn`.
+- Added/confirmed Susie as an active teacher in the production users table.
+- Set a temporary password for Susie after email-code delivery failed.
+- Verified production password login, `/api/auth/me`, and logout for Susie.
+
+### Files / Paths
+- Production DB: `/var/lib/eastie-curriculum-api/eastie.sqlite`
+- DB backup: `/root/eastie_release_backups/susie_password_20260907_081331.sqlite`
+
+### Current Status
+- Susie can sign in with email/password login.
+
+### Next Step
+- Ask Susie to log in and change her password from the account/password page.
+
+### Risks / Notes
+- Temporary password was set directly in production DB as an operational exception; do not record plaintext passwords in project docs.
+
+## 2026-09-06 — Deployment
+
+### Completed
+- Deployed local commit `f50a88b` (`Update PG Unit 1 non-language extensions`) to production.
+- Built and deployed frontend output while excluding `web/dist/training/`.
+- Updated API code, preserved production `.env` and SQLite DB, rebuilt API, and restarted `eastie-curriculum-api`.
+- Verified API tests locally before deployment: 17/17 passed.
+- Verified PG Unit 1 non-language course routes return `200 OK`.
+
+### Files / Paths
+- Local repo: `/Users/Lucia/Desktop/eastie_curriculum_app`
+- Production frontend: `/var/www/eastie-curriculum-app`
+- Production API: `/opt/eastie-curriculum-api`
+- Production DB preserved: `/var/lib/eastie-curriculum-api/eastie.sqlite`
+- Backup: `/root/eastie_release_backups/20260906_f50a88b`
+
+### Current Status
+- Production frontend now references `index-CcZHWpob.js` and `index-CiL0dpks.css`.
+- Main JS gzip transfer remains about `78K`.
+- `eastie-curriculum-api` is active with `NRestarts=0`.
+- `web/public/training` was not deployed.
+
+### Next Step
+- PM/user should browser-check the updated PG Unit 1 non-language pages while logged in.
+- Push local commit `f50a88b` to GitHub if remote release tracking should match production immediately.
+
+### Risks / Notes
+- Local `main` is still ahead of `origin/main` by 1 commit after deployment.
+- Server-side `npm install` reports 6 audit findings; review separately from this deployment.
+
 ## 2026-09-03 — Deployment
 
 ### Completed

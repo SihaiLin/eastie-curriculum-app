@@ -22,8 +22,8 @@ const CountryExplorationPage = lazy(() =>
     default: module.CountryExplorationPage,
   })),
 );
-const GradedReadingUnitPage = lazy(() =>
-  import("../components/Curriculum/GradedReadingUnitPage").then((module) => ({ default: module.GradedReadingUnitPage })),
+const KNonLanguageCoursePage = lazy(() =>
+  import("../components/Curriculum/KNonLanguageCoursePage").then((module) => ({ default: module.KNonLanguageCoursePage })),
 );
 const KLanguageCanonicalPreviewPage = lazy(() =>
   import("../components/Curriculum/KLanguageCanonicalPreviewPage").then((module) => ({
@@ -124,7 +124,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -154,7 +154,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -164,7 +164,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -194,7 +194,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -204,7 +204,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -214,7 +214,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -224,7 +224,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -234,7 +234,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -244,7 +244,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -254,7 +254,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -264,7 +264,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -274,7 +274,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -284,7 +284,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -294,7 +294,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -304,7 +304,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -334,7 +334,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -344,7 +344,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -354,7 +354,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -364,7 +364,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -374,7 +374,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -384,7 +384,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -394,7 +394,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -412,7 +412,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }
@@ -422,7 +422,7 @@ export function App() {
           element={
             <ProtectedRoute>
               <AppLayout language={language} onLanguageChange={setLanguage}>
-                <GradedReadingUnitPage />
+                <KNonLanguageCoursePage />
               </AppLayout>
             </ProtectedRoute>
           }

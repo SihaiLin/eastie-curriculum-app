@@ -23,7 +23,7 @@ import type { FeedbackContext } from "../../feedback/feedbackTypes";
 import type { LanguageCode } from "../../curriculum/types";
 import { FeedbackButton } from "../Feedback/FeedbackButton";
 
-export function GradedReadingUnitPage() {
+export function KNonLanguageCoursePage() {
   const language = useAppLanguage();
   const location = useLocation();
   const { lessonSlug } = useParams();
@@ -752,12 +752,20 @@ function GradedReadingLessonView({
   lesson: KGradedReadingLesson;
   unit: KGradedReadingUnit;
 }) {
+  const [summaryOpen, setSummaryOpen] = useState(false);
+  const dailySummaryText = buildGradedReadingDailySummaryText(lesson);
+
   return (
     <article className={embedded ? "graded-reading-lesson embedded" : "graded-reading-lesson"}>
-      <div className="lesson-card-header">
+      <div className="k-language-day-header non-language-lesson-header">
         <div>
-          <span className="lesson-number">Lesson {lesson.lessonNumber}</span>
-          <h2>{formatReadingLevelText(lesson.title)}</h2>
+          <p className="lesson-page-kicker">Lesson {lesson.lessonNumber}</p>
+          <h2 className="section-heading">{formatReadingLevelText(lesson.title)}</h2>
+        </div>
+        <div className="k-language-day-header-actions">
+          <button className="k-language-summary-button" type="button" onClick={() => setSummaryOpen(true)}>
+            Generate Daily Summary
+          </button>
         </div>
       </div>
 
@@ -777,8 +785,47 @@ function GradedReadingLessonView({
       <div className="graded-lesson-feedback">
         <FeedbackButton context={createGradedReadingFeedbackContext(unit, lesson)} label="Lesson Feedback" />
       </div>
+      {summaryOpen ? <DailySummaryDialog text={dailySummaryText} onClose={() => setSummaryOpen(false)} /> : null}
     </article>
   );
+}
+
+function buildGradedReadingDailySummaryText(lesson: KGradedReadingLesson) {
+  const books = [
+    { label: "Core Book", book: lesson.books.core },
+    ...(lesson.books.support ? [{ label: "Support Book", book: lesson.books.support }] : []),
+  ];
+  const hasMultipleBooks = books.length > 1;
+
+  const bookSummaries = books
+    .map(({ label, book }) => buildGradedReadingBookSummary(book, hasMultipleBooks ? label : null))
+    .join("\n\n");
+
+  return [
+    "Course Name: Graded Reading",
+    `Book Summary:\n${bookSummaries}`,
+  ].join("\n\n").concat("\n");
+}
+
+function buildGradedReadingBookSummary(book: KGradedReadingBook, label: string | null) {
+  const activities = book.activities
+    .map((activity, index) => `${index + 1}. ${activity.title}`)
+    .join("\n");
+  const bookAndLanguage = [
+    label,
+    `Book: Level ${displayReadingLevel(book.level)} - ${book.title}`,
+    "Language Pattern:",
+    `Sentence Frame: ${book.sentenceFrame}`,
+    `Key Vocabulary: ${book.vocabulary.join(", ")}`,
+  ].filter(Boolean).join("\n");
+
+  return [
+    bookAndLanguage,
+    `Story Context:\n${book.storyContext}`,
+    `Activities / Games:\n${activities}`,
+  ]
+    .filter((section) => section.trim())
+    .join("\n\n");
 }
 
 function BookSection({ book, heading }: { book: KGradedReadingBook; heading: string }) {
